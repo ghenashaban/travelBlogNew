@@ -34,6 +34,9 @@
              <a class="nav-link" href="index.php">Home</a>
              </li>
              <li class="nav-item">
+                 <a class="nav-link"  href="?controller=user&action=readAll" >Admin</a>
+             </li>
+             <li class="nav-item">
                  <a class="nav-link"  href="?controller=post&action=readAll" >View all articles</a>
              </li>
              <li class="nav-item">
