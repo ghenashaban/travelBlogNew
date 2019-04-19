@@ -6,11 +6,18 @@
 	<title>Travel Blog</title>
 	<link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" href="views/css/fixed.css">        
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <script src="JS/js.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="views/css/fixed.css">   
+<!--         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
-    
+   
 <!--- start home section --->
 <div id="home">
     
@@ -43,32 +50,44 @@
              </li>
              <li class="nav-item">
              <a class="nav-link" href="#practicalTips">Practical Tips</a>
-             </li>         
+             </li> 
+             <a href="#">  <button class="button"><i class="material-icons">
+                        lock_open
+                     </i> <br>log in </button> </a>
+             
+             <a href="#">
+             <button class="button"><i class="material-icons">
+              person_add
+                 </i> <br>sign up </button> </a>
+           
+
      </ul> 
+        
  </div>
  </nav>
  <!-- end of nav -->  
- 
+
  <!-- start landing page -->
  <div class="landing">
      <div class="home-wrap">
          <div class="home-inner">
-             
+     
          </div>
      </div>  
  </div>
  
  <div class="caption text-center">
-    
+   
       <?php require_once('routes.php'); ?>
-      
+       
     
+ 
  </div>
 
  <!-- end landing page -->
-
+    
 </div>
-
+     
 <!--- End home section --->
 
 <!--- start destination section --->
