@@ -45,11 +45,17 @@ class User {
         $user = $req->fetch();
         if ($user) {
             return new User($user['id'], $user['first_name'], $user['surname'], $user['username'], $user['email'], $user['role'], $user['password'], $user['created_at'], $user['updated_at'], $user['country_id']);
-            
-            } else
-            {
+        } else {
             throw new Exception('A real exception should go here');
         }
+    }
+
+    public static function remove($id) {
+        $db = Db::getInstance();
+
+        $id = intval($id);
+        $req = $db->prepare('delete FROM user WHERE id = :id');
+        $req->execute(array('id' => $id));
     }
 
 }
