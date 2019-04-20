@@ -13,7 +13,7 @@
      <p>  <td>   <?php echo $post->title; ?> </td>
     
    <a href='?controller=post&action=read&id=<?php echo $post->id; ?>' class='btn btn-primary'>Read More</a>
-    <a href='' class='btn btn-primary'>Update</a>
+    <a href='?controller=post&action=update&id=<?php echo $post->id; ?>'class='btn btn-primary'>Update</a>
   
     <a href='?controller=post&action=delete&id=<?php echo $post->id; ?>' class='btn btn-primary' onclick="ConfirmDelete()">Delete</a>
 </p>

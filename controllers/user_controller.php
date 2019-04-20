@@ -26,3 +26,20 @@ class UserController {
     }
 
 }
+
+public function login() {
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          
+        require_once('views/users/login.php');
+        }
+      else
+          { 
+       User::login($_POST['username']) ;
+ require_once('views/pages/home1.php');
+      }
+      
+    }
+
+
+
+}

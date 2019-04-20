@@ -49,7 +49,36 @@ class User {
             throw new Exception('A real exception should go here');
         }
     }
+    
+    Public static function login($username) {
+$db = Db::getInstance();
+$username = intval($username);
+if (isset($_POST['username']) && isset($_POST['password'])){
 
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+$req = $db->prepare ("SELECT * FROM user WHERE username=:username and password=:password");
+$req->bindParam(':username', $username);
+$req->bindParam(':password', $password);
+
+$req->execute(array('username' => $username));
+$data=$req->fetch();
+
+if (count($data)==1){
+    session_start();
+$_SESSION['username'] = $username;
+$_SESSION['password'] = $password;
+echo "your logged in";
+//header('location:index.php');
+}else{
+
+echo "Invalid Login Details.";
+}
+} else {
+    echo "Something went wrong, please try to login again";
+    
+=======
     public static function remove($id) {
         $db = Db::getInstance();
 
@@ -58,4 +87,9 @@ class User {
         $req->execute(array('id' => $id));
     }
 
+
 }
+
+    }
+}
+

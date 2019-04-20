@@ -54,7 +54,7 @@
              <li class="nav-item">
              <a class="nav-link" href="#practicalTips">Practical Tips</a>
              </li> 
-             <a href="#">  <button class="button"><i class="material-icons">
+             <a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
                         lock_open
                      </i> <br>log in </button> </a>
              

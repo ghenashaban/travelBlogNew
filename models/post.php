@@ -68,8 +68,6 @@ $req->bindParam(':title', $title);
 $req->bindParam(':body', $body);
 $req->bindParam(':image', $image);
 
-
-
     if(isset($_POST['title'])&& $_POST['title']!=""){
         $filteredTitle = filter_input(INPUT_POST,'title', FILTER_SANITIZE_SPECIAL_CHARS);
     }
@@ -133,6 +131,30 @@ if($post){
     {
         throw new Exception('A real exception should go here');
     }
+    }
+ public static function update($id) {
+    $db = Db::getInstance();
+    $req = $db->prepare("Update post set title=:title, body=:body where id=:id");
+    $req->bindParam(':id', $id);
+    $req->bindParam(':title', $title);
+    $req->bindParam(':body', $body);
+
+
+    if(isset($_POST['title'])&& $_POST['title']!=""){
+        $filteredTitle = filter_input(INPUT_POST,'title', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+    if(isset($_POST['body'])&& $_POST['body']!=""){
+        $filteredBody = filter_input(INPUT_POST,'body', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+$title = $filteredTitle;
+$body = $filteredBody;
+$req->execute();
+
+
+        if (!empty($_FILES[self::InputKey]['title'])) {
+		Product::uploadFile($title);
+	}
+
     }
 
 
