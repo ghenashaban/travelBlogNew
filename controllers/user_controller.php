@@ -27,9 +27,16 @@ public function login() {
       else
           { 
        User::login($_POST['username']) ;
- require_once('views/pages/home1.php');
+ require_once('index.php');
       }
       
     }
+    
+    Function logout () {
+    User::logout();
+   
+    header("location:index.php");
+}
+
 
 }

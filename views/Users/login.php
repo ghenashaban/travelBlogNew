@@ -1,30 +1,24 @@
-<?php
+<?php //
 
-session_start();
-
-if(isset($_POST['submit']))
-{
- $username = $_POST['username'];
- $email= $_POST['email'];
- $password = $_POST['password'];
-  
- if($user->login($username,$email,$password))
- {
-  $user->redirect('index.php');
- }
- else
- {
-  $error = "Wrong Details !";
-}}
+//if(isset($_POST['submit']))
+//{
+// $username = $_POST['username'];
+// $email= $_POST['email'];
+// $password = $_POST['password'];
+//  
+// if($user->login($username,$email,$password))
+// {
+//  $user->redirect('index.php');
+// }
+// else
+// {
+//  $error = "Wrong Details !";
+//}}
  ?>
-<html >
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
 <title>Login</title>
 
-</head>
-
-<body>
     <style>
         .btn{
          display: flex;
@@ -66,5 +60,3 @@ if(isset($_POST['submit']))
        </div>
 </div>
     
-</body>
-</html>

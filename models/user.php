@@ -51,36 +51,59 @@ class User {
             throw new Exception('A real exception should go here');
         }
     }
-    
-    Public static function login($username) {
+    public static function login() {
 $db = Db::getInstance();
-$username = intval($username);
-if (isset($_POST['username']) && isset($_POST['password'])){
+        if (isset($_POST['submit'])) {
+            $sqlquery = "SELECT username, password , id from user WHERE username=:username";
+            $querystring = $db->prepare($sqlquery);
+            $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+            $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+            $querystring->bindParam(':username', $username, PDO::PARAM_INT);
+//            $querystring->bindParam(':password', $password, PDO::PARAM_INT);
+            $querystring->execute(
+                    array(
+                        'username' => $_POST["username"])
+            );
 
-$username = $_POST['username'];
-$password = $_POST['password'];
-$req = $db->prepare ("SELECT * FROM user WHERE username=:username and password=:password");
-$req->bindParam(':username', $username);
-$req->bindParam(':password', $password);
+            $count = $querystring->rowCount();
 
-$req->execute(array('username' => $username));
-$data=$req->fetch();
+            if ($count > 0) {
 
-if (count($data)==1){
-    session_start();
-$_SESSION['username'] = $username;
-$_SESSION['password'] = $password;
-echo "your logged in";
-//header('location:index.php');
-}else{
+                $result = $querystring->fetch();
 
-echo "Invalid Login Details.";
-}
-} else {
-    echo "Something went wrong, please try to login again";
-    
-}
 
+
+                if (($_POST["password"]== $result['password'])) {
+
+                    echo 'correct';
+                    $_SESSION["username"] = $username;
+                    $_SESSION["id"]=$result ['id'];
+                header("location:index.php");
+                } else {
+                    echo ' <div class="container"> <div id="logo" class="text-center"> 
+                        <h2>invalid username or password!</h2><p></p>
+                    </div></div>';
+                }
+            } else {
+                echo '
+        <div class="container"> <div id="logo" class="text-center"> 
+                        <h2>Whoops, you are not registered yet!</h2><p></p>
+                    </div></div>';
+            }
+        }
     }
+    
+    Public static function logout() {
+unset($_SESSION["username"]);
+unset($_SESSION["id"]);
+        session_destroy();
+
+
 }
+
+    
+    }
+
+
+
 
