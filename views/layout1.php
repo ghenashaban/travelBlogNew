@@ -70,7 +70,7 @@
             
  ?>
              
-             <a href="#">
+             <a href="?controller=user&action=register">
              <button class="button"><i class="material-icons">
               person_add
                  </i> <br>sign up </button> </a>

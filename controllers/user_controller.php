@@ -46,6 +46,15 @@ public function login() {
     header("location:index.php");
 }
 
+    public function register () {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            require_once ('views/users/register.php');
+        }
+         else 
+         {
+            User::register(); 
+                 require_once ('views/users/login.php');         }
+     }  
 
 
 

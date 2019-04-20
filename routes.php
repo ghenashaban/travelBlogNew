@@ -30,7 +30,7 @@ $controllers = array('pages' => ['home', 'error'],
 
                      'post' => ['readAll','delete','create','read','update'],
 
-                    'user' => ['readAll', 'read','login','logout','update','delete']
+                    'user' => ['readAll', 'read','login','logout','update','delete','register']
 
                     
 
