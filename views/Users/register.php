@@ -1,40 +1,49 @@
- <form method="post">
-            <h2>Register</h2><hr />
-            <?php
-            if(isset($error))
-            {
-                  ?>
-                  <div class="alert alert-danger">
-                      <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
-                  </div>
-                  <?php
-            }
-            ?>
-            <div class="form-group">
-             <input type="text" class="form-control" name="first_name" placeholder="first_name" required />
-            </div>
-            <div class="form-group">
-             <input type="text" class="form-control" name="surname" placeholder="surname" required />
-            </div>
-            <div class="form-group">
-             <input type="text" class="form-control" name="username" placeholder="username" required />
-            </div>
-            <div class="form-group">
-             <input type="text" class="form-control" name="email" placeholder="email" required />
-            </div>
-            <div class="form-group">
-             <input type="password" class="form-control" name="password" placeholder="Your Password" required />
-            </div>
-              <div class="form-group">
-             <input type="text" class="form-control" name="role" placeholder="role" required />
-            </div>
-            <div class="clearfix"></div><hr />
+<p>Fill in the following form to Register:</p>
+<form action="" method="POST" class="w3-container" enctype="multipart/form-data">
+    
+ 
+</
+    <p>
+        <label>First_name</label>
+        <input class="w3-input" type="text" name="first_name" required autofocus>
         
-            <div class="form-group">
-             <button type="submit" name="submit" class="btn btn-default">
-                 <i class="glyphicon glyphicon-log-in"></i>&nbsp;SIGN IN
-                </button>
-            </div>
-            <br/>
+    </p>
+        <p>
+            <label>surname</label>
+        <input class="w3-input" type="text" name="surname" required> 
+    </p>
+     <p>
+            <label>username</label>
+        <input class="w3-input" type="text" name="username" required>
         
-        </form>
+    </p>
+    <p>
+       <label>email</label>
+        <input class="w3-input" type="text" name="email" required>
+        
+    </p>
+    <p>
+     <label>password</label>
+        <input class="w3-input" type="text" name="password" required>
+        
+    </p>
+    <p>
+         <label>role</label>
+        <input class="w3-input" type="text" name="role" required>
+        
+    </p>
+            
+  <p>
+    <input class="w3-btn w3-pink" type="submit" value="Register">
+  </p>
+</form>
+
+<?php $username=$_POST["username"];
+
+echo $username;
+
+?>
+
+
+
+           

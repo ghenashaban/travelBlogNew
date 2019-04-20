@@ -55,6 +55,28 @@ public function login() {
             User::register(); 
                  require_once ('views/users/login.php');         }
      }  
+     
+   public function update() {
+        
+      if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          if (!isset($_GET['id']))
+        return call('pages', 'error');
+
+        $user = User::find($_GET['id']);
+      
+        require_once('views/users/update.php');
+        }
+      else
+          { 
+            $id = $_GET['id'];
+            User::update($id);
+                        
+            $users = User::all();
+            require_once('views/users/readAll.php');
+      }
+      
+    }
+ 
 
 
 

@@ -99,7 +99,7 @@ unset($_SESSION["id"]);
 }
 public static function register() {
 $db = Db::getInstance();
-$req = $db->prepare("insert into post( first_name, surname, username, role, password, email ) values ( :first_name, :surname, :username, :role, :password, :email)");
+$req = $db->prepare("insert into user(first_name, surname, username, role, password, email ) values ( :first_name, :surname, :username, :role, :password, :email)");
 
 $req->bindParam(':first_name', $first_name);
           $req->bindParam(':surname', $surname);
@@ -136,5 +136,53 @@ $password = $filteredPassword;
 
 $req->execute();
 }
+
+  public static function update($id) {
+    $db = Db::getInstance();
+    $req = $db->prepare("Update user set first_name=:first_name ,  surname=:surname , username=:username , email=:email , password=:password where id=:id");
+    $req->bindParam(':first_name', $first_name);
+    $req->bindParam(':surname', $surname);
+    $req->bindParam(':username', $username);
+    $req->bindParam(':email', $email);
+    $req->bindParam(':password', $password);
+    $req->bindParam(':id', $id);
+
+
+    if(isset($_POST['username'])&& $_POST['username']!=""){
+        $filteredUsername = filter_input(INPUT_POST,'username', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+    if(isset($_POST['first_name'])&& $_POST['first_name']!=""){
+        $filteredFirst_name = filter_input(INPUT_POST,'first_name', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+if(isset($_POST['surname'])&& $_POST['surname']!=""){
+        $filteredSurname = filter_input(INPUT_POST,'surname', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+if(isset($_POST['email'])&& $_POST['email']!=""){
+        $filteredEmail = filter_input(INPUT_POST,'email', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+if(isset($_POST['password'])&& $_POST['password']!=""){
+        $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+
+$username=$filteredUsername;
+$first_name=$filteredFirst_name;
+$surname=$filteredSurname;
+$email=$filteredEmail;
+$password=$filteredPassword;
+
+
+$req->execute();
+
+
+
+    }
+  public static function remove($id) {
+      $db = Db::getInstance();
+      //make sure $id is an integer
+      $id = intval($id);
+      $req = $db->prepare('delete FROM user WHERE id = :id');
+      // the query was prepared, now replace :id with the actual $id value
+      $req->execute(array('id' => $id));
+  }
     
 }
