@@ -20,9 +20,6 @@ else if (file_exists($file2)) {
     echo "No picture found";
 }
 
-
-
-
 ?>
 
-  
+<!-- <a href='?controller=post&action=addComment' class='btn btn-primary'>Add comment</a> -->

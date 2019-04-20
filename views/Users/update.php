@@ -30,8 +30,3 @@
     <input class="w3-btn w3-gray" type="submit" value="Update Post">
     </p>
 </form>
-<?php $username=$_POST["username"];
-
-echo $username;
-
-?>
