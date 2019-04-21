@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <?php
 session_start();
-?>
+
+ob_start(); ?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -23,7 +25,12 @@ session_start();
 
 //    require_once('views/layout.php');
   require_once('views/layout1.php');
+
    
-        ?>
+
+    
+  ob_flush();
+  ?>
+
     </body>
 </html>

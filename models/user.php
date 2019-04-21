@@ -52,12 +52,13 @@ class User {
     public static function login() {
 $db = Db::getInstance();
         if (isset($_POST['submit'])) {
-            $sqlquery = "SELECT username, password , id from user WHERE username=:username";
+            $sqlquery = "SELECT username, password, role, id from user WHERE username=:username";
             $querystring = $db->prepare($sqlquery);
             $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
             $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
             $querystring->bindParam(':username', $username, PDO::PARAM_INT);
-//            $querystring->bindParam(':password', $password, PDO::PARAM_INT);
+           $role = filter_input(INPUT_POST, 'role', FILTER_SANITIZE_STRING);
+//             $querystring->bindParam(':password', $password, PDO::PARAM_INT);
             $querystring->execute(
                     array(
                         'username' => $_POST["username"])
@@ -73,9 +74,10 @@ $db = Db::getInstance();
 
                 if (($_POST["password"]== $result['password'])) {
 
-                    echo 'correct';
-                    $_SESSION["username"] = $username;
-                    $_SESSION["id"]=$result ['id'];
+                     $_SESSION["username"] = $result['username'];
+                    $_SESSION["role"] = $result['role'];
+                    $_SESSION["id"]=$result['id'];
+                   
                 header("location:index.php");
                 } else {
                     echo ' <div class="container"> <div id="logo" class="text-center"> 
@@ -99,13 +101,13 @@ unset($_SESSION["id"]);
 }
 public static function register() {
 $db = Db::getInstance();
-$req = $db->prepare("insert into user(first_name, surname, username, role, password, email ) values ( :first_name, :surname, :username, :role, :password, :email)");
+$req = $db->prepare("insert into user(first_name, surname, username, password, email ) values ( :first_name, :surname, :username,  :password, :email)");
 
 $req->bindParam(':first_name', $first_name);
           $req->bindParam(':surname', $surname);
           $req->bindParam(':username', $username);
           $req->bindParam(':email', $email);
-         $req->bindParam(':role', $role);
+        
          $req->bindParam(':password', $password);
 
     if(isset($_POST['first_name'])&& $_POST['first_name']!=""){
@@ -120,9 +122,7 @@ $req->bindParam(':first_name', $first_name);
      if(isset($_POST['email'])&& $_POST['email']!=""){
         $filteredEmail = filter_input(INPUT_POST,'email', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-     if(isset($_POST['role'])&& $_POST['role']!=""){
-        $filteredRole = filter_input(INPUT_POST,'role', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+    
      if(isset($_POST['password'])&& $_POST['password']!=""){
         $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
     }
@@ -131,7 +131,7 @@ $first_name = $filteredFirst;
 $surname = $filteredSecond;
 $username = $filteredUser;
 $email = $filteredEmail;
-$role = $filteredRole;
+
 $password = $filteredPassword;
 
 $req->execute();

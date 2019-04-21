@@ -39,17 +39,22 @@ class PostController {
 
   Public function read() {
 
-if (!isset($_GET['id']))
+if (!isset($_GET['id'])) 
         return call('pages', 'error');
 
-      try{
+//      try{
       // we use the given id to get the correct post
       $posts = Post::find($_GET['id']);
-      require_once('views/posts/read.php');
-      }
- catch (Exception $ex){
-     return call('pages','error');
- }
+      require_once 'models/comment.php';
+      $comments=Comment::findByPostId($_GET['id']);
+      Comment::addComment();
+      // added this again so i can see the comment right away
+       $comments=Comment::findByPostId($_GET['id']); 
+      require_once 'views/posts/read.php';
+//      }
+// catch (Exception $ex){
+//     return call('pages','error');
+// }
     }
     
     
@@ -74,7 +79,33 @@ public function update() {
       
     }
 
- 
-    
-    
-}
+// function addComment() {
+//if (isset($_POST['submit'])) {
+//
+//                Comment::addComment();
+//               
+//                
+//            } else {
+//                $new= new PostController;
+//                $new->read();
+//                Post::find($_GET['id']);
+//                require_once('views/posts/read.php');
+//            }
+//
+//}
+//function addComment(){
+//    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+//          require_once('views/posts/.php');
+//      }
+//      else { 
+//          require_once('views/posts/read.php');
+//          require_once('models/comment.php');
+//            Comment::addComment();
+//             
+//          
+//      require_once('views/posts/read.php');
+//      }
+//      
+//    }
+//
+      }

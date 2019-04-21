@@ -27,22 +27,14 @@
         <input class="w3-input" type="text" name="password" required>
         
     </p>
-    <p>
-         <label>role</label>
-        <input class="w3-input" type="text" name="role" required>
-        
-    </p>
-            
+    
+           
   <p>
     <input class="w3-btn w3-pink" type="submit" value="Register">
   </p>
 </form>
 
-<?php $username=$_POST["username"];
 
-echo $username;
-
-?>
 
 
 

@@ -27,14 +27,9 @@
 $controllers = array('pages' => ['home', 'error'],
                     'product' => ['readAll','read','create','update','delete'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
+                     'post' => ['readAll','delete','create','read','update', 'search','addComment'],
 
-                     'post' => ['readAll','delete','create','read','update', 'search'],
-
-                    'user' => ['readAll', 'read','login','logout','delete','register','update']
-
-                    
-
-                    
+                   'user' => ['readAll', 'read','login','logout','delete','register','update']
 
                     );
 

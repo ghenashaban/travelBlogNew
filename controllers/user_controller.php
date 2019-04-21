@@ -35,7 +35,7 @@ public function login() {
       else
           { 
        User::login($_POST['username']) ;
- require_once('index.php');
+// require_once('index.php');
       }
       
     }
@@ -43,7 +43,7 @@ public function login() {
     Function logout () {
     User::logout();
    
-    header("location:index.php");
+   header("location:index.php");
 }
 
     public function register () {
