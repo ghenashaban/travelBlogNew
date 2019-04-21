@@ -7,6 +7,8 @@
         <title>Travel Blog</title>
         <link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>
+
+
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
         <script src="JS/js.js" type="text/javascript"></script>
@@ -16,6 +18,7 @@
         <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
         <link href="css/search.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="views/css/cookiealert.css" rel="stylesheet" type="text/css"/>
     </head>
 
 
@@ -60,11 +63,14 @@
                         <?php
                         if (!empty($_SESSION)) {
                             echo' <a href="?controller=user&action=logout">  <button class="button"><i class="material-icons">
+
                         lock
                      </i> <br>log out </button> </a>';
                         } else {
                             echo' <a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
                         lock_open
+                    
+
                      </i> <br>log in </button> </a>';
                         }
                         ?>
@@ -99,6 +105,7 @@
             </div>
 
             <!-- end landing page -->
+
 
         </div>
 
@@ -325,7 +332,17 @@
                 </div>
             </footer>
         </div>
+
         <!-- End of footer -->
+<!-- START Bootstrap-Cookie-Alert -->
+<div class="alert text-center cookiealert" role="alert">
+    <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+    <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+        I agree
+    </button>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
 
         <!--- Script Source Files -->
         <script src="js/jquery-3.3.1.min.js"></script>
@@ -334,4 +351,5 @@
         <!--- End of Script Source Files -->
 
     </body>
+
 </html>
