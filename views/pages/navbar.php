@@ -51,7 +51,7 @@
   <a href="?controller=user&action=logout"> <button class="button"><i class="material-icons">
                         lock
                      </i> <br>log out </button> </a>
-  <a href="?controller=user&action=logout"> <button class="button"><i class="material-icons">
+  <a href=""> <button class="button"><i class="material-icons">
                         lock
                      </i> <br>view account </button> </a>
   
