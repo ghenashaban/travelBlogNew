@@ -25,7 +25,17 @@ class PostController {
       }
       
     }
-
+    
+    public function search() {
+  if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          require_once('views/posts/search.php');
+      }
+      else { 
+            Post::search();
+             
+            $posts = Post::all(); 
+            require_once('views/posts/readAll.php');
+    }}
 
   Public function read() {
 
@@ -46,6 +56,8 @@ if (!isset($_GET['id']))
 //     return call('pages','error');
 // }
     }
+    
+    
 public function update() {
         
       if($_SERVER['REQUEST_METHOD'] == 'GET'){

@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
     <div class="caption text-center">
         <h3> Welcome! أهلا بك! Bem Vinda! Failte! Bienvenido! </h3>
         <h1> Joined at the trip!</h1>
@@ -33,9 +34,12 @@
     <script src="jquery.min.js"></script>
     <script src="js/jquery.contact-buttons.js"></script>
 
+
 </body>
 
 </html>
+
+
 
 
 

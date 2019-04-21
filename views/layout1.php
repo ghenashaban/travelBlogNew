@@ -7,6 +7,8 @@
         <title>Travel Blog</title>
         <link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>
+
+
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
         <script src="JS/js.js" type="text/javascript"></script>
@@ -16,6 +18,7 @@
         <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
         <link href="css/search.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="views/css/cookiealert.css" rel="stylesheet" type="text/css"/>
     </head>
 
 
@@ -57,17 +60,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
                         </li> 
-                        <?php
-                        if (!empty($_SESSION)) {
-                            echo' <a href="?controller=user&action=logout">  <button class="button"><i class="material-icons">
+                        </ul> 
+                        <?php if (!empty($_SESSION['username'])){
+                            echo'<a href="?controller=user&action=logout"> <button class="button"><i class="material-icons">
                         lock
                      </i> <br>log out </button> </a>';
-                        } else {
-                            echo' <a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
+                        }else{
+                            echo'<a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
                         lock_open
-                     </i> <br>log in </button> </a>';
-                        }
-                        ?>
+                     </i> <br>log in </button> </a>';}?>
 
                         <a href="?controller=user&action=register">
                             <button class="button"><i class="material-icons">
@@ -75,11 +76,10 @@
                                 </i> <br>sign up </button> </a>
 
 
-                    </ul> 
+                    
 
                 </div>
             </nav>
-            <!-- end of nav -->  
 
             <!-- start landing page -->
             <div class="landing">
@@ -99,6 +99,7 @@
             </div>
 
             <!-- end landing page -->
+
 
         </div>
 
@@ -325,13 +326,27 @@
                 </div>
             </footer>
         </div>
+
         <!-- End of footer -->
+<!-- START Bootstrap-Cookie-Alert -->
+<div class="alert text-center cookiealert" role="alert">
+    <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+    <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+        I agree
+    </button>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
 
         <!--- Script Source Files -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-        <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+        
+      <script src="views/JS/js.js" type="text/javascript"></script>
+       <script src="views/JS/jquery-3.3.1.min.js"></script>
+       <script src="views/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+       <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+       <script src="views/JS/cookiealert.js" type="text/javascript"></script>
         <!--- End of Script Source Files -->
 
     </body>
+
 </html>

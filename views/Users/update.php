@@ -1,3 +1,4 @@
+
 <p>Fill in the following form to update the user:</p>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     <h2>Update User</h2>
@@ -30,3 +31,12 @@
     <input class="w3-btn w3-gray" type="submit" value="Update Post">
     </p>
 </form>
+
+
+//<?php // $username=$_POST["username"];
+//
+//echo $username;
+//
+//?>
+
+
