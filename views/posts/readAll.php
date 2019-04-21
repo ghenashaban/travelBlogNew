@@ -18,7 +18,7 @@
 </p>
                         <?php } ?>
                             
-   <a href='?controller=post&action=create' class='btn btn-primary'>create post</a>
+   
   
      <script>
                         function ConfirmDelete() {

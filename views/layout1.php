@@ -28,58 +28,7 @@
         <div id="home">
 
             <!-- start of nav -->
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand" href=""><img src ="views/images/logo4.jpg"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                    <span class="navbar-toggler-icon"></span>   
-                </button>
-                <!-- change href to controller/action and remove divs -->
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"  href="?controller=user&action=readAll" >Admin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"  href="?controller=post&action=readAll" >View all articles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"  href="#destination" >Destination</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#ecoTravel">Eco Travel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#familyTravel">Family Travel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#inspiration">Inspiration</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#practicalTips">Practical Tips</a>
-                        </li> 
-                        </ul> 
-                        <?php if (!empty($_SESSION['username'])){
-                            echo'<a href="?controller=user&action=logout"> <button class="button"><i class="material-icons">
-                        lock
-                     </i> <br>log out </button> </a>';
-                        }else{
-                            echo'<a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
-                        lock_open
-                     </i> <br>log in </button> </a>';}?>
-
-                        <a href="?controller=user&action=register">
-                            <button class="button"><i class="material-icons">
-                                    person_add
-                                </i> <br>sign up </button> </a>
-
-
-                    
-
-                </div>
-            </nav>
+           <?php require_once 'views/pages/navbar.php';?>
 
             <!-- start landing page -->
             <div class="landing">
@@ -110,10 +59,20 @@
         <div id="destination" class="offset">
 
             <div class="col-12 narrow text-center">
-                <h1>Here are our latest destination articles</h1>
+                <h1>Here are our latest destination articles
+            <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+                
+                </h1>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                 <a class="btn btn-secondary btn-md" href="#">Find out more</a>
-                \
+                
             </div>    
         </div>
         <!--- End destination section --->

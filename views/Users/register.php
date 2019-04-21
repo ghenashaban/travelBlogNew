@@ -28,7 +28,7 @@
         
     </p>
     
-            
+           
   <p>
     <input class="w3-btn w3-pink" type="submit" value="Register">
   </p>

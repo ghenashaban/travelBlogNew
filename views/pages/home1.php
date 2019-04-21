@@ -11,7 +11,7 @@
     <div class="caption text-center">
         <h3> Welcome! أهلا بك! Bem Vinda! Failte! Bienvenido! </h3>
         <h1> Joined at the trip!</h1>
-        <?php echo 'welcome'.$_SESSION["id"]?>
+      
         
         <div class="container">
             <input type="text" placeholder="Search...">

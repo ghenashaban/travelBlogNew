@@ -52,12 +52,13 @@ class User {
     public static function login() {
 $db = Db::getInstance();
         if (isset($_POST['submit'])) {
-            $sqlquery = "SELECT username, password , id from user WHERE username=:username";
+            $sqlquery = "SELECT username, password, role, id from user WHERE username=:username";
             $querystring = $db->prepare($sqlquery);
             $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
             $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
             $querystring->bindParam(':username', $username, PDO::PARAM_INT);
-//            $querystring->bindParam(':password', $password, PDO::PARAM_INT);
+           $role = filter_input(INPUT_POST, 'role', FILTER_SANITIZE_STRING);
+//             $querystring->bindParam(':password', $password, PDO::PARAM_INT);
             $querystring->execute(
                     array(
                         'username' => $_POST["username"])
@@ -73,9 +74,10 @@ $db = Db::getInstance();
 
                 if (($_POST["password"]== $result['password'])) {
 
-                    echo 'correct';
-                    $_SESSION["username"] = $username;
-                    $_SESSION["id"]=$result ['id'];
+                     $_SESSION["username"] = $result['username'];
+                    $_SESSION["role"] = $result['role'];
+                    $_SESSION["id"]=$result['id'];
+                   
                 header("location:index.php");
                 } else {
                     echo ' <div class="container"> <div id="logo" class="text-center"> 
