@@ -19,10 +19,11 @@ class Comment {
     
     public static function addComment() {
     $db = Db::getInstance();
-    $req = $db->prepare("insert into comment( post_id, content) values (:post_id, :content)");
+    $req = $db->prepare("insert into comment( post_id, content, user_id) values (:post_id, :content, :user_id)");
 
 $req->bindParam(':post_id', $post_id);
 $req->bindParam(':content', $content);
+$req->bindParam(':user_id', $user_id);
 
 
     if(isset($_POST['content'])&& $_POST['content']!=""){
@@ -33,6 +34,10 @@ $req->bindParam(':content', $content);
     if(isset($_POST['post_id'])&& $_POST['post_id']!=""){
         $filteredID = filter_input(INPUT_POST,'post_id', FILTER_SANITIZE_SPECIAL_CHARS);
     $post_id=$filteredID;}
+    
+     if(isset($_POST['user_id'])&& $_POST['user_id']!=""){
+        $filteredUser = filter_input(INPUT_POST,'user_id', FILTER_SANITIZE_SPECIAL_CHARS);
+    $user_id=$filteredUser;}
     
 //    if(isset($_POST['image'])&& $_POST['image']!=""){
 //        $filteredimage = filter_input(INPUT_POST,'image', FILTER_SANITIZE_SPECIAL_CHARS);
