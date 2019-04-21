@@ -6,11 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Travel Blog</title>
         <link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">
-        <link href="views/css/style.css" rel="stylesheet" type="text/css"/>
-
-
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-              rel="stylesheet">
+        <link href="views/css/style.css" rel="stylesheet" type="text/css"/>      
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="JS/js.js" type="text/javascript"></script>
         <link rel="stylesheet" href="views/css/fixed.css">   
         <!--         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,6 +16,8 @@
         <link href="css/search.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="views/css/cookiealert.css" rel="stylesheet" type="text/css"/>
+   
+
     </head>
 
 
@@ -41,8 +40,9 @@
 
             <div class="caption text-center">
 
-                <?php require_once('routes.php'); ?>
 
+                <?php require_once('routes.php'); ?>
+                <?php require_once('views\socialMedia\mediaLinks.php');?>
 
 
             </div>
@@ -287,6 +287,7 @@
         </div>
 
         <!-- End of footer -->
+
 <!-- START Bootstrap-Cookie-Alert -->
 <div class="alert text-center cookiealert" role="alert">
     <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
@@ -305,6 +306,7 @@
        <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
        <script src="views/JS/cookiealert.js" type="text/javascript"></script>
         <!--- End of Script Source Files -->
+
 
     </body>
 
