@@ -50,6 +50,22 @@ class Post {
       return $list;
    
     }
+      public static function search($searchTerm) { // find by user lne 137
+      $list = [];
+      $db = Db::getInstance();
+      $req = $db->query("SELECT * FROM post WHERE title LIKE '%$searchTerm%'");
+      // we create a list of posts where the search temr was found - UPDATE it with body date etc
+
+       foreach($req->fetchAll() as $post) {
+         $list[] = new Post($post['title'], $post['id'],$post['body'], $post['image']); 
+          
+       }
+      return $list;
+   
+    }
+    
+    
+    
     
     public static function remove($id) {
       $db = Db::getInstance();
@@ -159,4 +175,6 @@ $req->execute();
 
 
 }
+
+
     
