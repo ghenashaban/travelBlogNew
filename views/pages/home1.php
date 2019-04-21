@@ -9,15 +9,23 @@
              <div class="caption text-center">
                  <h1> Welcome to our Travel Blog!</h1>
                 <div class="container">
-  <input type="text" placeholder="Search...">
+  <<form action="search.php" method="POST">
+  <input type="text" name="search" placeholder="Search...">
+  
+  </form>
+
   <div class="search"></div>
-</div>
+<a href='?controller=post&action=search' class='btn btn-primary'>Search</a>
+                </div>
+                 
          </div>              
-    <p> try </p>
+    <p> try 
+    </p>
 </body>
  
 </html>
  
+
    
       
        
