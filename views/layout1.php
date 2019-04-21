@@ -9,13 +9,13 @@
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-        <script src="JS/js.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="views/css/fixed.css">   
+        <link rel="stylesheet" href="views/css/fixed.css"/>   
 <!--         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-       <link href="css/search.css" rel="stylesheet" type="text/css"/>
+<link href="views/css/search.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="views/css/cookiealert.css" rel="stylesheet" type="text/css"/>
 </head>
 
 
@@ -113,7 +113,7 @@
         <h1>Here are our latest destination articles</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
         <a class="btn btn-secondary btn-md" href="#">Find out more</a>
-        \
+        
 </div>    
 </div>
 <!--- End destination section --->
@@ -328,10 +328,22 @@
 </div>
 <!-- End of footer -->
 
+<!-- START Bootstrap-Cookie-Alert -->
+<div class="alert text-center cookiealert" role="alert">
+    <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+    <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+        I agree
+    </button>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+
 <!--- Script Source Files -->
+<script src="JS/js.js" type="text/javascript"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+<script src="views/JS/cookiealert.js"></script>
 <!--- End of Script Source Files -->
 
 </body>
