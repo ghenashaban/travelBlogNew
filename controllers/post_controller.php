@@ -29,7 +29,7 @@ class PostController {
 
   Public function read() {
 
-if (!isset($_GET['id']))
+if (!isset($_GET['id'])) 
         return call('pages', 'error');
 
       try{
@@ -62,7 +62,33 @@ public function update() {
       
     }
 
- 
-    
-    
-}
+// function addComment() {
+//if (isset($_POST['submit'])) {
+//
+//                Comment::addComment();
+//               
+//                
+//            } else {
+//                $new= new PostController;
+//                $new->read();
+//                Post::find($_GET['id']);
+//                require_once('views/posts/read.php');
+//            }
+//
+//}
+function addComment(){
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          require_once('views/posts/addComment.php');
+      }
+      else { 
+          
+          require_once('models/comment.php');
+            Comment::addComment();
+             
+            $posts = Post::find($_GET['id']);
+      require_once('views/posts/read.php');
+      }
+      
+    }
+
+      }

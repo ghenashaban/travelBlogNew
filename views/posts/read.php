@@ -21,5 +21,4 @@ else if (file_exists($file2)) {
 }
 
 ?>
-
-<!-- <a href='?controller=post&action=addComment' class='btn btn-primary'>Add comment</a> -->
+ <a href='?controller=post&action=addComment&id=<?php echo $posts->id; ?>' class='btn btn-primary'>add comment</a>
