@@ -5,6 +5,7 @@ session_start();
 <html>
     <head>
         <meta charset="UTF-8">
+<!--        <link href="views/css/socialMedia.css" rel="stylesheet" type="text/css"/>-->
         <title>Travel Blog</title>
     </head>
     <body>
@@ -19,8 +20,10 @@ session_start();
         $action     = 'home';
   }
 
+
 //    require_once('views/layout.php');
   require_once('views/layout1.php');
+   
         ?>
     </body>
 </html>
