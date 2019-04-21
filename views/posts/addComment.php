@@ -11,14 +11,12 @@
     
  
     <p>
-        <label>Add comment</label>
-        <input class="w3-input" type="hidden" name="post_id" value='<?php $posts->id ?>'>
+       
+        <input class="w3-input" type="hidden" name="post_id" value="<?= $posts->id; ?>">
         <input class="w3-input" type="text" name="content" required autofocus>
-        
-    </p>
-     <p>
-          <input class="w3-btn w3-pink" type="submit" value='add comment'>
-  </p>
+         <input class="w3-btn w3-pink" type="submit" value='Comment'>
+ </p>
        </form>
+        
     </body>
 </html>

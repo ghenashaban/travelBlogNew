@@ -14,11 +14,24 @@ if(file_exists($file1) ){
 }
 else if (file_exists($file2)) {
   $img = "<img src='$file2' width='150' />";
-    echo $img;  
-} else {
-    // we can put a default image
-    echo "No picture found";
-}
+echo $img;   } 
+//} else {
+//    // we can put a default image
+//    echo "No picture found";
+//}
 
-?>
- <a href='?controller=post&action=addComment&id=<?php echo $posts->id; ?>' class='btn btn-primary'>add comment</a>
+
+
+// foreach ($comments as $comment) { 
+// echo $comment->content;
+// }
+   
+     
+echo "these are the comments:";
+foreach ($comments as $comment) { ?>
+     <p>  <td>   <?php echo $comment->content; ?> </td>
+   <?php } 
+   
+   require_once 'views/posts/addComment.php';
+   ?>
+ 
