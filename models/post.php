@@ -157,6 +157,20 @@ $req->execute();
 
     }
 
+    public static function search($searchTerm) {
+      $db = Db::getInstance();
+      
+      $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$searchTerm%'");
+      
+      $req->execute(array('searchTerm' => $searchTerm));
+      foreach ($req->fetchAll() as $post) {
+
+      $list[]= new Post ($post['title'], $post['id'],$post['body'],$post['image']);
+    }
+    return $list;
+    
+    }
 
 }
-    
+  
+ 

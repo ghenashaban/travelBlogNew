@@ -25,6 +25,7 @@
 <div id="home">
     
  <!-- start of nav -->
+ <a href="layout1.php"></a>
  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
  <a class="navbar-brand" href="#">Logo</a>
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -57,7 +58,9 @@
              <li class="nav-item">
              <a class="nav-link" href="#practicalTips">Practical Tips</a>
              </li> 
-         <?php 
+         
+       <a class="search" href="?controller=post&action=search"</a>          
+                 <?php 
  if(!empty($_SESSION)){
            echo' <a href="?controller=user&action=logout">  <button class="button"><i class="material-icons">
                         lock
@@ -75,7 +78,11 @@
               person_add
                  </i> <br>sign up </button> </a>
            
-
+  <a href="?controller=post&action=search">
+             <button class="button"><i class="material-icons">
+              search
+                 </i> <br>search </button> </a>
+           
      </ul> 
         
  </div>

@@ -9,8 +9,13 @@
              <div class="caption text-center">
                  <h1> Welcome to our Travel Blog!</h1>
                 <div class="container">
-  <input type="text" placeholder="Search...">
-  <div class="search"></div>
+     <form id='searchBar' action='search.php' method='GET'> 
+         <label for='searchTerm'> </label>
+  <input type="text" name="searchTerm" placeholder="Search...">
+  </form>
+                    <div class="search">
+                        
+                    </div>
 </div>
          </div>              
     <p> try </p>
@@ -18,8 +23,7 @@
  
 </html>
  
-   
-      
+
        
     
 
