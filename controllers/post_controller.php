@@ -63,16 +63,21 @@ public function update() {
       
     }
 
- 
-  Public function search() {
-        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                require_once ('views/posts/search.php'); //check
-        }
-         else 
-         {
-            Post::search(); 
-                 require_once ('views/posts/readAll.php');         }
-     } 
-     
-}
+
+public function searchBar() {
+        
+      if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          
       
+        require_once('views/posts/searchBar.php');
+        }
+      else
+          { 
+       Post::searchBar() ;
+ require_once('index.php');
+      }
+      
+    }
+
+    
+}

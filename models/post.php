@@ -157,11 +157,11 @@ $req->execute();
 
     }
 
-    public static function search($searchTerm) {
+    public static function searchBar($searchTerm) {
       $db = Db::getInstance();
       
       $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$searchTerm%'");
-      
+      //extend this with other search terms if working  for title
       $req->execute(array('searchTerm' => $searchTerm));
       foreach ($req->fetchAll() as $post) {
 

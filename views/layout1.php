@@ -59,7 +59,7 @@
              <a class="nav-link" href="#practicalTips">Practical Tips</a>
              </li> 
          
-       <a class="search" href="?controller=post&action=search"</a>          
+      <!-- <a class="search" href="?controller=post&action=search"</a>         -->        
                  <?php 
  if(!empty($_SESSION)){
            echo' <a href="?controller=user&action=logout">  <button class="button"><i class="material-icons">
@@ -70,7 +70,7 @@
                         lock_open
                      </i> <br>log in </button> </a>';   
  }
-            
+          
  ?>
              
              <a href="?controller=user&action=register">
@@ -78,7 +78,7 @@
               person_add
                  </i> <br>sign up </button> </a>
            
-  <a href="?controller=post&action=search">
+  <a href="?controller=post&action=searchBar">
              <button class="button"><i class="material-icons">
               search
                  </i> <br>search </button> </a>

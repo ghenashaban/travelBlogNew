@@ -11,8 +11,8 @@
                 <div class="container">
      <form id='searchBar' action='search.php' method='GET'> 
          <label for='searchTerm'> </label>
-  <input type="text" name="searchTerm" placeholder="Search...">
-  </form>
+  <input type="text" name="searchTerm" placeholder="Search..."/>
+     </form>
                     <div class="search">
                         
                     </div>
