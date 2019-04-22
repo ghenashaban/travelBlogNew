@@ -150,25 +150,35 @@ $req->execute();
 
     if(isset($_POST['username'])&& $_POST['username']!=""){
         $filteredUsername = filter_input(INPUT_POST,'username', FILTER_SANITIZE_SPECIAL_CHARS);
+    $username=$filteredUsername;
+    
     }
     if(isset($_POST['first_name'])&& $_POST['first_name']!=""){
         $filteredFirst_name = filter_input(INPUT_POST,'first_name', FILTER_SANITIZE_SPECIAL_CHARS);
+    $first_name=$filteredFirst_name;
+    
     }
 if(isset($_POST['surname'])&& $_POST['surname']!=""){
         $filteredSurname = filter_input(INPUT_POST,'surname', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+    $surname=$filteredSurname;
+    
+}
 if(isset($_POST['email'])&& $_POST['email']!=""){
         $filteredEmail = filter_input(INPUT_POST,'email', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+    $email=$filteredEmail;
+    
+}
 if(isset($_POST['password'])&& $_POST['password']!=""){
         $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+    $password=$filteredPassword;
+    
+}
 
-$username=$filteredUsername;
-$first_name=$filteredFirst_name;
-$surname=$filteredSurname;
-$email=$filteredEmail;
-$password=$filteredPassword;
+
+
+
+
+
 
 
 $req->execute();

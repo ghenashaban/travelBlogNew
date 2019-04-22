@@ -60,16 +60,7 @@
 
             <div class="col-12 narrow text-center">
                 <h1>Here are our latest destination articles
-            <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
-</div>
-                
-                </h1>
+               </h1>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                 <a class="btn btn-secondary btn-md" href="#">Find out more</a>
                 

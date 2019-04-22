@@ -15,9 +15,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php
-        echo "so over this";
-        ?>
+      
                 <!--Social Media -->
 
                 <div class="icon-bar">

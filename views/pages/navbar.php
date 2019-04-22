@@ -22,7 +22,11 @@
                         </li>;
                           <li class="nav-item">
                             <a class="nav-link"  href="?controller=post&action=create" >Create new article</a>
+                        </li>;
+                         <li class="nav-item">
+                            <a class="nav-link"  href="" >Add new blogger</a>
                         </li>';
+                        
                             
                         } }?>
                        

@@ -53,7 +53,8 @@ public function login() {
          else 
          {
             User::register(); 
-                 require_once ('views/users/login.php');         }
+            
+            require_once('views/users/confirmation.php'); }
      }  
      
    public function update() {

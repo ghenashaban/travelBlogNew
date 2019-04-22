@@ -1,4 +1,5 @@
 
+<link href="views/css/search.css" rel="stylesheet" type="text/css"/>
 
     <div class="caption text-center">
         <h3> Welcome! أهلا بك! Bem Vinda! Failte! Bienvenido! </h3>
