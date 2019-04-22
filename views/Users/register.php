@@ -3,7 +3,7 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          
     </head>
-<p>Fill in the following form to Register:</p>
+<h3>Fill in the following form to Register:</h3>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
  
@@ -26,23 +26,24 @@
        <label>email</label>
         <input class="w3-input" type="text" name="email" required>
     </p>
-    <div class="form-group">
-                        <input id="password1" onKeyUp="check_pass()" type="password" class="form-control" name="password"required  placeholder="Enter Password" />
-                    </div>
-                    <div class="form-group">
-                        <input  id="password2" onKeyUp="check_pass()" type="password" name="confirm_password" class="form-control"required  placeholder="Confirm Password" />
-                    </div>
-                    <div class="clearfix"></div><hr />
-                    <div class="form-group">
+    <p>
+        <label>password</label>
+                        <input class="w3-input"  id="password1" onKeyUp="check_pass()" type="password" class="form-control" name="password"required  placeholder="Enter Password" />
+    </p>
+    <p>
+        <label>Confirm password</label>                <input class="w3-input"  id="password2" onKeyUp="check_pass()" type="password" name="confirm_password" class="form-control"required  placeholder="Confirm Password" />
+    </p>
+    <span id='message'></span> <br>
                         <button  type="submit" value="Submit" id="submit" disabled class="btn btn-default" >-->
                             <i class="glyphicon glyphicon-open-file"></i>&nbsp;SIGN UP
                         </button>
+    
                     </div>
                     <br />
                      <input class="w3-input" type="hidden" name="role" value="User" required>
         
     
-<span id='message'></span>
+
    
     
       
