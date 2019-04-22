@@ -23,7 +23,7 @@
            
                 </textarea> 
                   
-                    </div> </center>>
+                    </div> </center>
             </p>
             
   <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />

@@ -30,7 +30,7 @@ class User {
     public static function all() {
         $list = [];
         $db = Db::getInstance();
-        $req = $db->query("select * from user ");
+        $req = $db->query("select * from user where role='User' ");
         foreach ($req->fetchAll() as $user) {
             $list[] = new User($user['id'], $user['first_name'], $user['surname'], $user['username'], $user['email'], $user['role'], $user['password'], $user['created_at'], $user['updated_at'], $user['country_id']);
         }
@@ -101,17 +101,21 @@ unset($_SESSION["id"]);
 }
 public static function register() {
 $db = Db::getInstance();
-$req = $db->prepare("insert into user(first_name, surname, username, password, email ) values ( :first_name, :surname, :username,  :password, :email)");
+$req = $db->prepare("insert into user(first_name, surname, username, password, email, role ) values ( :first_name, :surname, :username,  :password, :email, :role)");
 
 $req->bindParam(':first_name', $first_name);
           $req->bindParam(':surname', $surname);
           $req->bindParam(':username', $username);
           $req->bindParam(':email', $email);
+          $req->bindParam(':role', $role);
         
          $req->bindParam(':password', $password);
 
     if(isset($_POST['first_name'])&& $_POST['first_name']!=""){
         $filteredFirst = filter_input(INPUT_POST,'first_name', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+     if(isset($_POST['role'])&& $_POST['role']!=""){
+        $filteredRole = filter_input(INPUT_POST,'role', FILTER_SANITIZE_SPECIAL_CHARS);
     }
      if(isset($_POST['surname'])&& $_POST['surname']!=""){
         $filteredSecond = filter_input(INPUT_POST,'surname', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -127,6 +131,7 @@ $req->bindParam(':first_name', $first_name);
         $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
+    $role=$filteredRole;
 $first_name = $filteredFirst;
 $surname = $filteredSecond;
 $username = $filteredUser;
@@ -195,4 +200,48 @@ $req->execute();
       $req->execute(array('id' => $id));
   }
     
+  public static function registerAdmin() {
+$db = Db::getInstance();
+$req = $db->prepare("insert into user(first_name, surname, username, password, role, email ) values ( :first_name, :surname, :username,  :password, :role, :email)");
+
+$req->bindParam(':first_name', $first_name);
+          $req->bindParam(':surname', $surname);
+          $req->bindParam(':username', $username);
+          $req->bindParam(':email', $email);
+          $req->bindParam(':role', $role);
+         $req->bindParam(':password', $password);
+
+    if(isset($_POST['first_name'])&& $_POST['first_name']!=""){
+        $filteredFirst = filter_input(INPUT_POST,'first_name', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+     if(isset($_POST['surname'])&& $_POST['surname']!=""){
+        $filteredSecond = filter_input(INPUT_POST,'surname', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+    if(isset($_POST['username'])&& $_POST['username']!=""){
+        $filteredUser = filter_input(INPUT_POST,'username', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+     if(isset($_POST['email'])&& $_POST['email']!=""){
+        $filteredEmail = filter_input(INPUT_POST,'email', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+    if(isset($_POST['role'])&& $_POST['role']!=""){
+        $filteredRole = filter_input(INPUT_POST,'role', FILTER_SANITIZE_SPECIAL_CHARS);
+   
+    
+}
+    
+     if(isset($_POST['password'])&& $_POST['password']!=""){
+        $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+
+ $role=$filteredRole;
+$first_name = $filteredFirst;
+$surname = $filteredSecond;
+$username = $filteredUser;
+$email = $filteredEmail;
+
+$password = $filteredPassword;
+
+$req->execute();
+}
+
 }

@@ -4,9 +4,15 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <style>
+            #inputText {
+    height : 50px;
+    
+            }
+        </style>
     </head>
     <body>
-      <?php echo 'welcome'.$_SESSION["id"]?>
+      
         <form action=""  method="POST" class="w3-container" enctype="multipart/form-data">
     
  
@@ -17,7 +23,7 @@
         
       
  
-    <center>  <div style="width:900px">
+    <center>  <div id="inputText" style="width:200px; height:100px;">
             <textarea  class="tinymce" id="texteditor" type="text" name="content" required> 
            
                 </textarea> 

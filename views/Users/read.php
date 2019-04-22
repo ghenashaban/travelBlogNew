@@ -6,18 +6,37 @@
     </head>
     <body>
         
-        See below for full details of this registered User:
+        <h3>Your account details: </h3>
         <br>
-<?php echo "$users->first_name" ?>  
-<?php echo "$users->surname" ?>  <br>
+        
+       
+        <h6>Update your account here:</h6>
+<a href='?controller=user&action=update&id=<?php echo $_SESSION["id"]; ?>'class='btn btn-primary'>Update</a>
 
-<?php echo $users->id ?> <br>
-<?php echo $users->email ?> <br>
-<?php echo $users->role ?> <br>
-<?php echo $users->password ?> <br>
-<?php echo $users->created_at ?> <br>
-<?php echo $users->updated_at ?> <br>
-<?php echo $users->country_id ?> <br>
+
+<?php // echo $users->role ?> <br>
+
+<?php // echo $users->updated_at ?> <br>
+<?php // echo $users->country_id ?> <br>
+
+<table style="width:100%">
+  <tr>
+    <td>First Name</td>
+    <td><?php echo "$users->first_name" ?></td>
+  </tr>
+  <tr><td>Surname</td> 
+   <td><?php echo "$users->surname" ?> </td></tr>
+    <tr><td>User ID</td>
+    <td><?php echo $users->id ?> <br></td></tr>
+    <tr><td>Email</td>
+    <td><?php echo $users->email ?> <br></td></tr>
+    <tr><td>Password</td>
+    <td><?php echo $users->password ?> <br></td></tr>
+    <tr><td>Jointed Date</td>
+    <td><?php echo $users->created_at ?></td></tr>
+  
+</table>
+
         
 <!--// FOR USE IF USERS HAVE AVATARS
 //$file1 = 'views/images/' .$posts->title .".jpg";

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php 
+if (!empty($_SESSION) ){
+$userID=$_SESSION['id'];
+}
+?> 
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                 <a class="navbar-brand" href=""><img src ="views/images/logo4.jpg"></a>
@@ -24,13 +29,13 @@
                             <a class="nav-link"  href="?controller=post&action=create" >Create new article</a>
                         </li>;
                          <li class="nav-item">
-                            <a class="nav-link"  href="" >Add new blogger</a>
+                            <a class="nav-link"  href="?controller=user&action=registerAdmin" >Add new blogger</a>
                         </li>';
                         
                             
                         } }?>
                        
-                        <?php if (empty($_SESSION) || ($_SESSION["role"]=="Author") )
+                        <?php if (empty($_SESSION) || ($_SESSION["role"]=="User") )
                             {echo'<li class="nav-item">
                             <a class="nav-link"  href="#destination" >Destination</a>
                         </li>
@@ -55,7 +60,7 @@
   <a href="?controller=user&action=logout"> <button class="button"><i class="material-icons">
                         lock
                      </i> <br>log out </button> </a>
-  <a href=""> <button class="button"><i class="material-icons">
+  <a href="?controller=user&action=read&id='.$userID.'"> <button class="button"><i class="material-icons">
                         lock
                      </i> <br>view account </button> </a>
   

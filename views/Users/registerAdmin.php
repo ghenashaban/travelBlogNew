@@ -1,4 +1,4 @@
-<p>Fill in the following form to Register:</p>
+<p>Fill in the following form to add a new Blogger:</p>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
  
@@ -28,18 +28,14 @@
         
     </p>
      <p>
-     <label>Role</label>
-     <input class="w3-input" type="hidden" name="role" value="User" required>
+      <p>
+   
+     <input class="w3-input" type="hidden" name="role" value="Admin" required>
         
     </p>
+    
            
   <p>
     <input class="w3-btn w3-pink" type="submit" value="Register">
   </p>
 </form>
-
-
-
-
-
-           

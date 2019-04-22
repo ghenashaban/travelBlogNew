@@ -55,7 +55,17 @@ public function login() {
             User::register(); 
             
             require_once('views/users/confirmation.php'); }
-     }  
+     }
+      public function registerAdmin () {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            require_once ('views/users/registerAdmin.php');
+        }
+         else 
+         {
+            User::registerAdmin(); 
+            
+            require_once('views/users/confirmation.php'); }
+     } 
      
    public function update() {
         

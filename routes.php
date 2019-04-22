@@ -29,7 +29,7 @@ $controllers = array('pages' => ['home', 'error'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
                      'post' => ['readAll','delete','create','read','update', 'search','addComment'],
 
-                   'user' => ['readAll', 'read','login','logout','delete','register','update']
+                   'user' => ['readAll', 'read','login','logout','delete','register','update','registerAdmin']
 
                     );
 

@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-        <h1>list of all posts</h1>
+        <h3>list of all posts</h3>
   
 
    <?php foreach ($posts as $post) { ?>

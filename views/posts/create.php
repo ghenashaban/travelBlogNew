@@ -1,9 +1,7 @@
 <html>
 <p>Fill in the following form to create a new article:</p>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
-    
- 
-
+   
     <p>
         <label>Title</label>
     <input class="w3-input" type="text" name="title" required autofocus>

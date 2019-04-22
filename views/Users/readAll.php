@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <p>Here is a list of all registered users:</p>
+        <h3> List of all registered users:</h3>
 
         <?php foreach ($users as $user) { ?>
 
@@ -18,7 +18,7 @@ and open the template in the editor.
             <?php echo "$user->surname" ?>  <br><br>
             <a href='?controller=user&action=read&id=<?php echo $user->id; ?>' class='btn btn-primary'>More info..</a>
         <a href='?controller=user&action=delete&id=<?php echo $user->id; ?>' class='btn btn-primary' onclick="ConfirmDelete()">Delete</a>
-<a href='?controller=user&action=update&id=<?php echo $user->id; ?>'class='btn btn-primary'>Update</a>
+<!--<a href='?controller=user&action=update&id=<?php echo $user->id; ?>'class='btn btn-primary'>Update</a>-->
         <?php } ?>
 
         <script>
