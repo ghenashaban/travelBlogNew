@@ -49,51 +49,43 @@
 
             <!-- end landing page -->
 
-
+            
         </div>
+        
+<!--- End home section --->
 
-        <!--- End home section --->
+<!--- start destination section --->
 
-        <!--- start destination section --->
+<div id="destination" class="offset">
+    
+    <div class="col-12 narrow text-center">
+        <h1>Here are our latest destination articles
+        </h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <a class="btn btn-secondary btn-md" href="#">Find out more</a>
+        
+</div>    
+</div>
+<!--- End destination section --->
 
-        <div id="destination" class="offset">
-
-            <div class="col-12 narrow text-center">
-                <h1>Here are our latest destination articles
-               </h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <a class="btn btn-secondary btn-md" href="#">Find out more</a>
-                
-            </div>    
-        </div>
-        <!--- End destination section --->
-
-        <!--- start eco travel section --->
-        <div id="ecoTravel" class="offset">    
-
-            <div class="jumbotron">
-                <div class="narrow text-center">
-
-                    <div class="col-12">
-                        <h3 class="heading">EcoTravel</h3>
-                        <div class="heading-underline"></div>
-                    </div>   
-
-                    <div class="row">                
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fas fa-play-circle fa-4x" data-fa-transform="shrink-3 up-5"></i>
-                                <h3>Custom Animation</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fas fa-sliders-h fa-4x" data-fa-transform="shrink-4.5 up-4.5"></i>
-                                <h3>Content slider</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
+<!--- start eco travel section --->
+<div id="ecoTravel" class="offset">    
+    
+    <div class="jumbotron">
+        <div class="narrow text-center">
+            
+            <div class="col-12">
+                <h3 class="heading">EcoTravel</h3>
+                <div class="heading-underline"></div>
+        </div>   
+            
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="feature">
+                         <i class="fas fa-play-circle fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                         <h3>Custom Animation</h3>
+                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
+                     </div>                                        
                         </div>
 
                         <div class="col-md-4">
@@ -104,6 +96,14 @@
                             </div>                      
                         </div>
 
+                 <div class="col-md-4">
+                            <div class="feature">
+                                <i class="fab fa-wpforms fa-4x" data-fa-transform="shrink-4 up-5"></i>
+                                <h3>Contact form</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
+                            </div>                      
+                 </di>
+                 
                     </div>             
                 </div>
             </div>
