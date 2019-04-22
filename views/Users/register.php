@@ -25,10 +25,8 @@
     <p>
        <label>email</label>
         <input class="w3-input" type="text" name="email" required>
-        
     </p>
-    
-                    <div class="form-group">
+    <div class="form-group">
                         <input id="password1" onKeyUp="check_pass()" type="password" class="form-control" name="password"required  placeholder="Enter Password" />
                     </div>
                     <div class="form-group">
@@ -41,11 +39,14 @@
                         </button>
                     </div>
                     <br />
+                     <input class="w3-input" type="hidden" name="role" value="User" required>
+        
+    
 <span id='message'></span>
+   
+    
       
-  <p>
-    <input class="w3-btn w3-pink" type="submit" value="Register">
-  </p>
+  
 </form>
   <script>
 //         
