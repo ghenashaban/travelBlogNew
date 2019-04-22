@@ -25,12 +25,10 @@ $req->bindParam(':post_id', $post_id);
 $req->bindParam(':content', $content);
 $req->bindParam(':user_id', $user_id);
 
-
-    if(isset($_POST['content'])&& $_POST['content']!=""){
-        $filteredContent = filter_input(INPUT_POST,'content', FILTER_SANITIZE_SPECIAL_CHARS);
-    $content = $filteredContent;
-        
-    }
+if (isset($_POST['content'])) {
+            $filteredContent = $_POST['content'];
+            $content=$filteredContent;
+        }
     if(isset($_POST['post_id'])&& $_POST['post_id']!=""){
         $filteredID = filter_input(INPUT_POST,'post_id', FILTER_SANITIZE_SPECIAL_CHARS);
     $post_id=$filteredID;}

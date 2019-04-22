@@ -87,9 +87,9 @@ $req->bindParam(':image', $image);
     if(isset($_POST['title'])&& $_POST['title']!=""){
         $filteredTitle = filter_input(INPUT_POST,'title', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-    if(isset($_POST['body'])&& $_POST['body']!=""){
-        $filteredBody = filter_input(INPUT_POST,'body', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+   if (isset($_POST['body'])) {
+            $filteredBody = $_POST['body'];
+        }
 //    if(isset($_POST['image'])&& $_POST['image']!=""){
 //        $filteredimage = filter_input(INPUT_POST,'image', FILTER_SANITIZE_SPECIAL_CHARS);
 //    }
@@ -159,9 +159,11 @@ if($post){
     if(isset($_POST['title'])&& $_POST['title']!=""){
         $filteredTitle = filter_input(INPUT_POST,'title', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-    if(isset($_POST['body'])&& $_POST['body']!=""){
-        $filteredBody = filter_input(INPUT_POST,'body', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+   
+     if (isset($_POST['body'])) {
+            $filteredBody = $_POST['body'];
+        }
+    
 $title = $filteredTitle;
 $body = $filteredBody;
 $req->execute();
