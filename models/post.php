@@ -111,27 +111,25 @@ public static function uploadFile(string $title) {
                 trigger_error("File Missing!");
 	}
 
-	if ($_FILES[self::InputKey]['error'] > 0) {
-		trigger_error("Handle the error! " . $_FILES[InputKey]['error']);
-	}
-
-
 	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
 		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
 	}
 
 	$tempFile = $_FILES[self::InputKey]['tmp_name'];
-        $path = "C:/xampp/htdocs/travelBlog/views/images/";
+        $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
 	$destinationFile = $path . $title . '.jpeg';
+         $imagePath = "uploads/" . $title . '.jpeg';
 
-	if (!move_uploaded_file($tempFile, $destinationFile)) {
-		trigger_error("Handle Error");
+	if (!move_uploaded_file($tempFile, $destinationFile) ) {
+		return $imagePath;
 	}
+       
 		
 	
 	if (file_exists($tempFile)) {
 		unlink($tempFile); 
 	}
+        return $imagePath;
 }
 
   public static function find($id) {
