@@ -31,7 +31,12 @@ echo "these are the comments:";
 foreach ($comments as $comment) { ?>
      <p>  <td>   <?php echo $comment->content; ?> </td>
    <?php } 
+   echo "likes:";
+ echo $likes->totalcount; 
+
+  
    
    require_once 'views/posts/addComment.php';
+   require_once 'views/posts/addLike.php';
    ?>
  

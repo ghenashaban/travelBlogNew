@@ -48,8 +48,11 @@ if (!isset($_GET['id']))
       require_once 'models/comment.php';
       $comments=Comment::findByPostId($_GET['id']);
       Comment::addComment();
-      // added this again so i can see the comment right away
        $comments=Comment::findByPostId($_GET['id']); 
+       require_once 'models/like.php';
+        $likes=Like::findByPostId($_GET['id']);
+      Like::addLike();
+       $likes=Like::findByPostId($_GET['id']);
       require_once 'views/posts/read.php';
 //      }
 // catch (Exception $ex){
