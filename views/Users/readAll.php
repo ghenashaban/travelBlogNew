@@ -20,7 +20,8 @@ and open the template in the editor.
         <a href='?controller=user&action=delete&id=<?php echo $user->id; ?>' class='btn btn-primary' onclick="ConfirmDelete()">Delete</a>
 <!--<a href='?controller=user&action=update&id=<?php echo $user->id; ?>'class='btn btn-primary'>Update</a>-->
         <?php } ?>
-
+        
+      
         <script>
             function ConfirmDelete() {
                 var txt;
@@ -31,11 +32,13 @@ and open the template in the editor.
                     $user->id;
                 ?>");
                 } else {
-                    txt = "You pressed Cancel!";
-                }
-                document.getElementById("demo").innerHTML = txt;
-            }
-        </script> 
+                   txt = "You pressed Cancel!";
+               }
+               document.getElementById("demo").innerHTML = txt;
+           }
+            
+            </script>
+          
 
     </body>
 </html>
