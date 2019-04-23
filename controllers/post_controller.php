@@ -39,23 +39,36 @@ class PostController {
 
   Public function read() {
 
-if (!isset($_GET['id'])) 
+if (!isset($_GET['id'])) {
         return call('pages', 'error');
-
-//      try{
-      // we use the given id to get the correct post
+} try {
       $posts = Post::find($_GET['id']);
       require_once 'models/comment.php';
       $comments=Comment::findByPostId($_GET['id']);
-      Comment::addComment();
-      // added this again so i can see the comment right away
-       $comments=Comment::findByPostId($_GET['id']); 
-      require_once 'views/posts/read.php';
-//      }
-// catch (Exception $ex){
-//     return call('pages','error');
-// }
+       require_once 'models/like.php';
+        $likes=Like::findByPostId($_GET['id']);
+       
+    require_once 'views/posts/read.php';
+   
+    } catch (Exception $ex) {
+            return call('pages', 'error');
     }
+     if (!empty($_REQUEST["content"])) {
+//        require_once 'models/comment.php';
+         Comment::addComment(); 
+//         require_once 'views/posts/read.php';
+           $comments=Comment::findByPostId($_GET['id']);     
+           header('location: http://localhost/travelBlogNew/index.php?controller=post&action=read&id='.$_GET["id"]);
+      }
+    if (!empty($_REQUEST["like_count"])) {
+//        require_once 'models/like.php';
+         Like::addLike();
+//         require_once 'views/posts/read.php';
+         $likes=Like::findByPostId($_GET['id']);
+          header('location: http://localhost/travelBlogNew/index.php?controller=post&action=read&id='.$_GET["id"]);
+       
+      }
+  }
     
 
 public function update() {
@@ -79,6 +92,7 @@ public function update() {
       
     }
 
+
 public function searchBar() {
         
       if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -97,3 +111,34 @@ public function searchBar() {
     
 }
 
+ 
+// function addComment() {
+//if (isset($_POST['submit'])) {
+//
+//                Comment::addComment();
+//               
+//                
+//            } else {
+//                $new= new PostController;
+//                $new->read();
+//                Post::find($_GET['id']);
+//                require_once('views/posts/read.php');
+//            }
+//
+//}
+//function addComment(){
+//    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+//          require_once('views/posts/.php');
+//      }
+//      else { 
+//          require_once('views/posts/read.php');
+//          require_once('models/comment.php');
+//            Comment::addComment();
+//             
+//          
+//      require_once('views/posts/read.php');
+//      }
+//      
+//    }
+//
+      

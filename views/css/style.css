@@ -247,16 +247,16 @@ hr.socket{
 /* ----------Log in/out and sign up??---------------*/
 .button {
   border-radius: 4px;
-  background-color: #55d6be;
+  background-color: black;
   border: none;
   color: white;
   text-align: center;
   font-size: 15px;
   padding: 10px;
-  width: 80px;
+/*  width: 80px;*/
   transition: all 0.5s;
   cursor: pointer;
-  margin: 2px;
+/*  margin: 2px;*/
 }
 
 .button span {
@@ -285,12 +285,16 @@ hr.socket{
 }
 
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: black;
   color: white;
-  padding: 16px;
-  font-size: 16px;
+  padding: 10px;
+/*  font-size: 20px;*/
   border: none;
   cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  width: 80px;
 }
 
 .dropdown {
@@ -301,8 +305,8 @@ hr.socket{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: black;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -321,9 +325,9 @@ hr.socket{
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color:#55d6be;
 }
-
+.material-icons.md-48 { font-size: 48px; }
 /*table, th, td {
   border: 1px solid black;
   border-collapse: collapse;

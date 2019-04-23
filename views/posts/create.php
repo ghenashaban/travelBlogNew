@@ -7,6 +7,11 @@
     <input class="w3-input" type="text" name="title" required autofocus>
         
     </p>
+    <p>
+     
+    <input class="w3-input" type="hidden" name="user_id" value=<?php echo $_SESSION['id']?>>
+        
+    </p>
       
      <p>
                 <label>Body</label>
