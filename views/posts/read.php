@@ -2,6 +2,10 @@
 
 <p>Title: <?php echo $posts->title; ?></p>
 <p>Post Body: <?php echo $posts->body; ?></p>
+ <form action="" method="POST">
+<a class="btn btn-info" href="?controller=post&action=addLike" type="submit">Like</a>
+
+</form>
 
 <?php 
 $file1 = 'views/images/' .$posts->title .".jpg";
@@ -29,9 +33,9 @@ echo $img;   }
      
 echo "these are the comments:";
 foreach ($comments as $comment) { ?>
+
      <p>  <td>   <?php echo $comment->content; ?> </td>
    <?php } 
    
    require_once 'views/posts/addComment.php';
    ?>
- 

@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>      
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="JS/js.js" type="text/javascript"></script>
+        
         <link rel="stylesheet" href="views/css/fixed.css">   
         <!--         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
@@ -290,7 +290,7 @@
 <!-- END Bootstrap-Cookie-Alert -->
 
         <!--- Script Source Files -->
-        
+      
       <script src="views/JS/js.js" type="text/javascript"></script>
        <script src="views/JS/jquery-3.3.1.min.js"></script>
        <script src="views/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>

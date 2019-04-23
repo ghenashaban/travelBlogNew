@@ -78,6 +78,18 @@ public function update() {
       }
       
     }
+    
+    public function addLike() {
+        
+function likePost() {
+if (isset($_POST['submit'])) {
+
+               Like::likePost();
+                require_once('views/posts/read.php');
+            }
+}
+    }
+
 
 // function addComment() {
 //if (isset($_POST['submit'])) {
@@ -108,4 +120,4 @@ public function update() {
 //      
 //    }
 //
-      }
+}
