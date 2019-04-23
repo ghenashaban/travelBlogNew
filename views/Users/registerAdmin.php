@@ -27,6 +27,10 @@
         <input class="w3-input" type="text" name="email" required>
     </p>
     <p>
+       <label>Country</label>
+       <input class="w3-input" type="text" name="country" placeholder="UK AND USA for now" required>
+    </p>
+    <p>
         <label>password</label>
                         <input class="w3-input"  id="password1" onKeyUp="check_pass()" type="password" class="form-control" name="password"required  placeholder="Enter Password" />
     </p>

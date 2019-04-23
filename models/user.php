@@ -12,8 +12,9 @@ class User {
     public $created_at;
     public $updated_at;
     public $country_id;
+    public $country;
 
-    public function __construct($id, $first_name, $surname, $username, $email, $role, $password, $created_at, $updated_at, $country_id) {
+    public function __construct($id, $first_name, $surname, $username, $email, $role, $password, $created_at, $updated_at, $country_id, $country) {
 
         $this->id = $id;
         $this->first_name = $first_name;
@@ -25,6 +26,7 @@ class User {
         $this->created_at = $created_at;
         $this->updated_at = $updated_at;
         $this->country_id = $country_id;
+        $this->country = $country;
     }
 
     public static function all() {
@@ -32,7 +34,7 @@ class User {
         $db = Db::getInstance();
         $req = $db->query("select * from user where role='User' ");
         foreach ($req->fetchAll() as $user) {
-            $list[] = new User($user['id'], $user['first_name'], $user['surname'], $user['username'], $user['email'], $user['role'], $user['password'], $user['created_at'], $user['updated_at'], $user['country_id']);
+            $list[] = new User($user['id'], $user['first_name'], $user['surname'], $user['username'], $user['email'], $user['role'], $user['password'], $user['created_at'], $user['updated_at'], $user['country_id'],"");
         }
         return $list;
     }
@@ -44,7 +46,7 @@ class User {
         $req->execute(array('id' => $id));
         $user = $req->fetch();
         if ($user) {
-            return new User($user['id'], $user['first_name'], $user['surname'], $user['username'], $user['email'], $user['role'], $user['password'], $user['created_at'], $user['updated_at'], $user['country_id']);
+            return new User($user['id'], $user['first_name'], $user['surname'], $user['username'], $user['email'], $user['role'], $user['password'], $user['created_at'], $user['updated_at'], $user['country_id'],$user['country']);
         } else {
             throw new Exception('A real exception should go here');
         }
@@ -101,14 +103,14 @@ unset($_SESSION["id"]);
 }
 public static function register() {
 $db = Db::getInstance();
-$req = $db->prepare("insert into user(first_name, surname, username, password, email, role ) values ( :first_name, :surname, :username,  :password, :email, :role)");
+$req = $db->prepare("insert into user(first_name, surname, username, password, email, role, country_id ) values (( :first_name),( :surname), (:username), ( :password),( :email), (:role),((select id from country where country=:country)) )");
 
 $req->bindParam(':first_name', $first_name);
           $req->bindParam(':surname', $surname);
           $req->bindParam(':username', $username);
           $req->bindParam(':email', $email);
           $req->bindParam(':role', $role);
-        
+        $req->bindParam(':country', $country);
          $req->bindParam(':password', $password);
 
     if(isset($_POST['first_name'])&& $_POST['first_name']!=""){
@@ -116,6 +118,9 @@ $req->bindParam(':first_name', $first_name);
     }
      if(isset($_POST['role'])&& $_POST['role']!=""){
         $filteredRole = filter_input(INPUT_POST,'role', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+     if(isset($_POST['country'])&& $_POST['country']!=""){
+        $filteredCountry = filter_input(INPUT_POST,'country', FILTER_SANITIZE_SPECIAL_CHARS);
     }
      if(isset($_POST['surname'])&& $_POST['surname']!=""){
         $filteredSecond = filter_input(INPUT_POST,'surname', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -132,6 +137,7 @@ $req->bindParam(':first_name', $first_name);
     }
 
     $role=$filteredRole;
+    $country=$filteredCountry;
 $first_name = $filteredFirst;
 $surname = $filteredSecond;
 $username = $filteredUser;
@@ -202,7 +208,7 @@ $req->execute();
     
   public static function registerAdmin() {
 $db = Db::getInstance();
-$req = $db->prepare("insert into user(first_name, surname, username, password, role, email ) values ( :first_name, :surname, :username,  :password, :role, :email)");
+$req = $db->prepare("insert into user(first_name, surname, username, password, role, email, country_id ) values (( :first_name),( :surname),( :username),(  :password),( :role),( :email),(select id from country where country=:country))");
 
 $req->bindParam(':first_name', $first_name);
           $req->bindParam(':surname', $surname);
@@ -210,6 +216,7 @@ $req->bindParam(':first_name', $first_name);
           $req->bindParam(':email', $email);
           $req->bindParam(':role', $role);
          $req->bindParam(':password', $password);
+         $req->bindParam(':country', $country);
 
     if(isset($_POST['first_name'])&& $_POST['first_name']!=""){
         $filteredFirst = filter_input(INPUT_POST,'first_name', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -223,6 +230,9 @@ $req->bindParam(':first_name', $first_name);
      if(isset($_POST['email'])&& $_POST['email']!=""){
         $filteredEmail = filter_input(INPUT_POST,'email', FILTER_SANITIZE_SPECIAL_CHARS);
     }
+     if(isset($_POST['country'])&& $_POST['country']!=""){
+        $filteredCountry = filter_input(INPUT_POST,'country', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
     if(isset($_POST['role'])&& $_POST['role']!=""){
         $filteredRole = filter_input(INPUT_POST,'role', FILTER_SANITIZE_SPECIAL_CHARS);
    
@@ -233,7 +243,8 @@ $req->bindParam(':first_name', $first_name);
         $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
- $role=$filteredRole;
+ $country=$filteredCountry;
+    $role=$filteredRole;
 $first_name = $filteredFirst;
 $surname = $filteredSecond;
 $username = $filteredUser;
