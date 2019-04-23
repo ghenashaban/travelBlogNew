@@ -55,14 +55,20 @@ $userID=$_SESSION['id'];
                         </ul> 
                         <?php if (!empty($_SESSION['username'])){
                             echo' <div class="dropdown">
-  <button class="dropbtn">My account</button>
+  <button class="dropbtn" class="button">
+<i class="material-icons md-48"> account_circle </i></button>
   <div class="dropdown-content">
-  <a href="?controller=user&action=logout"> <button class="button"><i class="material-icons">
+  
+
+
+<a href="?controller=user&action=read&id='.$userID.'"> <button class="button"><i class="material-icons md-436">
+                        edit
+                     </i> <br>My Account </button> </a>
+
+  <a href="?controller=user&action=logout"> <button class="button"><i class="material-icons md-36">
                         lock
                      </i> <br>log out </button> </a>
-  <a href="?controller=user&action=read&id='.$userID.'"> <button class="button"><i class="material-icons">
-                        lock
-                     </i> <br>view account </button> </a>
+  
   
   </div>
 </div>';

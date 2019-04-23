@@ -1,7 +1,7 @@
-<p>This is the requested post:</p>
 
-<p>Title: <?php echo $posts->title; ?></p>
-<p>Post Body: <?php echo $posts->body; ?></p>
+
+<h3><?php echo $posts->title; ?> </h3>
+<h5> <?php echo $posts->body; ?></h5>
 
 <?php 
 $file1 = 'views/images/' .$posts->title .".jpg";
@@ -31,7 +31,13 @@ echo "these are the comments:";
 foreach ($comments as $comment) { ?>
      <p>  <td>   <?php echo $comment->content; ?> </td>
    <?php } 
+  echo "<br>";
+   echo "likes:";
+ echo $likes->totalcount; 
+
+  
    
    require_once 'views/posts/addComment.php';
+   require_once 'views/posts/addLike.php';
    ?>
  
