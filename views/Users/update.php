@@ -1,4 +1,4 @@
-
+<div id="banner">
 <p>Fill in the following form to update the user:</p>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     <h2>Update User</h2>
@@ -33,10 +33,6 @@
 </form>
 
 
-//<?php // $username=$_POST["username"];
-//
-//echo $username;
-//
-//?>
+</div>
 
 

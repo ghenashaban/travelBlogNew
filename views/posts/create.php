@@ -1,4 +1,5 @@
 <html>
+    <div id="banner">
 <p>Fill in the following form to create a new article:</p>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
    
@@ -32,7 +33,9 @@
     <input class="w3-btn w3-pink" type="submit" value="Add Article">
   </p>
 </form>
+   
 <script src="views/js/js/jquery.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/init-tinymce.js" type="text/javascript"></script>
 </html>
+</div>

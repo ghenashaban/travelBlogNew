@@ -6,7 +6,7 @@ $userID=$_SESSION['id'];
 ?> 
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand" href=""><img src ="views/images/logo4.jpg"></a>
+                <a class="navbar-brand" href=""><img src ="views/images/logot.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>   
                 </button>
@@ -63,7 +63,7 @@ $userID=$_SESSION['id'];
 
 <a href="?controller=user&action=read&id='.$userID.'"> <button class="button"><i class="material-icons md-436">
                         edit
-                     </i> <br>My Account </button> </a>
+                     </i> <br>Details</button> </a>
 
   <a href="?controller=user&action=logout"> <button class="button"><i class="material-icons md-36">
                         lock
@@ -74,10 +74,17 @@ $userID=$_SESSION['id'];
 </div>';
                         }else{
                            
-                            echo'<a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
+                            echo'
+                                
+<div class="dropdown">
+  <button class="dropbtn" class="button">
+<i class="material-icons md-48"> account_circle </i></button>
+  <div class="dropdown-content">
+  
+<a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
                         lock_open
-                     </i> <br>log in </button> </a>';
-                             echo '<a href="?controller=user&action=register">
+                     </i> <br>log in </button> </a>
+                            <a href="?controller=user&action=register">
                             <button class="button"><i class="material-icons">
                                     person_add
                                 </i> <br>sign up </button> </a>';

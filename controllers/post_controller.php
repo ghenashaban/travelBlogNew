@@ -91,27 +91,9 @@ public function update() {
       }
       
     }
-
-
-public function searchBar() {
-        
-      if($_SERVER['REQUEST_METHOD'] == 'GET'){
-          
-      
-        require_once('views/posts/searchBar.php');
-        }
-      else
-          { 
-       Post::searchBar() ;
- require_once('index.php');
-      }
-      
-    }
-
-    
 }
 
- 
+
 // function addComment() {
 //if (isset($_POST['submit'])) {
 //
@@ -141,4 +123,3 @@ public function searchBar() {
 //      
 //    }
 //
-      

@@ -1,4 +1,5 @@
 <html>
+    <div id="banner">
  <div class="caption text-center">
      
            
@@ -46,7 +47,7 @@ echo "<img src='views/images/standard/_noproductimage.png' width='150' />";
     </p>
     </form>
  </div>
-
+    </div>
 
 <script src="views/js/js/jquery.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/tinymce.min.js" type="text/javascript"></script>
