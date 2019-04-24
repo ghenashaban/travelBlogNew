@@ -18,6 +18,23 @@
 
 <?php // echo $users->updated_at ?> <br>
 <?php // echo $users->country_id ?> <br>
+<?php
+$file1 = 'views/images/' .$users->username .".jpg";
+$file2 = 'views/images/' .$users->username .".jpeg";
+
+if(file_exists($file1) ){
+    $img = "<img src='$file1' width='150' />";
+    echo $img;
+    
+}
+else if (file_exists($file2)) {
+  $img = "<img src='$file2' width='150' />";
+echo $img;   } ?>
+
+
+
+<input type="submit" value="" />
+<input type="submit" value="" />
 
 <table style="width:100%">
   <tr>
