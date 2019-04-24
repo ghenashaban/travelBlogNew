@@ -23,10 +23,14 @@ ob_start(); ?>
   }
 
 
-//    require_once('views/layout.php');
-  require_once('views/layout1.php');
+//if (isset($_GET['action']) && ($_GET['action']!='login')){
+// require_once('views/layout1.php');   
+//}else {
+//    require_once('routes.php');
+//}
+  
 
-   
+   require_once('views/layout1.php');
 
     
   ob_flush();
