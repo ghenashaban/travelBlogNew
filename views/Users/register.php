@@ -3,6 +3,7 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          
     </head>
+    <div id="banner">
 <h3>Fill in the following form to Register:</h3>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
@@ -31,6 +32,17 @@
        <input class="w3-input" type="text" name="country" placeholder="UK AND USA for now" required>
     </p>
     <p>
+        <label>Upload profile picture</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="10000000"/>
+        
+        <input type="file"  name="myUploader"/>
+<!--        <input type="submit" value="Upload"/>-->
+    </p>
+    
+  <p>
+<!--    <input class="w3-btn w3-pink" type="submit" value="Add Article">-->
+  </p>
+    <p>
         <label>password</label>
                         <input class="w3-input"  id="password1" onKeyUp="check_pass()" type="password" class="form-control" name="password"required  placeholder="Enter Password" />
     </p>
@@ -53,6 +65,7 @@
       
   
 </form>
+    </div>
   <script>
 //         
             function check_pass() {
