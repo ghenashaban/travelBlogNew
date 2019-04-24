@@ -5,6 +5,7 @@
         <title></title>
     </head>
     <body>
+        <div id="banner">
         <h3>list of all posts</h3>
   
 
@@ -18,7 +19,7 @@
 </p>
                         <?php } ?>
                             
-   
+    </div>
   
      <script>
                         function ConfirmDelete() {

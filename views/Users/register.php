@@ -1,8 +1,14 @@
-<p>Fill in the following form to Register:</p>
+<html>
+    <head>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         
+    </head>
+    <div id="banner">
+<h3>Fill in the following form to Register:</h3>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
  
-</
+
     <p>
         <label>First_name</label>
         <input class="w3-input" type="text" name="first_name" required autofocus>
@@ -20,24 +26,63 @@
     <p>
        <label>email</label>
         <input class="w3-input" type="text" name="email" required>
-        
-    </p>
-    <p>
-     <label>password</label>
-        <input class="w3-input" type="text" name="password" required>
-        
     </p>
      <p>
-     <label>Role</label>
-     <input class="w3-input" type="hidden" name="role" value="User" required>
-        
+       <label>Country</label>
+       <input class="w3-input" type="text" name="country" placeholder="UK AND USA for now" required>
     </p>
-           
+    <p>
+        <label>Upload profile picture</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="10000000"/>
+        
+        <input type="file"  name="myUploader"/>
+<!--        <input type="submit" value="Upload"/>-->
+    </p>
+    
   <p>
-    <input class="w3-btn w3-pink" type="submit" value="Register">
+<!--    <input class="w3-btn w3-pink" type="submit" value="Add Article">-->
   </p>
-</form>
+    <p>
+        <label>password</label>
+                        <input class="w3-input"  id="password1" onKeyUp="check_pass()" type="password" class="form-control" name="password"required  placeholder="Enter Password" />
+    </p>
+    <p>
+        <label>Confirm password</label>                <input class="w3-input"  id="password2" onKeyUp="check_pass()" type="password" name="confirm_password" class="form-control"required  placeholder="Confirm Password" />
+    </p>
+    <span id='message'></span> <br>
+                        <button  type="submit" value="Submit" id="submit" disabled class="btn btn-default" >-->
+                            <i class="glyphicon glyphicon-open-file"></i>&nbsp;SIGN UP
+                        </button>
+    
+                    </div>
+                    <br />
+                     <input class="w3-input" type="hidden" name="role" value="User" required>
+        
+    
 
+   
+    
+      
+  
+</form>
+    </div>
+  <script>
+//         
+            function check_pass() {
+                if (document.getElementById('password1').value ==
+                        document.getElementById('password2').value) {
+                    document.getElementById('submit').disabled = false;
+
+                    $('#message').html('Matching').css('color', 'green');
+                } else {
+                    document.getElementById('submit').disabled = true;
+                     $('#message').html('Not Matching').css('color', 'red');
+
+                }
+            }
+
+        </script>
+</html>
 
 
 

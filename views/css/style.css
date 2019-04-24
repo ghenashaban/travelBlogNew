@@ -39,7 +39,7 @@ body {
 /* doesn't make it green as vidoe suggests approx 35 mins in'*/
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #1evba3;
+    color: #55d6be;
     
 }
 /* ----------Landing Page---------------*/
@@ -51,7 +51,7 @@ body {
     width: 100%;
     max-width: 100%;
     position:absolute;
-    top: 38%;
+    top: 25%;
     z-index: 1;
     color: white;
     text-transform: uppercase;
@@ -247,16 +247,19 @@ hr.socket{
 /* ----------Log in/out and sign up??---------------*/
 .button {
   border-radius: 4px;
-  background-color: #55d6be;
+  background: rgba(0,0,0,0.0) !important;
+/*   background-color: rgba(0,0,0,3);  Fallback color */
+/*  background-color: rgba(0,0,0,0.6);  Black background with 0.5 opacity */
   border: none;
   color: white;
   text-align: center;
   font-size: 15px;
   padding: 10px;
-  width: 80px;
+/*  width: 80px;*/
   transition: all 0.5s;
   cursor: pointer;
   margin: 2px;
+  
 }
 
 .button span {
@@ -275,6 +278,10 @@ hr.socket{
   transition: 0.5s;
 }
 
+.button:hover {
+   color:#55d6be;
+   
+}
 .button:hover span {
   padding-right: 25px;
 }
@@ -285,12 +292,16 @@ hr.socket{
 }
 
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: rgba(0,0,0,0.0);
   color: white;
-  padding: 16px;
-  font-size: 16px;
+  padding: 10px;
+/*  font-size: 20px;*/
   border: none;
   cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  width: 80px;
 }
 
 .dropdown {
@@ -301,29 +312,30 @@ hr.socket{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: rgba(0,0,0,0.6);
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: rgba(0,0,0,0.6);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: rgba(0,0,0,0.0);}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+ color:#55d6be;
+/*  background-color:rgba(0,0,0,0.6);*/
 }
-
+.material-icons.md-48 { font-size: 48px; }
 /*table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -331,6 +343,21 @@ hr.socket{
 th, td {
   padding: 10px;
 }*/
+
+#banner{
+   
+    background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0,0,0,0.6); /* Black background with 0.5 opacity */
+  width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+/*  width: 50%;*/
+    
+}
 
 
 /*============ BOOTSTRAP BREAK POINTS:
