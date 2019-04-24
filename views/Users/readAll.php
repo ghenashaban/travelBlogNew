@@ -19,9 +19,9 @@ and open the template in the editor.
             <?php echo "$user->surname" ?>  <br><br>
             <a href='?controller=user&action=read&id=<?php echo $user->id; ?>' class='btn btn-primary'>More info..</a>
         <a href='?controller=user&action=delete&id=<?php echo $user->id; ?>' class='btn btn-primary' onclick="ConfirmDelete()">Delete</a>
-<!--<a href='?controller=user&action=update&id=<?php echo $user->id; ?>'class='btn btn-primary'>Update</a>-->
+
         <?php } ?>
-        </div>
+
         <script>
             function ConfirmDelete() {
                 var txt;
@@ -32,11 +32,13 @@ and open the template in the editor.
                     $user->id;
                 ?>");
                 } else {
-                    txt = "You pressed Cancel!";
-                }
-                document.getElementById("demo").innerHTML = txt;
-            }
-        </script> 
+                   txt = "You pressed Cancel!";
+               }
+               document.getElementById("demo").innerHTML = txt;
+           }
+            
+            </script>
+          
 
     </body>
 </html>
