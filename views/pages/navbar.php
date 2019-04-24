@@ -61,7 +61,7 @@ $userID=$_SESSION['id'];
   
 
 
-<a href="?controller=user&action=read&id='.$userID.'"> <button class="button"><i class="material-icons md-436">
+<a href="?controller=user&action=readAccount&id='.$userID.'"> <button class="button"><i class="material-icons md-436">
                         edit
                      </i> <br>Details</button> </a>
 

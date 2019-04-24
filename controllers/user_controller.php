@@ -17,6 +17,17 @@ class UserController {
             return call('pages', 'error');
         }
     }
+    
+    Public function readAccount() {
+        if (!isset($_GET['id']))
+            return call('pages', 'error');
+        try {
+            $users = User::find($_SESSION['id']);
+            require_once('views/users/userAccount.php');
+        } catch (Exception $ex) {
+            return call('pages', 'error');
+        }
+    }
 
     public function delete() {
         User::remove($_GET['id']);

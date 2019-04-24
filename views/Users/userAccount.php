@@ -46,9 +46,8 @@ echo $img;
              <div class="col-sm-6">
         <h3>Your account details: </h3>
         <br>
-        <h6>Update this users account here:</h6>
-        <a href='?controller=user&action=update&id=<?php echo $users->id; ?>'class='btn btn-primary'>Update</a>
-             <a href='?controller=user&action=delete&id=<?php echo $users->id; ?>' class='btn btn-primary' onclick="ConfirmDelete()">Delete User</a>
+        <h6>Update your account here:</h6>
+        <a href='?controller=user&action=update&id=<?php echo $_SESSION["id"]; ?>'class='btn btn-primary'>Update</a>
              </div>
          </div>
         
@@ -69,8 +68,8 @@ echo $img;
     <td><?php echo $users->id ?> <br></td></tr>
     <tr><td>Email</td>
     <td><?php echo $users->email ?> <br></td></tr>
-<!--    <tr><td>Password</td>
-    <td><?php echo $users->password ?> <br></td></tr>-->
+    <tr><td>Password</td>
+    <td><?php echo $users->password ?> <br></td></tr>
     <tr><td>Jointed Date</td>
     <td><?php echo $users->created_at ?></td></tr>
   
@@ -78,30 +77,24 @@ echo $img;
       </div>
  </div>
 
-     
+        
+<!--// FOR USE IF USERS HAVE AVATARS
+//$file1 = 'views/images/' .$posts->title .".jpg";
+//$file2 = 'views/images/' .$posts->title .".jpeg";
+//if(file_exists($file1) ){
+//    $img = "<img src='$file1' width='150' />";
+//    echo $img;    
+//}
+//else if (file_exists($file2)) {
+//  $img = "<img src='$file2' width='150' />";
+//    echo $img; 
+//} else {
+//    // we can put a default image
+//    echo "No picture found";
+//}
+//?>-->
 
-      
- </div>
+    </div>
        
     </body>
-        <script>
-            function ConfirmDelete() {
-                var txt;
-                var r = confirm("Are you sure you want to delete this user?");
-                if (r == true) {
-                    txt = "You pressed OK! ";
-                    window.location.href = ("?controller=user&action=delete&id=<?php echo
-                    $user->id;
-                ?>");
-                } else {
-                   txt = "You pressed Cancel!";
-               }
-               document.getElementById("demo").innerHTML = txt;
-           }
-            
-            </script>
-          
-   
-
-   
 </html>
