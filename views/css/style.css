@@ -346,6 +346,27 @@ hr.socket{
 
 .material-icons.md-48 { font-size: 48px; }
 
+/*Bootstrap cards*/
+
+.card {
+    border: none;
+}
+.card-header {
+     border-bottom: none;     
+}
+
+.card-body {
+    background-color:   rgba(0,0,0,.03);
+    padding-top: 0;
+}
+
+a.card-title {
+    color: #505962;
+    text-decoration: none;
+}
+/*end of Bootstrap cards*/
+
+
 /*table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
