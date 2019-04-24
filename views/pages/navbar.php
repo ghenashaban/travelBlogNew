@@ -63,7 +63,7 @@ $userID=$_SESSION['id'];
 
 <a href="?controller=user&action=read&id='.$userID.'"> <button class="button"><i class="material-icons md-436">
                         edit
-                     </i> <br>My Account </button> </a>
+                     </i> <br>Details</button> </a>
 
   <a href="?controller=user&action=logout"> <button class="button"><i class="material-icons md-36">
                         lock
@@ -74,10 +74,17 @@ $userID=$_SESSION['id'];
 </div>';
                         }else{
                            
-                            echo'<a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
+                            echo'
+                                
+<div class="dropdown">
+  <button class="dropbtn" class="button">
+<i class="material-icons md-48"> account_circle </i></button>
+  <div class="dropdown-content">
+  
+<a href="?controller=user&action=login">  <button class="button"><i class="material-icons">
                         lock_open
-                     </i> <br>log in </button> </a>';
-                             echo '<a href="?controller=user&action=register">
+                     </i> <br>log in </button> </a>
+                            <a href="?controller=user&action=register">
                             <button class="button"><i class="material-icons">
                                     person_add
                                 </i> <br>sign up </button> </a>';

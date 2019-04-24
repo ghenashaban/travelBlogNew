@@ -1,5 +1,5 @@
 
-
+<div id="banner">
 <h3><?php echo $posts->title; ?> </h3>
 <h5> <?php echo $posts->body; ?></h5>
 
@@ -40,4 +40,4 @@ foreach ($comments as $comment) { ?>
    require_once 'views/posts/addComment.php';
    require_once 'views/posts/addLike.php';
    ?>
- 
+</div>

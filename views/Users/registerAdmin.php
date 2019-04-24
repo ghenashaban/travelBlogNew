@@ -3,6 +3,7 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          
     </head>
+    <div id="banner">
 <h2>Fill in the following form to add a Blogger</h2>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
@@ -46,13 +47,9 @@
                     <br />
                      <input class="w3-input" type="hidden" name="role" value="Admin" required>
         
-    
 
-   
-    
-      
-  
 </form>
+    </div>
   <script>
 //         
             function check_pass() {
