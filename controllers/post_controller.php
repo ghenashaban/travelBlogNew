@@ -91,7 +91,9 @@ public function update() {
       }
       
     }
+
   }
+
 // function addComment() {
 //if (isset($_POST['submit'])) {
 //
@@ -121,4 +123,6 @@ public function update() {
 //      
 //    }
 //
+
       
+

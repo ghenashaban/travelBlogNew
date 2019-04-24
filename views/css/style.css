@@ -335,7 +335,46 @@ hr.socket{
  color:#55d6be;
 /*  background-color:rgba(0,0,0,0.6);*/
 }
+
+
+/*like button on posts*/
+.btn-info   {
+   background-color: #55d6be;
+   padding: .375rem 1.75rem;
+   border-color: #55d6be;
+   font-size: 1rem;
+}
+
+.btn-info:hover  {
+  background-color: #98e6d8;
+  border-color: #98e6d8;
+}
+/*end of like button on posts*/
+
+
 .material-icons.md-48 { font-size: 48px; }
+
+/*Bootstrap cards*/
+
+.card {
+    border: none;
+}
+.card-header {
+     border-bottom: none;     
+}
+
+.card-body {
+    background-color:   rgba(0,0,0,.03);
+    padding-top: 0;
+}
+
+a.card-title {
+    color: #505962;
+    text-decoration: none;
+}
+/*end of Bootstrap cards*/
+
+
 /*table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
