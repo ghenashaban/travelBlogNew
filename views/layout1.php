@@ -76,20 +76,20 @@
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="images/croatia.jpg" alt="Lake in Croatia">
-    <div class="card-header">Top ten Croatian islands</div>
-    <div class="card-body text-center">
-      <a href="#" class="stretched-link card-title">Join a Library </a>
+    <img class="card-img-top" src="views/images/croatia.jpg" alt="Lake in Croatia">
+    <div class="card-header"><h3>Top ten Croatian islands</h3></div>
+    <div class="card-body">
+      <a href="#" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway with our top ten islands</a>
      </div>
     </div>
 </div>
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="Images/JoinLibrary1.jpg" alt="Library">
-    <div class="card-header">Header</div>
+    <img class="card-img-top" src="views/images/croatia.jpg" alt="Lake in Croatia">
+    <div class="card-header"><h3>Top ten Croatian islands</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">Join a Library </a>
+      <a href="#" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway with our top ten islands</a>
      </div>
     </div>
 </div>
