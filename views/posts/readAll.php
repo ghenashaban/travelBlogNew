@@ -19,7 +19,7 @@
 </p>
                         <?php } ?>
                             
-    </div>
+    
   
      <script>
                         function ConfirmDelete() {
@@ -33,6 +33,7 @@
                             }
                             document.getElementById("demo").innerHTML = txt;
                         }
-                    </script>          
+                    </script>  
+                    </div>
     </body>
 </html>
