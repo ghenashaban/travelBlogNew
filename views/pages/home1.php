@@ -14,6 +14,30 @@
                     </div>
 </div>
       
+<<<<<<< HEAD
+=======
+        <form method="POST">
+        <div class="container">
+            <input type="text" placeholder="Search..." name="search">
+            <div class="search"></div>
+<!--            <button type="submit"></button>-->
+        </div>
+        </form>
+        
+        
+
+    </div>              
+   
+
+
+
+
+
+
+
+
+
+>>>>>>> 0ee96615c1dd0e9d12cd747130e020180f4d8975
 
 
 

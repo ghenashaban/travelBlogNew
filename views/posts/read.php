@@ -24,9 +24,9 @@ echo $img;   }
 
 
 
-// foreach ($comments as $comment) { 
-// echo $comment->content;
-// }
+ foreach ($comments as $comment) { 
+ echo $comment->content;
+ }
    
      
 echo "these are the comments:";

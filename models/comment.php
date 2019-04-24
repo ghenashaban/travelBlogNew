@@ -60,6 +60,15 @@ public static function findByPostId($post_id) {
       } return $list ;  
     }
    
+      public static function remove($post_id) {
+      $db = Db::getInstance();
+      //make sure $id is an integer
+      $post_id = intval($post_id);
+      $req = $db->prepare('delete FROM liketotal WHERE post_id = :post_id; delete from post_like where post_id=:post_id; delete from comment where post_id=:post_id');
+      // the query was prepared, now replace :id with the actual $id value
+      $req->execute(array('post_id' => $post_id));
+  }
+    
     }
      
     
