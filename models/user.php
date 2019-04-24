@@ -38,7 +38,18 @@ class User {
         }
         return $list;
     }
-
+    //function checks if there are existing
+    //records in user table for a given username
+    public static function userNameExists($userName)
+    {
+        $db = Db::getInstance();
+        $req = $db->prepare('select count(username) from user where username = :username ');
+        $req->execute(array('username' => $userName)); 
+        $count = (int)$req->fetch()[0];
+        if($count>0)
+            return true;
+        return false;
+    }
     public static function find($id) {
         $db = Db::getInstance();
         $id = intval($id);
