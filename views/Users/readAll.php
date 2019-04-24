@@ -10,6 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <div id="banner">
         <h3> List of all registered users:</h3>
 
         <?php foreach ($users as $user) { ?>
@@ -20,7 +21,7 @@ and open the template in the editor.
         <a href='?controller=user&action=delete&id=<?php echo $user->id; ?>' class='btn btn-primary' onclick="ConfirmDelete()">Delete</a>
 <!--<a href='?controller=user&action=update&id=<?php echo $user->id; ?>'class='btn btn-primary'>Update</a>-->
         <?php } ?>
-
+        </div>
         <script>
             function ConfirmDelete() {
                 var txt;

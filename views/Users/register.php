@@ -3,6 +3,7 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          
     </head>
+    <div id="banner">
 <h3>Fill in the following form to Register:</h3>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
@@ -53,6 +54,7 @@
       
   
 </form>
+    </div>
   <script>
 //         
             function check_pass() {

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title></title>
     </head>
+    <div id="banner">
     <body>
         
         <h3>Your account details: </h3>
@@ -54,7 +55,7 @@
 //}
 //?>-->
 
-
+    </div>
        
     </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-
+<div id="banner">
         <h3>List of all registered Users</h3>
         <?php
         foreach ($users as $user) { ?>
@@ -10,8 +9,8 @@
         
         
  <div id="destination" class="offset">
-     <p> hello </p>  
+      
     
 </div>
         
-
+</div>

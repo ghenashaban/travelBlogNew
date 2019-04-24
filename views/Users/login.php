@@ -17,7 +17,7 @@
  ?>
 
 
-<title>Login</title>
+
 
     <style>
         .btn{
@@ -26,11 +26,13 @@
   justify-content: center;
 }
     </style>
-
+  
+<div id="banner">
     <div class="container">
      <div class="form-container">
         <form method="post">
-            <h2>Log in</h2><hr />
+            <h2>Log in</h2>
+            <br>
             <?php
             if(isset($error))
             {
@@ -42,6 +44,8 @@
             }
             ?>
             <div class="form-group">
+               
+               
              <input type="text" class="form-control" name="username" placeholder="Username" required />
             </div>
             <div class="form-group">
@@ -54,9 +58,15 @@
                  <i class="glyphicon glyphicon-log-in"></i>&nbsp;SIGN IN
                 </button>
             </div>
-            <br/>
+          
         
         </form>
        </div>
 </div>
+    <h6>Not registered? Please sign up here! <a href="?controller=user&action=register">
+                            <button class="button"><i class="material-icons">
+                                    person_add
+                                </i> <br>sign up </button> </a></h6> 
+</div>
+    
     
