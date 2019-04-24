@@ -1,7 +1,9 @@
 
 <div id="banner">
+
 <h3><?php echo $posts->title; ?> </h3>
 <h5> <?php echo $posts->body; ?></h5>
+
 
 <?php 
 $file1 = 'views/images/' .$posts->title .".jpg";
@@ -22,13 +24,14 @@ echo $img;   }
 
 
 
-// foreach ($comments as $comment) { 
-// echo $comment->content;
-// }
+ foreach ($comments as $comment) { 
+ echo $comment->content;
+ }
    
      
 echo "these are the comments:";
 foreach ($comments as $comment) { ?>
+
      <p>  <td>   <?php echo $comment->content; ?> </td>
    <?php } 
   echo "<br>";
@@ -40,4 +43,6 @@ foreach ($comments as $comment) { ?>
    require_once 'views/posts/addComment.php';
    require_once 'views/posts/addLike.php';
    ?>
+
 </div>
+

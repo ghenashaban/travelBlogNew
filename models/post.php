@@ -57,17 +57,34 @@ class Post {
     }
       public static function search($searchTerm) { // find by user lne 137
       $list = [];
-      $db = Db::getInstance();
-      $req = $db->query("SELECT * FROM post WHERE title LIKE '%$searchTerm%'");
-      // we create a list of posts where the search temr was found - UPDATE it with body date etc
+        $search = $_POST['search'];
+        $db = Db::getInstance();
 
-       foreach($req->fetchAll() as $post) {
-         $list[] = new Post($post['title'], $post['id'],$post['body'], $post['image']); 
-          
-       }
-      return $list;
-   
+        $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$search%';");
+        $req->execute();
+
+        $rows = $req->rowCount();
+
+        if ($rows > 0) {
+            $results = $req->fetchAll();
+            foreach ($results as $result) {
+                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image']);
+            }
+            return $list;
+        } else {
+            echo "  <div class='container'> <div id='logo' class='text-cente'> 
+                        <h2>0 results found!</h2><p></p>
+                    </div></div>'" . " <div class='container'> <h4> Continue searching</h4>
+
+        <form class='searchbar'method='POST'>
+            <input type='text' placeholder='Search..'required name='search'>
+            <button type='submit'> <i class='fa fa-search'></i></button>
+        </form> </div>";
+            exit();
+        }
     }
+   
+    
     
     
     
@@ -76,10 +93,14 @@ class Post {
       $db = Db::getInstance();
       //make sure $id is an integer
       $id = intval($id);
-      $req = $db->prepare('delete FROM post WHERE id = :id');
+      $req = $db->prepare('delete FROM post WHERE id = :id;');
       // the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
+              
+             
   }
+  
+   
   
   public static function add() {
     $db = Db::getInstance();

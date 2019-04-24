@@ -6,7 +6,10 @@ class PostController {
     }
     
     public function delete() {
+        require_once 'models/comment.php';
+        Comment::remove($_GET['id']);
             Post::remove($_GET['id']);
+            
             
             $posts = Post::all();
             require_once('views/posts/readAll.php');
@@ -91,7 +94,9 @@ public function update() {
       }
       
     }
+
   }
+
 // function addComment() {
 //if (isset($_POST['submit'])) {
 //
@@ -121,4 +126,6 @@ public function update() {
 //      
 //    }
 //
+
       
+
