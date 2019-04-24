@@ -38,10 +38,9 @@ foreach ($comments as $comment) { ?>
    echo "likes:";
  echo $likes->totalcount; 
 
-  
-   
-   require_once 'views/posts/addComment.php';
-   require_once 'views/posts/addLike.php';
+    
+      require_once 'views/posts/addLike.php';
+       require_once 'views/posts/addComment.php';
    ?>
 
 </div>
