@@ -39,7 +39,7 @@ border-color:black;
       
             <label>surname</label>
             <br>
-        <input class="w3-input border" type="text" name="surname" required> 
+        <input class="w3-input border" id = "surname" type="text" name="surname" required> 
     
      </div>
  </div>
@@ -48,8 +48,8 @@ border-color:black;
     
             <label>username</label>
           <br>
-        <input class="w3-input border" type="text"  name="username" required>
-        
+          <input class="w3-input border" id= "username" onkeyup="clearUserMessage()" onblur="checkUserNameAgainstExisting()" type="text" class="form-control" name="username" required>
+        <span id='usernamemessage'></span> <br>
     
     </div>
      <div class="col-sm-6">
@@ -127,13 +127,52 @@ border-color:black;
                     document.getElementById('submit').disabled = false;
 
                     $('#message').html('Matching').css('color', 'green');
+                    var pwd = document.getElementById('password1').value;
+                    //this is an extra validation to ensure password is at least
+                    //eight characters long, could add more validation
+                    if(pwd.length<8)
+                        $('#message').html('Password too short').css('color', 'red');
                 } else {
                     document.getElementById('submit').disabled = true;
                      $('#message').html('Not Matching').css('color', 'red');
 
                 }
             }
-
+            function clearUserMessage(){
+                $('#usernamemessage').html('');
+            }
+            //This javascript function makes an ajax call to php server
+            //to check if a chosen username has already been used
+            //currently if there is an existing user
+            //it just warns with a message in red, should probably combine
+            //with password validation and prevent submit button from being
+            //enabled. Also, email should be unique too (username could actually be email)
+            function checkUserNameAgainstExisting(){
+                //alert('checkUserNameAgainstExisting');
+                //document.getElementById('username').value = "x";
+                if (document.getElementById('username') && document.getElementById('username').value) 
+                {
+                    //alert('checkUserNameAgainstExisting has value');
+                    var chosenName = document.getElementById('username').value;
+                    //document.getElementById('surname').value = 'worked2';
+                    var xhttp;
+                    xhttp=new XMLHttpRequest();
+                    xhttp.onreadystatechange=function(){
+                    //alert(this.status);
+                    if (this.readyState ==4 && this.status ==200) {
+                        //alert(this.status);
+                        //document.getElementById('surname').value = this.responseText;
+                        if(this.responseText==="1")
+                            $('#usernamemessage').html('User name exists').css('color', 'red');
+                        else
+                            $('#usernamemessage').html('').css('color', 'red');
+                    }
+                    };
+                    xhttp.open("GET","./views/Users/UserValidation.php?chosenUserName="+chosenName);      
+                    xhttp.send();
+                    //alert('<-send()');
+                }
+            }   
         </script>
 </html>
 
