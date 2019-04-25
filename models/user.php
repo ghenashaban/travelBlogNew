@@ -268,7 +268,7 @@ $password = $filteredPassword;
 $req->execute();
 }
 
-const AllowedTypes = ['image/jpeg', 'image/jpg'];
+const AllowedTypes = ['image/jpeg', 'image/jpg','image/bmp','image/png'];
 const InputKey = 'myUploader';
 
 public static function uploadFile(string $title) {
