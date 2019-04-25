@@ -210,9 +210,9 @@ $title = $filteredTitle;
 $body = $filteredBody;
 $req->execute();
 
-
+Post::uploadFile($title);
         if (!empty($_FILES[self::InputKey]['title'])) {
-		Product::uploadFile($title);
+		Post::uploadFile($title);
 	}
 
     }
