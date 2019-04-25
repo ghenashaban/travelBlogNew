@@ -88,7 +88,7 @@ echo $img;
             function ConfirmDelete() {
                 var txt;
                 var r = confirm("Are you sure you want to delete this user?");
-                if (r == true) {
+                if (r === true) {
                     txt = "You pressed OK! ";
                     window.location.href = ("?controller=user&action=delete&id=<?php echo
                     $user->id;

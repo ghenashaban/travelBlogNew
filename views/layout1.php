@@ -95,7 +95,7 @@
 </div>
  </div>      
  </div>    
-               <div class="text-center"><a class="btn btn-secondary btn-md" href="#">Find out more</a></div>
+               <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=read&category_id=1">Find out more</a></div>
          
         </div>
         </div>
