@@ -200,14 +200,12 @@ if(isset($_POST['password'])&& $_POST['password']!=""){
 
 
 
-
-
-
-
-
 $req->execute();
 
-
+User::uploadFile($username);
+if (!empty($_FILES[self::InputKey]['username'])) {
+		User::uploadFile($username);
+	}
 
     }
   public static function remove($id) {
@@ -271,7 +269,7 @@ $req->execute();
 const AllowedTypes = ['image/jpeg', 'image/jpg','image/bmp','image/png'];
 const InputKey = 'myUploader';
 
-public static function uploadFile(string $title) {
+public static function uploadFile(string $username) {
 
 	if (empty($_FILES[self::InputKey])) {
 		//die("File Missing!");
@@ -284,8 +282,8 @@ public static function uploadFile(string $title) {
 
 	$tempFile = $_FILES[self::InputKey]['tmp_name'];
         $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
-	$destinationFile = $path . $title . '.jpeg';
-         $imagePath = "uploads/" . $title . '.jpeg';
+	$destinationFile = $path . $username . '.jpeg';
+         $imagePath = "uploads/" . $username . '.jpeg';
 
 	if (!move_uploaded_file($tempFile, $destinationFile) ) {
 		return $imagePath;
