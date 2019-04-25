@@ -360,7 +360,12 @@ hr.socket{
     border: none;
 }
 .card-header {
-     border-bottom: none;     
+     border-bottom: none; 
+   color: #505962;
+}
+
+.card-header h3 {
+margin-bottom: 0;
 }
 
 .card-body {
