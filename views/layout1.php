@@ -98,7 +98,7 @@
                <div class="text-center"><a class="btn btn-secondary btn-md" href="#">Find out more</a></div>
          
         </div>
->>>>>>> df353b4dce008d7e1b327cdc9928a0d5b39a05a5
+
         </div>
         
 <!--- End home section --->

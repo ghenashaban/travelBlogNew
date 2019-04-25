@@ -14,8 +14,8 @@
                     </div>
 </div>
       
-<<<<<<< HEAD
-=======
+
+
         <form method="POST">
         <div class="container">
             <input type="text" placeholder="Search..." name="search">
@@ -23,8 +23,15 @@
 <!--            <button type="submit"></button>-->
         </div>
         </form>
+                 </br>
+                 </br>
+                 </br>
+                 
+        <a href="?controller=pages&action=aboutUs" class='btn btn-primary'>About Us….</a>
+         </br>
+         </br>
         
-        
+        <a href="?controller=pages&action=contactUs" class='btn btn-primary'>Contact Us….</a>
 
     </div>              
    
@@ -36,8 +43,6 @@
 
 
 
-
->>>>>>> 0ee96615c1dd0e9d12cd747130e020180f4d8975
 
 
 

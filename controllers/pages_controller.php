@@ -21,5 +21,12 @@ class PagesController {
       require_once('views/pages/error.php');
       
     }
-    
+    public function contactUS() {
+      require_once('views/pages/contactUs.php');
+      
+    }
+    public function aboutUs() {
+      require_once('views/pages/aboutUs.php');
+      
+    }
 }
