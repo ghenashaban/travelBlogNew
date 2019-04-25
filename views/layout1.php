@@ -69,7 +69,7 @@
     <img class="card-img-top" src="views/images/croatia.jpg" alt="Lake in Croatia">
     <div class="card-header"><h3>Top ten Croatian islands</h3></div>
     <div class="card-body">
-      <a href="" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
+      <a href="?controller=post&action=read&id=93" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
      </div>
     </div>
 </div>
@@ -79,7 +79,7 @@
     <img class="card-img-top" src="views/images/miami-post.jpg" alt="Miami skyline">
     <div class="card-header"><h3>48 hours in... Miami</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">South Beach is usually the first thing people think of when it comes to Miami - but there's a lot more to the city than that</a>
+      <a href="?controller=post&action=read&id=94" class="stretched-link card-title">South Beach is usually the first thing people think of when it comes to Miami - but there's a lot more to the city than that</a>
      </div>
     </div>
 </div>
@@ -89,7 +89,7 @@
     <img class="card-img-top" src="views/images/amalfi-post.jpg" alt="Amalfi coastline">
     <div class="card-header"><h3>Expert guide to the Amalfi Coast</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">The legendary Amalfi Coast is one of Europe's most desirable and romantic destinations. Don't miss our top tips</a>
+      <a href="?controller=post&action=read&id=96" class="stretched-link card-title">The legendary Amalfi Coast is one of Europe's most desirable and romantic destinations. Don't miss our top tips</a>
      </div>
     </div>
 </div>
@@ -115,30 +115,30 @@
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/croatia.jpg" alt="Lake in Croatia">
-    <div class="card-header"><h3>Top ten Croatian islands</h3></div>
+    <img class="card-img-top" src="views/images/switzerland-post.jpg" alt="Lake and flowers in Switzerland">
+    <div class="card-header"><h3>Holiday destinations that are saving the planet</h3></div>
     <div class="card-body">
-      <a href="" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
+      <a href="?controller=post&action=read&id=102" class="stretched-link card-title">We take a tour of the world’s most eco-friendly destinations</a>
      </div>
     </div>
 </div>
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/miami-post.jpg" alt="Miami skyline">
-    <div class="card-header"><h3>48 hours in... Miami</h3></div>
+    <img class="card-img-top" src="views/images/plastic-post.jpg" alt="Plastic bottles">
+    <div class="card-header"><h3>How to travel plastic-free</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">South Beach is usually the first thing people think of when it comes to Miami - but there's a lot more to the city than that</a>
+      <a href="?controller=post&action=read&id=103" class="stretched-link card-title">You can reduce how much single use plastic you consume while travelling through a bit of preparation</a>
      </div>
     </div>
 </div>
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/amalfi-post.jpg" alt="Amalfi coastline">
-    <div class="card-header"><h3>Expert guide to the Amalfi Coast</h3></div>
+    <img class="card-img-top" src="views/images/costa-rica-post.jpg" alt="Costa Rica beach">
+    <div class="card-header"><h3>Ecotourism in Costa Rica</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">The legendary Amalfi Coast is one of Europe's most desirable and romantic destinations. Don't miss our top tips</a>
+      <a href="?controller=post&action=read&id=104" class="stretched-link card-title">Costa Rica has devoted an estimated 26% of its land to national parks</a>
      </div>
     </div>
 </div>
@@ -194,7 +194,7 @@
     <img class="card-img-top" src="views/images/wales-post.jpg" alt="Welsh shipping container">
     <div class="card-header"><h3>Family holiday heaven</h3></div>
     <div class="card-body">
-      <a href="" class="stretched-link card-title">How we found holiday bliss in a Welsh shipping container</a>
+      <a href="?controller=post&action=read&id=98" class="stretched-link card-title">How we found holiday bliss in a Welsh shipping container</a>
      </div>
     </div>
 </div>
@@ -204,7 +204,7 @@
     <img class="card-img-top" src="views/images/dubai-post.jpeg" alt="Dubai skyline">
     <div class="card-header"><h3>Sun, sea and Legoland in Dubai</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">Why Dubai is the perfect family holiday destination</a>
+      <a href="?controller=post&action=read&id=97" class="stretched-link card-title">Why Dubai is the perfect family holiday destination</a>
      </div>
     </div>
 </div>
@@ -212,9 +212,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/ibiza-post.jpg" alt="Ibiza coastline">
-    <div class="card-header"><h3>An Ibiza yoga retreat with toddlers</h3></div>
+    <div class="card-header"><h3>A yoga retreat with toddlers</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">The yoga retreats designed for mothers and their young children</a>
+      <a href="?controller=post&action=read&id=95" class="stretched-link card-title">The Ibiza retreat designed for mothers and their young children</a>
      </div>
     </div>                   
 </div>             
@@ -274,9 +274,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/canyon.jpeg" alt="Sardinia canyon">
-    <div class="card-header"><h3>The grand canyons of Europe</h3></div>
+    <div class="card-header"><h3>The grand canyon of Europe</h3></div>
     <div class="card-body">
-      <a href="" class="stretched-link card-title">Up for a challenge? Try hiking these rocky ravines</a>
+      <a href="?controller=post&action=read&id=99" class="stretched-link card-title">Up for a challenge? Try hiking this rocky ravine</a>
      </div>
     </div>
 </div>
@@ -286,17 +286,17 @@
     <img class="card-img-top" src="views/images/desert-post.jpg" alt="Night sky over desert">
     <div class="card-header"><h3>Three desert holidays you must try</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">Escape the crowds in these otherworldly landscapes</a>
+      <a href="?controller=post&action=read&id=100" class="stretched-link card-title">Escape the crowds in these otherworldly landscapes</a>
      </div>
     </div>
 </div>
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/desert-post.jpg" alt="Ibiza coastline">
-    <div class="card-header"><h3>Honeymoon Hotspots</h3></div>
+    <img class="card-img-top" src="views/images/honeymoon-post.jpg" alt="Hammock on beach">
+    <div class="card-header"><h3>Honeymoon hotspots</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">We checkout the top 10 destinations for romance</a>
+      <a href="?controller=post&action=read&id=101" class="stretched-link card-title">We check out the best destinations for romance</a>
      </div>
     </div>                   
 </div>             
@@ -361,30 +361,30 @@
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/croatia.jpg" alt="Lake in Croatia">
-    <div class="card-header"><h3>Top ten Croatian islands</h3></div>
+    <img class="card-img-top" src="views/images/packing-post.jpg" alt="Family at airport">
+    <div class="card-header"><h3>Family holiday packing list</h3></div>
     <div class="card-body">
-      <a href="" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
+      <a href="?controller=post&action=read&id=105" class="stretched-link card-title">Don't leave home without these essential items</a>
      </div>
     </div>
 </div>
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/miami-post.jpg" alt="Miami skyline">
-    <div class="card-header"><h3>48 hours in... Miami</h3></div>
+    <img class="card-img-top" src="views/images/car-post.jpg" alt="Childen in car">
+    <div class="card-header"><h3>How to survive a long car journey with kids</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">South Beach is usually the first thing people think of when it comes to Miami - but there's a lot more to the city than that</a>
+      <a href="?controller=post&action=read&id=106" class="stretched-link card-title">Don't miss these essential tips for those long car journeys this summer</a>
      </div>
     </div>
 </div>
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/amalfi-post.jpg" alt="Amalfi coastline">
-    <div class="card-header"><h3>Expert guide to the Amalfi Coast</h3></div>
+    <img class="card-img-top" src="views/images/companion-post.jpg" alt="Two women taking selfie">
+    <div class="card-header"><h3>How to choose the perfect travel companion</h3></div>
     <div class="card-body">
-      <a href="#" class="stretched-link card-title">The legendary Amalfi Coast is one of Europe's most desirable and romantic destinations. Don't miss our top tips</a>
+      <a href="?controller=post&action=read&id=107" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
      </div>
     </div>
 </div>
