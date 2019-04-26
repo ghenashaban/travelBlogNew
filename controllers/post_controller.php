@@ -38,10 +38,10 @@ class PostController {
              
             $posts = Post::all(); 
             require_once('views/posts/readAll.php');
+            
     }}
 
-  Public function read() {
-
+   Public function read() {
 if (!isset($_GET['id'])) {
         return call('pages', 'error');
 } try {
@@ -72,8 +72,24 @@ if (!isset($_GET['id'])) {
        
       }
   }
+
+  Public function readByCat() {
+
+
+      $posts = Post::findByCat($_GET['categoryID']);
+    
+       
+    require_once 'views/posts/readByCat.php';
+   
+  
+     
+  }
+  
     
     
+
+     
+
 public function update() {
         
       if($_SERVER['REQUEST_METHOD'] == 'GET'){

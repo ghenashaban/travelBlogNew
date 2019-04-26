@@ -98,7 +98,8 @@ public function login() {
             User::update($id);
                         
             $users = User::all();
-            require_once('views/users/readAll.php');
+//            require_once('views/users/readAll.php');
+            header('location:index.php');
       }
       
     }

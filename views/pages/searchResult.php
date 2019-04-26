@@ -2,26 +2,10 @@
 
     <body>
        
-
-
         <div  class = "container" >     <div class="col-md-7">           <div style="overflow-x:auto;">
-
 
                     <h4>Search results for "<?php echo $_POST['search']; ?>"</h4></div>
 
-<?php 
-//$file1 = 'views/images/' .$posts->title .".jpg";
-//$file2 = 'views/images/' .$posts->title .".jpeg";
-//
-//if(file_exists($file1) ){
-//    $img = "<img src='$file1' width='150' />";
-//    echo $img;
-//    
-//}
-//else if (file_exists($file2)) {
-//  $img = "<img src='$file2' width='150' />";
-//echo $img;   }
-//?>
                 <table>
                     <tr>
 
