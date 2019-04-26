@@ -1,12 +1,4 @@
-<!DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
- 
-    </head>
-    <body>
         
         <?php if (!empty($_SESSION) ){
 echo'
@@ -19,15 +11,14 @@ echo'
       </form> ';
         
           
-} else {
-     echo "<a href='?controller=user&action=login'><button>comment</button> </a>";
-    }  
-      ?> 
+} 
+   
+     
+     
         
 
 
 
 
-</body>
-</html>
+
 
