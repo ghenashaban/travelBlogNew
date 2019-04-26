@@ -1,14 +1,26 @@
 <html>
     <head>
-<<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
 $(document).ready(function(){
-  $("button").click(function(){
-    $("p").toggle();
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
   });
 });
 </script>
-    </head>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
 </body>
 <div id="banner">
 
@@ -52,19 +64,22 @@ echo $img;   }
       
    ?>
 
-<button>view comments</button>
 
-<p>
-   <?php 
+
+
+<div id="flip">Comments</div>
+<div id="panel"><p>
+    <?php 
+   
     echo "these are the comments:";
 foreach ($comments as $comment) { ?>
 
       <td>   <?php echo $comment->content; ?> </td>
    <?php echo "<br>";} 
     ?>
-</p>
-
+</p></div>
 </div>
+ 
 
 </body>
     </html>
