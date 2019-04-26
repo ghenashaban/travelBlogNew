@@ -41,40 +41,19 @@ class PostController {
             
     }}
 
-  Public function read() {
-
+   Public function read() {
 if (!isset($_GET['id'])) {
-        echo"line 47";
+        return call('pages', 'error');
 } try {
-    
       $posts = Post::find($_GET['id']);
-      
-      require_once 'models/like.php';
+      require_once 'models/comment.php';
+      $comments=Comment::findByPostId($_GET['id']);
+       require_once 'models/like.php';
         $likes=Like::findByPostId($_GET['id']);
        
     require_once 'views/posts/read.php';
-      
-      if (isset($_POST['getComment'])){
-      require_once 'models/comment.php';
-      $comments=Comment::findByPostId($_GET['id']);
-      
-       foreach ($comments as $comment) { 
-     
- echo $comment->content;
- }
    
-  
-echo "these are the comments:";
-foreach ($comments as $comment) {
-
-       echo $comment->content; 
-   } 
-   
-      }else{
-       
-  echo "";
-   
-}} catch (Exception $ex) {
+    } catch (Exception $ex) {
             return call('pages', 'error');
     }
      if (!empty($_REQUEST["content"])) {

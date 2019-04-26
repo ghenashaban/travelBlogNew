@@ -40,10 +40,6 @@ if(file_exists($file1) ){
 else if (file_exists($file2)) {
   $img = "<img src='$file2' width='150' />";
 echo $img;   } 
-//} else {
-//    // we can put a default image
-//    echo "No picture found";
-//}
 
 
 
@@ -79,19 +75,6 @@ foreach ($comments as $comment) { ?>
     ?>
 </p></div>
 </div>
- <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
-
-<button id=button name='getComment' onclick='comment(<?php echo $post->id; ?>)' >Get External Content</button>
-<script>
-function comment(id) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("button").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("POST", "index.php?controller=post&action=read&id="+id, true);
-  xhttp.send();}
-</script>
+ 
 </body>
     </html>
