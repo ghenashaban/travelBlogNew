@@ -1,4 +1,16 @@
+<html>
+    <head>
+<!--       <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("viewComment.php");
+  });
+});
+</script>-->
+    </head>
+</body>
 <div id="banner">
 
 <h3><?php echo $posts->title; ?> </h3>
@@ -24,9 +36,6 @@ echo $img;   }
 
 
 
- foreach ($comments as $comment) { 
- echo $comment->content;
- }
    
      
 echo "these are the comments:";
@@ -34,6 +43,10 @@ foreach ($comments as $comment) { ?>
 
      <p>  <td>   <?php echo $comment->content; ?> </td>
    <?php } 
+
+   
+     
+ 
   echo "<br>";
    echo "likes:";
  echo $likes->totalcount; 
@@ -41,7 +54,13 @@ foreach ($comments as $comment) { ?>
     
       require_once 'views/posts/addLike.php';
        require_once 'views/posts/addComment.php';
+      
    ?>
 
+<!--     <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get Comments</button>-->
 </div>
 
+</body>
+    </html>

@@ -22,13 +22,13 @@ ob_start(); ?>
         $action     = 'home';
   }
 
-
-//if (isset($_GET['action']) && ($_GET['action']!='login')){
+//
+//if (isset($_GET['action']) && ($_GET['action']!='comment')){
 // require_once('views/layout1.php');   
 //}else {
 //    require_once('routes.php');
 //}
-  
+//  
 
    require_once('views/layout1.php');
 

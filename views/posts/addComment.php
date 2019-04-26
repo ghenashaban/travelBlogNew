@@ -44,10 +44,10 @@
      
 <body>
 
-<div id="demo">
+<!--<div id="demo">
 <h2>The XMLHttpRequest Object</h2>
 <button type="button" onclick="loadDoc()">Change Content</button>
-</div>
+</div>-->
 
 <script>
 function loadDoc() {
@@ -58,7 +58,7 @@ function loadDoc() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "views/posts/ajax.txt", true);
+  xhttp.open("GET", "viewComment.php", true);
   xhttp.send();
 }
 </script>

@@ -52,6 +52,7 @@ if (!isset($_GET['id'])) {
         $likes=Like::findByPostId($_GET['id']);
        
     require_once 'views/posts/read.php';
+  
    
     } catch (Exception $ex) {
             return call('pages', 'error');
@@ -73,7 +74,8 @@ if (!isset($_GET['id'])) {
       }
   }
     
-    
+     
+   
 public function update() {
         
       if($_SERVER['REQUEST_METHOD'] == 'GET'){
