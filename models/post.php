@@ -12,14 +12,17 @@ class Post {
     public $title;
    public $post_id;
    public $like_count;
+   public $categories ;
   
         
-    public function __construct($title, $id, $body, $image, $categoryID ) {
+    public function __construct($title, $id, $body, $image, $categoryID, $categories ) {
         $this->title=$title;
         $this->id=$id;
         $this->body=$body;
         $this->image=$image;
         $this->categoryID =$categoryID ;
+        $this->categories =$categories ;
+         
 //        $this->post_id=$post_id;
 //        $this->user_id=$user_id;
 //         $this->like_count=$like_count;
@@ -50,7 +53,7 @@ class Post {
       // we create a list of Product objects from the database results
 
        foreach($req->fetchAll() as $post) {
-          $list[] = new Post($post['title'], $post['id'],$post['body'], $post['image'],""); 
+          $list[] = new Post($post['title'], $post['id'],$post['body'], $post['image'],"",""); 
 
          
        }
@@ -62,11 +65,13 @@ class Post {
       $list = [];
       $db = Db::getInstance();
       $categoryID  = intval($categoryID );
-      $req = $db->query("select * from post where categoryID = $categoryID;  ");
+      $req = $db->query("select post.title, post.id, post.body, post.categoryID, category.categories  from post 
+            INNER JOIN category
+ON post.categoryID = category.id where categoryID = $categoryID ;  ");
       // we create a list of Product objects from the database results
  $req->execute(array('categoryID ' => $categoryID ));
        foreach($req->fetchAll() as $post) {
-          $list[] = new Post($post['title'], $post['id'],$post['body'], $post['image'],""); 
+          $list[] = new Post($post['title'], $post['id'],$post['body'], "","",$post['categories']); 
 
          
        }
@@ -87,7 +92,7 @@ class Post {
         if ($rows > 0) {
             $results = $req->fetchAll();
             foreach ($results as $result) {
-                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"");
+                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"","");
             }
             return $list;
         } else {
@@ -202,7 +207,7 @@ public static function uploadFile(string $title) {
       $req->execute(array('id' => $id));
       $post = $req->fetch();
 if($post){
-      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"");
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
     }
     else
     {

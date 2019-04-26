@@ -7,13 +7,13 @@
     <body>
         <div id="banner">
         <h3>list of all posts</h3>
-  
+ 
 
    <?php foreach ($posts as $post) { ?>
    
       <p>   
    
-   
+    <?php // echo $post->categories; ?> 
   <?php $file1 = 'views/images/' .$post->title .".jpg";
 $file2 = 'views/images/' .$post->title.".jpeg";
 
