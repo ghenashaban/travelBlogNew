@@ -8,7 +8,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: #555;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0,0,0,0.6); /* Black background with 0.5 opacity */
+/*  background-color: #555;*/
   color: white;
   padding: 16px 20px;
   border: none;
@@ -31,7 +33,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   
 }
 
-/* Add styles to the form container */
+/* Add styles to the form container "sign in" box*/
 .form-container {
   max-width: 300px;
   padding: 10px;
@@ -54,6 +56,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+  
+/*     text-transform: uppercase;*/
+   font-weight: 300;
+   font-size: .9rem;
+   color: white;
+   letter-spacing: .1rem;
+   background: rgba(0,0,0,0.6) !important;
 }
 
 /* When the inputs get focus, do something */
@@ -83,8 +92,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-.h1{
-    color: blue;
+h6{
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: .9rem;
+   letter-spacing: .1rem;
+   background: rgba(0,0,0,0.6) !important;
 }
 </style>
 </head>
@@ -93,12 +106,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <!--<h2>Popup Form</h2>
 <p>Click on the button at the bottom of this page to open the contact form.</p>
 <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>-->
-
-<button class="open-button" onclick="openForm()">Open Form</button>
-
-<div class="form-popup" id="myForm">
-  <form action="login.php" class="form-container">
-    <h1>Login</h1>
+<!--<a href="?controller=user&action=loginPopUp">-->
+    <button class="open-button" onclick="openForm()"> Open Form</button> 
+    <div class="form-popup" id="myForm">
+  <form method="post" class="form-container">
+    <h6>Login</h6>
+                <br>
+            <?php
+            if(isset($error))
+            {
+                  ?>
+                  <div class="alert alert-danger">
+                      <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
+                  </div>
+                  <?php
+            }
+            ?>
+           
+            <br>
 
     <label for="username"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
@@ -106,7 +131,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
 
-    <button type="submit" class="btn">Login</button>
+<a href="http://localhost:8080/travelBlogNew/index.php?controller=user&action=login">
+    <button type="submit" class="btn">Login</button> </a>
+    
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>

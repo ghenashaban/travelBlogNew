@@ -49,8 +49,12 @@ $userID=$_SESSION['id'];
                             <a class="nav-link" href="#inspiration">Inspiration</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="views/pages/gallery.php">Gallery</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
-                        </li> ' ;} ?>
+                        </li> ' 
+                            ;} ?>
                         
                         </ul> 
                         <?php if (!empty($_SESSION['username'])){
