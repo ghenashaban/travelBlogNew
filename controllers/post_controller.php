@@ -73,6 +73,19 @@ if (!isset($_GET['id'])) {
       }
   }
     
+  Public function readByCat() {
+
+
+      $posts = Post::findByCat($_GET['categoryID']);
+    
+       
+    require_once 'views/posts/readByCat.php';
+   
+  
+     
+  }
+  
+    
     
 public function update() {
         

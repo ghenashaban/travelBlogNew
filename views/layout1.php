@@ -95,7 +95,9 @@
 </div>
  </div>      
  </div>    
-               <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=read&category_id=1">Find out more</a></div>
+               <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=1 ">Read more articles
+                   
+               </a></div>
          
         </div>
         </div>
@@ -144,32 +146,7 @@
 </div>
  </div>      
  </div>   
-          <!--old layout          <div class="row">                
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fas fa-play-circle fa-4x" data-fa-transform="shrink-3 up-5"></i>
-                                <h3>Custom Animation</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fas fa-sliders-h fa-4x" data-fa-transform="shrink-4.5 up-4.5"></i>
-                                <h3>Content slider</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fab fa-wpforms fa-4x" data-fa-transform="shrink-4 up-5"></i>
-                                <h3>Contact form</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
-                        </div>
-
-                    </div>     -->        
+           <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=2 ">Read more articles</a></div>       
                 </div>
             </div>
       <!--  </div>-->
@@ -218,9 +195,12 @@
      </div>
     </div>                   
 </div>             
-  </div>      
+  </div>  
+  <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=3 ">Read more articles</a></div>                        
  </div>  
- </div>      
+                   
+ </div>  
+
  </div>         
    </div>                    
     <!--   CONTENT FROM VIDEO TUTORIAL - NOW USING CARDS ABOVE            
@@ -300,51 +280,10 @@
      </div>
     </div>                   
 </div>             
-  </div>      
+  </div> 
+          <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=4 ">Read more articles</a></div>                    
  </div>           
-     <!-- previous two image layout           <div class="row">
-                    <div class="col-md-6 clients">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="views/images/insp.jpg">
-                            </div>
-                            <div class="col-md-8">
-                                <blockquote>
-                                    <i class="fas fa-quote-left"></i>
-                                    A pastel paradise perched on a hilltop. Like a beautiful Balamory, with less annoying characters! 
-                                    <hr class="clients-hr">
-                                    <cite>&#8212; Mont colourful - Corsica</cite>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 clients">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="views/images/insp1.jpg">
-                            </div>
-                            <div class="col-md-8">
-                                <blockquote>
-                                    <i class="fas fa-quote-left"></i>
-                                    A truly tranquil turquois treasure. Electric yet calming, a place to ponder.
-                                    <hr class="clients-hr">
-                                    <cite>&#8212; North Cape - Norway</cite>
-                                </blockquote>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
             </div>
-
-            <div class="col-12 narrow text-center">
-        <!-- Old layout        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>-->
-                <a class="btn btn-secondary btn-md" href="#">Find out more</a>
-            </div>
-        </div>
-        <!--- End inspiration section --->
 
         <!--- start practical tips section --->
         <div id="practicalTips" class="offset">    
@@ -388,7 +327,8 @@
      </div>
     </div>
 </div>
- </div>      
+ </div> 
+                      <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=5 ">Read more articles</a></div> 
  </div>                    
 
            <!--old layout         <div class="row">
