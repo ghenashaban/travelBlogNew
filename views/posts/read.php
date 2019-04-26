@@ -1,14 +1,13 @@
 <html>
     <head>
-<!--       <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
+<<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("#div1").load("viewComment.php");
+    $("p").toggle();
   });
 });
-</script>-->
+</script>
     </head>
 </body>
 <div id="banner">
@@ -38,11 +37,7 @@ echo $img;   }
 
    
      
-echo "these are the comments:";
-foreach ($comments as $comment) { ?>
 
-     <p>  <td>   <?php echo $comment->content; ?> </td>
-   <?php } 
 
    
      
@@ -57,9 +52,18 @@ foreach ($comments as $comment) { ?>
       
    ?>
 
-<!--     <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<button>view comments</button>
 
-<button>Get Comments</button>-->
+<p>
+   <?php 
+    echo "these are the comments:";
+foreach ($comments as $comment) { ?>
+
+      <td>   <?php echo $comment->content; ?> </td>
+   <?php echo "<br>";} 
+    ?>
+</p>
+
 </div>
 
 </body>
