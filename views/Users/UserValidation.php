@@ -14,7 +14,17 @@
 
 require_once('./../../connection.php');
 require_once('./../../models/user.php');
-$userchoice = $_REQUEST ["chosenUserName"];
-$ret = User::userNameExists($userchoice);
-echo $ret;
+if(isset($_REQUEST ["chosenUserName"]))
+{
+    $userchoice = $_REQUEST ["chosenUserName"];
+    $ret = User::userNameExists($userchoice);
+    echo $ret;
+}
+if(isset($_REQUEST ["chosenEmail"]))
+{
+    $email = $_REQUEST ["chosenEmail"];
+    $ret = User::emailExists($email);
+    echo $ret;
+}
+
 ?>
