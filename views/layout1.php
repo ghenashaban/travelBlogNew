@@ -216,17 +216,17 @@ vertical-align: middle;
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/switzerland-post.jpg" alt="Lake and flowers in Switzerland">
+    <img class="card-img-top" src="views/images/holiday destinations that are saving the planet.jpeg" alt="Lake and flowers in Switzerland">
     <div class="card-header"><h3>Holiday destinations that are saving the planet</h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=102" class="stretched-link card-title">We take a tour of the world’s most eco-friendly destinations</a>
+      <a href="?controller=post&action=read&id=112" class="stretched-link card-title">We take a tour of the world’s most eco-friendly destinations</a>
      </div>
     </div>
 </div>
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/plastic-post.jpg" alt="Plastic bottles">
+    <img class="card-img-top" src="views/images/HOW TO TRAVEL PLASTIC-FREE.jpg" alt="Plastic bottles">
     <div class="card-header"><h3>How to travel plastic-free</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=103" class="stretched-link card-title">You can reduce how much single use plastic you consume while travelling through a bit of preparation</a>
@@ -236,10 +236,10 @@ vertical-align: middle;
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/costa-rica-post.jpg" alt="Costa Rica beach">
+    <img class="card-img-top" src="views/images/Ecotourism in Costa Rica.jpeg" alt="Costa Rica beach">
     <div class="card-header"><h3>Ecotourism in Costa Rica</h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=104" class="stretched-link card-title">Costa Rica has devoted an estimated 26% of its land to national parks</a>
+      <a href="?controller=post&action=read&id=113" class="stretched-link card-title">Costa Rica has devoted an estimated 26% of its land to national parks</a>
      </div>
     </div>
 </div>
@@ -267,7 +267,7 @@ vertical-align: middle;
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/wales-post.jpg" alt="Welsh shipping container">
+    <img class="card-img-top" src="views/images/FAMILY HOLIDAY HEAVEN.jpg" alt="Welsh shipping container">
     <div class="card-header"><h3>Family holiday heaven</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=98" class="stretched-link card-title">How we found holiday bliss in a Welsh shipping container</a>
@@ -277,7 +277,7 @@ vertical-align: middle;
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/dubai-post.jpeg" alt="Dubai skyline">
+    <img class="card-img-top" src="views/images/SUN, SEA AND LEGOLAND.jpeg" alt="Dubai skyline">
     <div class="card-header"><h3>Sun, sea and Legoland in Dubai</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=97" class="stretched-link card-title">Why Dubai is the perfect family holiday destination</a>
@@ -352,7 +352,7 @@ vertical-align: middle;
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/canyon.jpeg" alt="Sardinia canyon">
+    <img class="card-img-top" src="views/images/SARDINIA'S GRAND CANYON.jpeg" alt="Sardinia canyon">
     <div class="card-header"><h3>The grand canyon of Europe</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=99" class="stretched-link card-title">Up for a challenge? Try hiking this rocky ravine</a>
@@ -362,7 +362,7 @@ vertical-align: middle;
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/desert-post.jpg" alt="Night sky over desert">
+    <img class="card-img-top" src="views/images/Three desert holidays you must try.jpeg" alt="Night sky over desert">
     <div class="card-header"><h3>Three desert holidays you must try</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=100" class="stretched-link card-title">Escape the crowds in these otherworldly landscapes</a>
@@ -372,7 +372,7 @@ vertical-align: middle;
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/honeymoon-post.jpg" alt="Hammock on beach">
+    <img class="card-img-top" src="views/images/WHERE TO GO ON YOUR HONEYMOON.jpg" alt="Hammock on beach">
     <div class="card-header"><h3>Honeymoon hotspots</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=101" class="stretched-link card-title">We check out the best destinations for romance</a>
@@ -399,7 +399,7 @@ vertical-align: middle;
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/packing-post.jpg" alt="Family at airport">
+    <img class="card-img-top" src="views/images/FAMILY HOLIDAY PACKING LIST.jpg" alt="Family at airport">
     <div class="card-header"><h3>Family holiday packing list</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=105" class="stretched-link card-title">Don't leave home without these essential items</a>
@@ -409,7 +409,7 @@ vertical-align: middle;
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/car-post.jpg" alt="Childen in car">
+    <img class="card-img-top" src="views/images/HOW TO SURVIVE A LONG CAR JOURNEY WITH CHILDREN.jpg" alt="Childen in car">
     <div class="card-header"><h3>How to survive a long car journey with kids</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=106" class="stretched-link card-title">Don't miss these essential tips for those long car journeys this summer</a>
@@ -419,10 +419,10 @@ vertical-align: middle;
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/companion-post.jpg" alt="Two women taking selfie">
+    <img class="card-img-top" src="views/images/HOW TO CHOOSE THE PERFECT TRAVEL COMPANIO.jpg" alt="Two women taking selfie">
     <div class="card-header"><h3>How to choose the perfect travel companion</h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=107" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
+      <a href="?controller=post&action=read&id=114" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
      </div>
     </div>
 </div>
