@@ -25,7 +25,7 @@ border-color:black;
     </head>
     <div id="bannerREG">
 <h3>Fill in the following form to Register:</h3>
-<form action="" method="POST" class="w3-container" enctype="multipart/form-data">
+<form onsubmit="return validate_ignore()" action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
  <div class="row">
 <div class="col-sm-6">
@@ -48,7 +48,7 @@ border-color:black;
     
             <label>username</label>
           <br>
-          <input class="w3-input border" id= "username" onkeyup="clearUserMessage()" onblur="checkUserNameAgainstExisting()" type="text" class="form-control" name="username" required>
+          <input class="w3-input border" id= "username" onblur="checkUserNameAgainstExisting()" type="text" class="form-control" name="username" required>
         <span id='usernamemessage'></span> <br>
     
     </div>
@@ -56,8 +56,8 @@ border-color:black;
     
        <label>email</label>
        <br>
-        <input class="w3-input border" type="text" name="email" required>
-    
+        <input class="w3-input border" id="email" onblur="checkEmailAgainstExisting()" class="form-control" type="text" name="email" required>
+        <span id='emailmessage'></span> <br>
      </div>
      </div>
          <div class="row">
@@ -124,29 +124,43 @@ border-color:black;
             function check_pass() {
                 if (document.getElementById('password1').value ==
                         document.getElementById('password2').value) {
-                    document.getElementById('submit').disabled = false;
 
                     $('#message').html('Matching').css('color', 'green');
                     var pwd = document.getElementById('password1').value;
                     //this is an extra validation to ensure password is at least
                     //eight characters long, could add more validation
-                    if(pwd.length<8)
-                        $('#message').html('Password too short').css('color', 'red');
-                } else {
+                    if (new RegExp('^(?=.*[A-Z])(?=.*[0-9]).{8,}$').exec(pwd)==null){
+                        $('#message').html('password must be minimum 8 chars long and contain at least one capital letter and one number').css('color', 'red');
+                        document.getElementById('submit').disabled = true;
+                    }
+                    else
+                    {
+                        document.getElementById('submit').disabled = false;
+                        $('#message').html('');
+                    }
+               }
+               else {
                     document.getElementById('submit').disabled = true;
-                     $('#message').html('Not Matching').css('color', 'red');
-
-                }
+                    $('#message').html('Not Matching').css('color', 'red');
+               }
             }
-            function clearUserMessage(){
-                $('#usernamemessage').html('');
+            function validate() {
+                if (document.getElementById('email') && document.getElementById('email').value) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    var regEx = new RegExp(re);
+                    $('#emailmessage').html('').css('color', 'green');
+                    if(regEx.exec(document.getElementById('email').value)==null)
+                        $('#emailmessage').html('Invalid email').css('color', 'red');
+                    else
+                        $('#emailmessage').html('');
+                }
             }
             //This javascript function makes an ajax call to php server
             //to check if a chosen username has already been used
             //currently if there is an existing user
             //it just warns with a message in red, should probably combine
             //with password validation and prevent submit button from being
-            //enabled. Also, email should be unique too (username could actually be email)
+            //enabled.
             function checkUserNameAgainstExisting(){
                 //alert('checkUserNameAgainstExisting');
                 //document.getElementById('username').value = "x";
@@ -173,6 +187,29 @@ border-color:black;
                     //alert('<-send()');
                 }
             }   
+            //using similar approach to username check in checkUserNameAgainstExisting
+            function checkEmailAgainstExisting(){
+                if (document.getElementById('email') && document.getElementById('email').value) 
+                {
+                    var chosen = document.getElementById('email').value;
+                    var xhttp;
+                    xhttp=new XMLHttpRequest();
+                    xhttp.onreadystatechange=function(){
+                    if (this.readyState ==4 && this.status ==200) {
+                        if(this.responseText==="1")
+                            $('#emailmessage').html('already registered').css('color', 'red');
+                        else
+                        {
+                            $('#emailmessage').html('').css('color', 'red');
+                            validate();
+                        }
+                    }
+                    };
+                    xhttp.open("GET","./views/Users/UserValidation.php?chosenEmail="+chosen);      
+                    xhttp.send();
+                    //alert('<-send()');
+                }
+            }               
         </script>
 </html>
 
