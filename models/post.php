@@ -238,8 +238,112 @@ Post::uploadFile($title);
 	}
 
     }
+    
+    public static function RecentPost(){
+      $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at) FROM post);');
+        // we create a list of Post objects from the database results
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+    public static function RecentPostDes(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=1
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+  public static function RecentPostEco(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=2
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
 
-
+      public static function RecentPostFam(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=3
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+       public static function RecentPostIns(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=4
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+     public static function RecentPostTip(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=5
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+    
 }
 
 

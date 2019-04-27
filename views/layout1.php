@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+  
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -142,7 +142,9 @@ vertical-align: middle;
 
 
                 <?php require_once('routes.php'); ?>
+               
                 <?php require_once('views\socialMedia\mediaLinks.php');?>
+
 
 
             </div>
