@@ -13,9 +13,15 @@ require_once 'models/post.php';
             $RecentPostFam = Post::RecentPostFam();
             $RecentPostIns = Post::RecentPostIns();
             $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
            
             require_once 'views/pages/home1.php';
-//             require_once 'views/pages/mostRecent.php';
+            
+             
             
 //           
               

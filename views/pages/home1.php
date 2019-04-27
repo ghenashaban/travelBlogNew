@@ -12,21 +12,15 @@
 
         </div>
         </form>       
-<!--
-         <h2>Recent Posts</h2>
-        <h3><?php // echo $RecentPost->title; ?> </h3>
-        <h5> <?php // echo $RecentPost->body; ?></h5>
-   
-        -->
 
-<div> 
-<?php require 'views/pages/popUp.php';?>
+
+
+    </div>
+<div>
+<?php 
+ require_once 'views/pages/homepage-sections.php';
+?>
 </div>
-   
-
-
-
-
 
 
 

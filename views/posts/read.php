@@ -57,6 +57,9 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .box {border-style: solid;
+       width: 400px;
+        }
     </style>
    
     
@@ -117,9 +120,9 @@
 
                     foreach ($comments as $comment) {
                         ?>
-
-                    <td>   <?php echo $comment->content; ?> </td>
-
+<div class='box'>
+                    <td >   <?php echo $comment->content; ?> </td>
+</div>
                     <?php
                     echo "<br>";
                 }

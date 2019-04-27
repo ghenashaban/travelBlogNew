@@ -1,4 +1,12 @@
 
+
+<?php echo $postLikeDes->title; ?>
+<?php echo $postLikeEco->title; ?>
+<?php echo $postLikeFam->title; ?>
+<?php echo $postLikeIns->title; ?>
+<?php echo $postLikeTip->title; ?>
+
+
         <!--- start destination section --->
  <div id="destination" class="offset">
 
@@ -10,9 +18,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/croatia.jpg" alt="Lake in Croatia">
-    <div class="card-header"><h3>Top ten Croatian islands</h3></div>
+    <div class="card-header"><h3><?php echo $RecentPostDes->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=93" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
+      <a href="?controller=post&action=read&id=<?php echo $RecentPostDes->id; ?>" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
      </div>
     </div>
 </div>
@@ -58,9 +66,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/holiday destinations that are saving the planet.jpeg" alt="Lake and flowers in Switzerland">
-    <div class="card-header"><h3>Holiday destinations that are saving the planet</h3></div>
+    <div class="card-header"><h3><?php echo $RecentPostEco->title?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=112" class="stretched-link card-title">We take a tour of the world’s most eco-friendly destinations</a>
+      <a href="?controller=post&action=read&id=<?php echo $RecentPostEco->id?>" class="stretched-link card-title">We take a tour of the world’s most eco-friendly destinations</a>
      </div>
     </div>
 </div>
@@ -109,9 +117,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/FAMILY HOLIDAY HEAVEN.jpg" alt="Welsh shipping container">
-    <div class="card-header"><h3>Family holiday heaven</h3></div>
+    <div class="card-header"><h3><?php echo $RecentPostFam->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=98" class="stretched-link card-title">How we found holiday bliss in a Welsh shipping container</a>
+      <a href="?controller=post&action=read&id=<?php echo $RecentPostFam->id; ?>" class="stretched-link card-title">How we found holiday bliss in a Welsh shipping container</a>
      </div>
     </div>
 </div>
@@ -214,9 +222,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/WHERE TO GO ON YOUR HONEYMOON.jpg" alt="Hammock on beach">
-    <div class="card-header"><h3>Honeymoon hotspots</h3></div>
+    <div class="card-header"><h3><?php echo $RecentPostIns->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=101" class="stretched-link card-title">We check out the best destinations for romance</a>
+      <a href="?controller=post&action=read&id=<?php echo $RecentPostIns->id; ?>" class="stretched-link card-title">We check out the best destinations for romance</a>
      </div>
     </div>                   
 </div>             
@@ -261,9 +269,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/HOW TO CHOOSE THE PERFECT TRAVEL COMPANIO.jpg" alt="Two women taking selfie">
-    <div class="card-header"><h3>How to choose the perfect travel companion</h3></div>
+    <div class="card-header"><h3><?php echo $RecentPostTip->title?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=114" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
+      <a href="?controller=post&action=read&id=<?php echo $RecentPostTip->id?>" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
      </div>
     </div>
 </div>
@@ -302,4 +310,25 @@
             </div>
 
         
-        
+        <!--footer-->
+             <div id="contact" class="offset">
+            <footer>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 text-center">
+                      <!--image to be added <img src="">-->
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p> 
+                        <strong>Contact info  </strong>
+                        <p>99999<br>email address</p>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <hr class="socket">
+                    &copy; Blog theme.
+
+                </div>
+            </footer>
+        </div>
+
+         <!-- End of footer -->

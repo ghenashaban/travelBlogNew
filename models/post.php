@@ -343,7 +343,94 @@ if($post){
     else "error";
     }
     
+      public static function postLikeDes(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=1;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
     
+    public static function postLikeEco(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=2;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+    
+    public static function postLikeFam(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=3;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+        public static function postLikeIns(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=4;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+    
+        public static function postLikeTip(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=5;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
 }
 
 

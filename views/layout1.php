@@ -171,28 +171,7 @@ vertical-align: middle;
 
 
 
-<!--footer-->
-             <div id="contact" class="offset">
-            <footer>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 text-center">
-                      <!--image to be added <img src="">-->
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p> 
-                        <strong>Contact info  </strong>
-                        <p>99999<br>email address</p>
-                        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
 
-                    <hr class="socket">
-                    &copy; Blog theme.
-
-                </div>
-            </footer>
-        </div>
-
-         <!-- End of footer -->
       
 
       
