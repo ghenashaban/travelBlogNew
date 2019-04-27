@@ -1,16 +1,15 @@
 
 
-<?php echo $postLikeDes->title; ?>
-<?php echo $postLikeEco->title; ?>
-<?php echo $postLikeFam->title; ?>
-<?php echo $postLikeIns->title; ?>
-<?php echo $postLikeTip->title; ?>
+
+
+
 
 
         <!--- start destination section --->
  <div id="destination" class="offset">
 
            <div class="col-12"> 
+             
                 <h1 class="text-center">Destinations
                </h1>
 <div class="container-fluid">
@@ -28,9 +27,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/miami-post.jpg" alt="Miami skyline">
-    <div class="card-header"><h3>48 hours in... Miami</h3></div>
+    <div class="card-header"><h3><?php echo $postLikeDes->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=94" class="stretched-link card-title">South Beach is usually the first thing people think of when it comes to Miami - but there's a lot more to the city than that</a>
+      <a href="?controller=post&action=read&id=<?php echo $postLikeDes->id; ?>" class="stretched-link card-title">South Beach is usually the first thing people think of when it comes to Miami - but there's a lot more to the city than that</a>
      </div>
     </div>
 </div>
@@ -76,9 +75,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/HOW TO TRAVEL PLASTIC-FREE.jpg" alt="Plastic bottles">
-    <div class="card-header"><h3>How to travel plastic-free</h3></div>
+    <div class="card-header"><h3><?php echo $postLikeEco->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=103" class="stretched-link card-title">You can reduce how much single use plastic you consume while travelling through a bit of preparation</a>
+      <a href="?controller=post&action=read&id=<?php echo $postLikeEco->id; ?>" class="stretched-link card-title">You can reduce how much single use plastic you consume while travelling through a bit of preparation</a>
      </div>
     </div>
 </div>
@@ -127,9 +126,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/SUN, SEA AND LEGOLAND.jpeg" alt="Dubai skyline">
-    <div class="card-header"><h3>Sun, sea and Legoland in Dubai</h3></div>
+    <div class="card-header"><h3><?php echo $postLikeFam->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=97" class="stretched-link card-title">Why Dubai is the perfect family holiday destination</a>
+      <a href="?controller=post&action=read&id=<?php echo $postLikeFam->id; ?>" class="stretched-link card-title">Why Dubai is the perfect family holiday destination</a>
      </div>
     </div>
 </div>
@@ -202,9 +201,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/SARDINIA'S GRAND CANYON.jpeg" alt="Sardinia canyon">
-    <div class="card-header"><h3>The grand canyon of Europe</h3></div>
+    <div class="card-header"><h3><?php echo $postLikeIns->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=99" class="stretched-link card-title">Up for a challenge? Try hiking this rocky ravine</a>
+      <a href="?controller=post&action=read&id=<?php echo $postLikeIns->id; ?>" class="stretched-link card-title">Up for a challenge? Try hiking this rocky ravine</a>
      </div>
     </div>
 </div>
@@ -249,9 +248,9 @@
 <div class="col-md-4 mt-4">
   <div class="card">
     <img class="card-img-top" src="views/images/FAMILY HOLIDAY PACKING LIST.jpg" alt="Family at airport">
-    <div class="card-header"><h3>Family holiday packing list</h3></div>
+    <div class="card-header"><h3><?php echo $postLikeTip->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=105" class="stretched-link card-title">Don't leave home without these essential items</a>
+      <a href="?controller=post&action=read&id=<?php echo $postLikeTip->id; ?>" class="stretched-link card-title">Don't leave home without these essential items</a>
      </div>
     </div>
 </div>

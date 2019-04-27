@@ -17,15 +17,20 @@
 
     </div>
 <div>
-<?php 
- require_once 'views/pages/homepage-sections.php';
-?>
+    <div class="caption text-center">
+
+
+               
+
+
+
+            </div>
+
+            <!-- end landing page -->
+
+
+        </div>
 </div>
-
-
-
-
-
-
+<?php require_once 'views/pages/divs.php'; ?>
 
 

@@ -145,6 +145,7 @@
 
     </div>
 
+    
             <script>
                 // Get the modal
                 var modal = document.getElementById('myModal');
@@ -172,6 +173,25 @@
                     }
                 }
             </script>
+
+ <div>
+<!--    <div class="caption text-center">
+
+
+               
+
+
+
+            </div>-->
+
+            <!-- end landing page -->
+
+
+        </div>
+</div>
+<br>
+<br>
+<?php require_once 'views/pages/divs.php'; ?>
 
 
             </body>
