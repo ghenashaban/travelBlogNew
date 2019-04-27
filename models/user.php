@@ -57,6 +57,18 @@ class User {
         if($count>0)
             return true;
         return false;
+    }    
+    //function checks if there are existing
+    //records in user table for a given email
+    public static function emailExists($email)
+    {
+        $db = Db::getInstance();
+        $req = $db->prepare('select count(email) from user where email = :email ');
+        $req->execute(array('email' => $email)); 
+        $count = (int)$req->fetch()[0];
+        if($count>0)
+            return true;
+        return false;
     }
     public static function find($id) {
         $db = Db::getInstance();
