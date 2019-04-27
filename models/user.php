@@ -8,7 +8,7 @@ class User {
     public $username;
     public $email;
     public $role;
-    public $password;
+    private $password;
     public $created_at;
     public $updated_at;
     public $country_id;
@@ -29,6 +29,14 @@ class User {
         $this->country = $country;
     }
 
+    //hash the password so it is not visible in db
+    //call the hash function passing in clear password that was passed in
+    //returns hashedpassword
+    public static function internal_hash($password)
+    {
+        return password_hash($password, PASSWORD_DEFAULT);
+    }
+    
     public static function all() {
         $list = [];
         $db = Db::getInstance();
@@ -84,10 +92,9 @@ $db = Db::getInstance();
                 $result = $querystring->fetch();
 
 
-
-                if (($_POST["password"]== $result['password'])) {
-
-                     $_SESSION["username"] = $result['username'];
+                if(password_verify($_POST["password"], $result['password']))
+                {
+                    $_SESSION["username"] = $result['username'];
                     $_SESSION["role"] = $result['role'];
                     $_SESSION["id"]=$result['id'];
                    
@@ -155,7 +162,7 @@ $surname = $filteredSecond;
 $username = $filteredUser;
 $email = $filteredEmail;
 
-$password = $filteredPassword;
+$password = User::internal_hash($filteredPassword);
 
 $req->execute();
 User::uploadFile($username);
@@ -194,7 +201,7 @@ if(isset($_POST['email'])&& $_POST['email']!=""){
 }
 if(isset($_POST['password'])&& $_POST['password']!=""){
         $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
-    $password=$filteredPassword;
+    $password= User::internal_hash($filteredPassword);
     
 }
 
@@ -261,7 +268,7 @@ $surname = $filteredSecond;
 $username = $filteredUser;
 $email = $filteredEmail;
 
-$password = $filteredPassword;
+$password = User::internal_hash($filteredPassword);
 
 $req->execute();
 }
