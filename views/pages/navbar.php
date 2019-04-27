@@ -7,7 +7,8 @@ $userID=$_SESSION['id'];
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <!-- logo-->
-                <div id="logo-strap><a class="navbar-brand" href=""><!--<img src ="views/images/logot.jpg">--></a></div>
+                <a class="navbar-brand" href="">
+<!--<img src ="views/images/logot.jpg">--></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>   
                 </button>

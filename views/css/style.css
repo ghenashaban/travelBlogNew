@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
-@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 body {
    overflow-x: hidden;
    font-family: 'Lato', sans-serif;
@@ -409,11 +409,14 @@ th, td {
 
 /*logo*/
 
-div#logo-strap {
-    font-family: 'Oleo Script', cursive;
-    color: #1ebba3;
-    font-size: .85rem;
+span#logo-strap {
+    display: inline-block;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #1ebba3;    
     text-transform: none;
+    letter-spacing: 0;
+   line-height: .95em;
+    padding-left: 0;
 }
 
 
