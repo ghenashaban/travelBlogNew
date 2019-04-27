@@ -323,7 +323,7 @@
     <img class="card-img-top" src="views/images/companion-post.jpg" alt="Two women taking selfie">
     <div class="card-header"><h3>How to choose the perfect travel companion</h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=107" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
+      <a href="?controller=post&action=read&id=105" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
      </div>
     </div>
 </div>
