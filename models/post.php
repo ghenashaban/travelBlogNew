@@ -67,9 +67,9 @@ class Post {
       $categoryID  = intval($categoryID );
       $req = $db->query("select post.title, post.id, post.body, post.categoryID, category.categories  from post 
             INNER JOIN category
-ON post.categoryID = category.id where categoryID = $categoryID ;  ");
+ON post.category_ID = category.id where category_ID = $categoryID ;  ");
       // we create a list of Product objects from the database results
- $req->execute(array('categoryID ' => $categoryID ));
+ $req->execute(array('category_ID ' => $categoryID ));
        foreach($req->fetchAll() as $post) {
           $list[] = new Post($post['title'], $post['id'],$post['body'], "","",$post['categories']); 
 
@@ -262,7 +262,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=1
+    where category_ID=1
 );');
         
             $post = $req->fetch();
@@ -279,7 +279,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=2
+    where category_ID=2
 );');
         
             $post = $req->fetch();
@@ -297,7 +297,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=3
+    where category_ID=3
 );');
         
             $post = $req->fetch();
@@ -315,7 +315,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=4
+    where category_ID=4
 );');
         
             $post = $req->fetch();
@@ -333,7 +333,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=5
+    where category_ID=5
 );');
         
             $post = $req->fetch();
