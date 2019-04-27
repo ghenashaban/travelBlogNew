@@ -46,10 +46,13 @@ public function login() {
       else
           { 
        User::login($_POST['username']) ;
+       
+       
 // require_once('index.php');
       }
       
     }
+    
     
     Function logout () {
     User::logout();
@@ -100,7 +103,17 @@ public function login() {
       }
       
     }
- 
+      public function loginPopUp() {
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          
+        require_once('views/pages/popUp.php');
+        }
+      else
+          { 
+       User::login($_POST['username']) ;
+// require_once('index.php');
+      }
+      }
 
 
 

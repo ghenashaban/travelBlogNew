@@ -8,7 +8,7 @@
         <input class="w3-btn w3-pink" type="submit" value="Like">
        </form>';
 
- }else{
-     "<a href='?controller=user&action=login'><button>comment</button> </a>";
  }
+ 
+ ?>
 

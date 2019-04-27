@@ -11,11 +11,12 @@
             <div class="search"></div>
 <!--            <button type="submit"></button>-->
         </div>
-        </form>
-        
-        
+        </form>       
 
-    </div>              
+    </div>   
+<div> 
+<?php require 'views/pages/popUp.php';?>
+</div>
    
 
 

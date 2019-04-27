@@ -31,7 +31,7 @@ $controllers = array('pages' => ['home', 'error'],
                      'post' => ['readAll','delete','create','read','update', 'search','addComment','addLike','readByCat'],
 
 
-                   'user' => ['readAll', 'read','login','logout','delete','register','update','registerAdmin','readAccount']
+                   'user' => ['readAll', 'read','login','logout','delete','register','update','registerAdmin','readAccount', 'loginPopUp']
 
                     );
 
