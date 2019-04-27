@@ -157,8 +157,7 @@ vertical-align: middle;
         <!--- End home section --->
 
         <!--- start destination section --->
-
-        <div id="destination" class="offset">
+ <div id="destination" class="offset">
 
            <div class="col-12"> 
                 <h1 class="text-center">Destinations
@@ -202,10 +201,7 @@ vertical-align: middle;
          
         </div>
         </div>
-        <!--- End destination section --->
-
-        <!--- start eco travel section --->
-        <div id="ecoTravel" class="offset">    
+    <div id="ecoTravel" class="offset">    
 
             <div class="jumbotron">
         <!--        <div class="narrow text-center">-->
@@ -463,16 +459,7 @@ vertical-align: middle;
             </div>
         
 
-            
-
-</body>
-      <!--  </div> -->
-
-
-        <!--- End practical tips section --->
-
-        <!-- Footer -->
-        <div id="contact" class="offset">
+             <div id="contact" class="offset">
             <footer>
                 <div class="row justify-content-center">
                     <div class="col-md-5 text-center">
@@ -492,6 +479,18 @@ vertical-align: middle;
             </footer>
         </div>
 
+        
+        <!--- End destination section --->
+
+        <!--- start eco travel section --->
+    </body>
+      <!--  </div> -->
+
+
+        <!--- End practical tips section --->
+
+        <!-- Footer -->
+       
         <!-- End of footer -->
 
 <!-- START Bootstrap-Cookie-Alert -->

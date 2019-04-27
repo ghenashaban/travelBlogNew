@@ -13,8 +13,10 @@ require_once 'models/post.php';
             $RecentPostFam = Post::RecentPostFam();
             $RecentPostIns = Post::RecentPostIns();
             $RecentPostTip = Post::RecentPostTip();
-//            require_once 'views/pages/mostRecent.php';
+           
             require_once 'views/pages/home1.php';
+//             require_once 'views/pages/mostRecent.php';
+            
 //           
               
             
