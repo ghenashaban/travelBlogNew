@@ -4,10 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--Gallery Styles>-->
-        <link href="css/gallery.css" rel="stylesheet" type="text/css"/>
         <title>Travel Blog</title>
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!--<link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">-->
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>      
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -460,10 +458,86 @@ vertical-align: middle;
                 </div>
             </div>
         
+        <div class="col-12">
+                        <h3 class="heading text-center">Gallery</h3>
+                        <div class="heading-underline"></div>
+                    </div> 
 
-            
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-50" src="views/images/badBear.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="views/images/bear.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="views/images/route66.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
+        
+<!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-50" src="views/images/badBear.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="views/images/bear.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="views/images/route66.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>-->
+        
+        
+<!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+   
+    <div id="gallery">
+    <h3 class="heading text-center">Gallery</h3>
+                        <div class="heading-underline"></div>
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" id="pics">
+    <div class="carousel-item active">
+      <img class="d-block w-50" align="middle" src="views/images/route66.jpg" alt="Yeah baby!">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="views/images/bear.jpg" alt="Bear Friends">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50" src="views/images/badBear.jpg" alt="Bad Bear">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>-->
+</div>
 
-</body>
+
       <!--  </div> -->
 
 
@@ -484,7 +558,7 @@ vertical-align: middle;
                     </div>
 
                     <hr class="socket">
-                    &copy; Blog theme.
+                    &copy; Joined at the trip!
 
                 </div>
             </footer>
