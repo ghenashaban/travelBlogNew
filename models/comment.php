@@ -19,7 +19,10 @@ class Comment {
     
     public static function addComment() {
     $db = Db::getInstance();
-    $req = $db->prepare("insert into comment( post_id, content, user_id) values (:post_id, :content, :user_id)");
+    $req = $db->prepare("insert into comment( post_id, content, user_id) values (:post_id, :content, :user_id);
+             update totalcomments
+set totalCount = (SELECT count(*) from comment where post_id=:post_id)
+where Post_id=:post_id;");
 
 $req->bindParam(':post_id', $post_id);
 $req->bindParam(':content', $content);

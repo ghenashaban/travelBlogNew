@@ -96,15 +96,9 @@ ON post.categoryID = category.id where categoryID = $categoryID ;  ");
             }
             return $list;
         } else {
-            echo "  <div class='container'> <div id='logo' class='text-cente'> 
-                        <h2>0 results found!</h2><p></p>
-                    </div></div>'" . " <div class='container'> <h4> Continue searching</h4>
-
-        <form class='searchbar'method='POST'>
-            <input type='text' placeholder='Search..'required name='search'>
-            <button type='submit'> <i class='fa fa-search'></i></button>
-        </form> </div>";
-            exit();
+          
+            require_once('views/pages/noResult.php');
+         exit();
         }
     }
    
@@ -130,6 +124,10 @@ ON post.categoryID = category.id where categoryID = $categoryID ;  ");
     $db = Db::getInstance();
     $req = $db->prepare("insert into post( title, body, image, user_id ) values ( :title, :body, :image, :user_id);"
             . "insert into liketotal(post_id, totalcount) 
+values ((select id from post where title=:title),
+('0'));
+
+insert into totalcomments(post_id, totalCount) 
 values ((select id from post where title=:title),
 ('0'));");
 
@@ -179,9 +177,9 @@ public static function uploadFile(string $title) {
                 trigger_error("File Missing!");
 	}
 
-	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
-		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
-	}
+//	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
+//		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
+//	}
 
 	$tempFile = $_FILES[self::InputKey]['tmp_name'];
         $path = "C:/xampp/htdocs/travelBlogNew/views/images/";

@@ -7,9 +7,9 @@
       
         <form method="POST">
         <div class="container">
-            <input type="text" placeholder="Search..." name="search">
+            <input type="text" placeholder="Search.." name="search">
             <div class="search"></div>
-<!--            <button type="submit"></button>-->
+
         </div>
         </form>       
 
