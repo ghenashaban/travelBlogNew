@@ -51,12 +51,10 @@
 
             <!-- end landing page -->
 
-
+            
         </div>
 
-        <!--- End home section --->
-
-<!--All 5 content sections were here-->
+   
        
 <?php 
 
