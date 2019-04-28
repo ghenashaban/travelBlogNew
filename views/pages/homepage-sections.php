@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-        <!--- start destination section --->
+    <!--- start destination section --->
  <div id="destination" class="offset">
 
            <div class="col-12"> 
@@ -231,7 +224,7 @@
           <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=4 ">Read more articles</a></div>                    
  </div>           
             </div>
-
+        </div>
         <!--- start practical tips section --->
         <div id="practicalTips" class="offset">    
 

@@ -70,12 +70,10 @@ echo $img;
     <tr><td>User ID</td>
     <td><?php echo $users->id ?> <br></td></tr>
     
-    <tr><td>password</td>
-    <td><?php echo $users->password ?> <br></td></tr>
+   
     <tr><td>Email</td>
     <td><?php echo $users->email ?> <br></td></tr>
-<!--    <tr><td>Password</td>
-    <td><?php echo $users->password ?> <br></td></tr>-->
+
     <tr><td>Jointed Date</td>
     <td><?php echo $users->created_at ?></td></tr>
   

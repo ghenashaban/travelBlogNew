@@ -1,29 +1,46 @@
-<html>
-<head>
-<script>
-function showHint(str) {
-  if (str.length == 0) { 
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("txtHint").innerHTML = this.responseText;
-      }
-    };
-    xmlhttp.open("GET", "phpAjax.php?q=" + str, true);
-    xmlhttp.send();
-  }
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "root", "", "blog");
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-</script>
-</head>
-<body>
-
-<p><b>Start typing a name in the input field below:</b></p>
-<form> 
-First name: <input type="text" onkeyup="showHint(this.value)">
-</form>
-<p>Suggestions: <span id="txtHint"></span></p>
-</body>
-</html>
+ 
+if(isset($_REQUEST["term"])){
+    // Prepare a select statement
+    $sql = "SELECT * FROM post WHERE title LIKE ? ";
+   
+    if($stmt = mysqli_prepare($link, $sql)){
+        // Bind variables to the prepared statement as parameters
+        
+        
+        // Set parameters
+        $param_term = $_REQUEST["term"] . '%';
+         mysqli_stmt_bind_param($stmt, "s", $param_term);
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+            $result = mysqli_stmt_get_result($stmt);
+            
+            // Check number of rows in the result set
+            if(mysqli_num_rows($result) > 0){
+                // Fetch result rows as an associative array
+                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                    echo "<p>" . $row["title"] . "</p>";
+                }
+            } else{
+                echo "<p>No matches found</p>";
+            }
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+    }
+     
+    // Close statement
+    mysqli_stmt_close($stmt);
+}
+ 
+// close connection
+mysqli_close($link);
+?>
