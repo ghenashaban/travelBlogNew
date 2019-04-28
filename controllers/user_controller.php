@@ -103,6 +103,28 @@ public function login() {
       }
       
     }
+    
+     public function updatePassword() {
+        
+      if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          if (!isset($_GET['id']))
+        return call('pages', 'error');
+
+        $user = User::find($_GET['id']);
+      
+        require_once('views/users/resetPassword.php');
+        }
+      else
+          { 
+            $id = $_GET['id'];
+            User::updatePassword($id);
+                        
+            $users = User::all();
+//            require_once('views/users/readAll.php');
+//            header('location:index.php');
+      }
+      
+    }
       public function loginPopUp() {
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
           
