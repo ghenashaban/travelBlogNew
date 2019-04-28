@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-  
-<html lang="en">
+ <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Gallery Styles>-->
+        <link href="css/gallery.css" rel="stylesheet" type="text/css"/>
         <title>Travel Blog</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!--<link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">-->
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>      
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -74,30 +74,6 @@ require_once 'views/pages/homepage-sections.php';
 
 
 
-       
-        
-        <div class="col-12">
-                        <h3 class="heading text-center">Gallery</h3>
-                        <div class="heading-underline"></div>
-                    </div> 
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-50" src="views/images/badBear.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-50" src="views/images/bear.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-50" src="views/images/route66.jpg" alt="Third slide">
-    </div>
-  </div>
-</div>
-        
-
-        
-        
 
 
       
@@ -105,10 +81,6 @@ require_once 'views/pages/homepage-sections.php';
       
 
  
-
-                    <hr class="socket">
-                    &copy; Joined at the trip!
-
 
 
      
@@ -140,3 +112,4 @@ require_once 'views/pages/homepage-sections.php';
     </body>
 
 </html>
+  

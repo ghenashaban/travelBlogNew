@@ -2,6 +2,7 @@
 class PostController {
     public function readAll() {
        $posts = Post::all();
+       
       require_once('views/posts/readAll.php'); 
     }
     
@@ -50,8 +51,22 @@ if (!isset($_GET['id'])) {
       $comments=Comment::findByPostId($_GET['id']);
        require_once 'models/like.php';
         $likes=Like::findByPostId($_GET['id']);
-       
+       require_once 'models/post.php';
+//            $PopularPostCOM = Post::PopularPostCOM();
+//            $PopularPostLIKE = Post::PopularPostLIKE();
+//            $RecentPosts = Post::RecentPost();
+            $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
     require_once 'views/posts/read.php';
+   
    
     } catch (Exception $ex) {
             return call('pages', 'error');

@@ -1,5 +1,7 @@
 <html>
-
+    <head>
+        <link href="views/css/search.css" rel="stylesheet" type="text/css"/>
+    </head>
     <body>
        
         <div  class = "container" >     <div class="col-md-7">           <div style="overflow-x:auto;">
@@ -25,7 +27,7 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "'>$img </a>";
                     
                             
                         
-                 
+    
                         ?>
                         &nbsp; &nbsp;
                        

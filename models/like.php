@@ -18,7 +18,8 @@ public $like_count;
        
        public static function addLike() {
     $db = Db::getInstance();
-    $req = $db->prepare("insert into post_like( post_id, like_count, user_id) values (:post_id, :like_count, :user_id); update liketotal
+    $req = $db->prepare("insert into post_like( post_id, like_count, user_id) values (:post_id, :like_count, :user_id); 
+        update liketotal
 set totalcount = (SELECT count(*) from post_like where post_id=:post_id)
 where Post_id=:post_id;");
 

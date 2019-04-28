@@ -77,6 +77,7 @@
             text-decoration: none;
             cursor: pointer;
         }
+
         button{
             color: white;
             border: 2px solid #55d6be; /* turquoise */
@@ -85,9 +86,21 @@
             border-radius: 12px;
             padding: 10px 24px;
         }
+
+        .box {border-style: solid;
+       width: 400px;
+        }
+
     </style>
    
-    
+           <style>
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+</style>
 
 
    
@@ -149,9 +162,32 @@
 
                     foreach ($comments as $comment) {
                         ?>
+                  
+                  
+<div class='box'>
+    
+                     <?php
+    $file1 = 'views/images/' .$comment->username .".jpg";
+$file2 = 'views/images/' .$comment->username .".jpeg";
 
-                    <td>   <?php echo $comment->content; ?> </td>
+if(file_exists($file1) ){
+   $img= "<img src='$file1'  class='avatar'>";
+   
+    echo $img;
+    
+}
+else if (file_exists($file2)) {
+    $img= "<img src='$file2'  class='avatar'>";
+  
+echo $img;  
 
+}else{
+    $img="<img src='views/images/avatar.jpg' class='avatar' />";
+echo $img;
+}?> 
+   <td>   <?php echo $comment->username." :"; ?>   <?php echo $comment->content; ?> 
+                    </td>                 
+</div>
                     <?php
                     echo "<br>";
                 }
@@ -174,6 +210,7 @@
 
     </div>
 
+    
             <script>
                 // Get the modal
                 var modal = document.getElementById('myModal');
@@ -201,6 +238,25 @@
                     }
                 }
             </script>
+
+ <div>
+<!--    <div class="caption text-center">
+
+
+               
+
+
+
+            </div>-->
+
+            <!-- end landing page -->
+
+
+        </div>
+</div>
+<br>
+<br>
+<?php require_once 'views/pages/divs.php'; ?>
 
 
             </body>

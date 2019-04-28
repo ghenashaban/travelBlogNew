@@ -7,26 +7,30 @@
       
         <form method="POST">
         <div class="container">
-            <input type="text" placeholder="Search..." name="search">
+            <input type="text" placeholder="Search.." name="search">
             <div class="search"></div>
-<!--            <button type="submit"></button>-->
+
         </div>
         </form>       
 
-    </div>   
-<div> 
-<?php require 'views/pages/popUp.php';?>
+
+
+    </div>
+<div>
+    <div class="caption text-center">
+
+
+               
+
+
+
+            </div>
+
+            <!-- end landing page -->
+
+
+        </div>
 </div>
-   
-
-
-
-
-
-
-
-
-
-
+<?php require_once 'views/pages/divs.php'; ?>
 
 
