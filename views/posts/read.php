@@ -30,7 +30,7 @@
             border: 2px solid #55d6be;
             border-radius: 12px;
             
-        .myModal{
+        #myModal{
             border: 2px solid #55d6be;
             border-radius: 12px;
             
@@ -38,25 +38,43 @@
             }
         }
         .modal {
-            display: none;  /*Hidden by default*/
-            position: fixed; /* Stay in place*/ 
-            z-index: 1;  /*Sit on top */
-            padding-top: 50px;  /*Location of the box */
+
+/*            display: none;  Hidden by default
+            position: fixed;  Stay in place 
+            z-index: 1;  Sit on top 
+            padding-top: 50px;  Location of the box */
+
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 400px; /* Location of the box */
+
             left: 0;
             top: 0;
             width: 40%; /* Full width */
             height: 20%;  /*Full height */
             overflow: auto; /* Enable scroll if needed */
             background-color: rgb(0,0,0); /* Fallback color */
+
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity*/ 
+
+            background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+
             border: 5px solid #55d6be;
             border-radius: 12px;
         }
 
-         Modal Content 
+
+/*         Modal Content 
         .modal-content {
-            background-color: rgb(0,0,0);  /*Fallback color for comments box*/
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity*/ 
+            background-color: rgb(0,0,0);  Fallback color for comments box
+            background-color: rgba(0,0,0,0.4);  Black w/ opacity */
+
+        /* Modal Content */
+        #modal-content {
+            background-color: rgb(0,0,0); /* Fallback color for comments box */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
             margin: auto;
             padding: 20px;
             border: 5px solid #55d6be;
@@ -135,21 +153,31 @@
             echo $img;
         }
         ?>
-        <p></p>
+        
+
+        
+
+
+<!--            <div class="modal-content" >-->
+
+<?php if (empty($_SESSION['username'])){
+         echo'<p></p>
         <div id="myBtn">
          <button id="myBtn">Comment/like ?</button>
-        </div>
+        </div>   
+             <div id="myModal" class="modal" >
+             <div id="modal-content">
 
-        <div id="myModal" class="modal">
-
-
-            <div class="modal-content" >
                 <span class="close">&times;</span>
                 
                 <h3> To comment please login or register... </h3>
                 <a href="?controller=user&action=login"><button>Login/Register</button> </a>
             </div>
-        </div>
+        </div>';
+}
+?>
+        
+        
                 <?php
         echo "<br>";
         echo "Likes: ";
@@ -172,7 +200,7 @@
 <!--        <div class="fb-like" data-href="https://www.lonelyplanet.com/croatia" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>-->
           <div id="panel"><p>
                     <?php
-                    echo "Blah blah blahh:";
+                   
 
                     foreach ($comments as $comment) {
                         ?>

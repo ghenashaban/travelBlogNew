@@ -13,6 +13,18 @@
     <input class="w3-input" type="hidden" name="user_id" value=<?php echo $_SESSION['id']?>>
         
     </p>
+    
+     <p>
+     <label>category</label>
+          <select name="categories">
+    <option  value="Destination">Destination</option>
+    <option  value="Eco-travel">Eco-Travel</option>
+    <option  value="Family-Travel">Family Travel</option>
+    <option  value="INSPIRATION">INSPIRATION</option>
+    <option  value="Practical-tips">Practical-tips</option>
+  </select>
+        
+    </p>
       
      <p>
                 <label>Body</label>

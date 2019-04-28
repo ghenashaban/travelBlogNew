@@ -108,6 +108,7 @@ $db = Db::getInstance();
                 {
                     $_SESSION["username"] = $result['username'];
                     $_SESSION["role"] = $result['role'];
+                    $_SESSION["password"] = $result['password'];
                     $_SESSION["id"]=$result['id'];
                    
                 header("location:index.php");
@@ -227,7 +228,38 @@ if (!empty($_FILES[self::InputKey]['username'])) {
 	}
 
     }
-  public static function remove($id) {
+    
+    public static function updatePassword($id){
+      $db = Db::getInstance();
+    $req = $db->prepare("Update user set password=:password where id=:id");
+    
+    $req->bindParam(':password', $password);
+    $req->bindParam(':id', $id);
+
+
+if(isset($_POST['password'])&& $_POST['password']!=""){
+        $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
+    $password= User::internal_hash($filteredPassword);
+ 
+    
+}
+   $oldPassword=$_POST["oldPassword"];
+    $hashedOld=User::internal_hash($oldPassword);
+    $sessionID= $_SESSION['id'];
+    
+if (password_verify($_POST["oldPassword"], $_SESSION['password'])){
+echo "Password Reset";
+$req->execute();   
+    } else {
+        echo "Sorry, you have entered a wrong password";
+        echo "Please try again";
+        echo '<a href="?controller=user&action=updatePassword&id= '.$sessionID.'" class="btn btn-primary"> Reset Password</a>';
+       exit();
+            
+    }
+    }
+            
+    public static function remove($id) {
       $db = Db::getInstance();
       //make sure $id is an integer
       $id = intval($id);
