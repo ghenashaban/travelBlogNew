@@ -30,6 +30,6 @@
 
 
         </div>
-<?php require_once 'views/pages/divs.php'; ?>
+            <?php require_once 'views/pages/divs.php'; ?>
 </div>
 
