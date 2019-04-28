@@ -46,10 +46,13 @@ public function login() {
       else
           { 
        User::login($_POST['username']) ;
+       
+       
 // require_once('index.php');
       }
       
     }
+    
     
     Function logout () {
     User::logout();
@@ -95,11 +98,22 @@ public function login() {
             User::update($id);
                         
             $users = User::all();
-            require_once('views/users/readAll.php');
+//            require_once('views/users/readAll.php');
+            header('location:index.php');
       }
       
     }
- 
+      public function loginPopUp() {
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          
+        require_once('views/pages/popUp.php');
+        }
+      else
+          { 
+       User::login($_POST['username']) ;
+// require_once('index.php');
+      }
+      }
 
 
 

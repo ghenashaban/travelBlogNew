@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-  
-<html lang="en">
+ <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Gallery Styles>-->
+        <link href="css/gallery.css" rel="stylesheet" type="text/css"/>
         <title>Travel Blog</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!--<link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">-->
         <link href="views/css/style.css" rel="stylesheet" type="text/css"/>      
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -51,7 +51,7 @@
 
             <!-- end landing page -->
 
-            
+
         </div>
 
         <!--- End home section --->
@@ -74,12 +74,6 @@ require_once 'views/pages/homepage-sections.php';
 
 
 
-       
-        
-      
-
-        
-        
 
 
       
@@ -87,10 +81,6 @@ require_once 'views/pages/homepage-sections.php';
       
 
  
-
-                    <hr class="socket">
-                    &copy; Joined at the trip!
-
 
 
      
@@ -122,3 +112,4 @@ require_once 'views/pages/homepage-sections.php';
     </body>
 
 </html>
+  

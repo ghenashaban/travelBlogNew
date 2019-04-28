@@ -6,7 +6,8 @@ $userID=$_SESSION['id'];
 ?> 
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand" href=""><img src ="views/images/logot.png"></a>
+            <!-- logo-->
+                <div id="logo-strap><a class="navbar-brand" href=""><!--<img src ="views/images/logot.jpg">--></a></div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>   
                 </button>
@@ -49,8 +50,12 @@ $userID=$_SESSION['id'];
                             <a class="nav-link" href="#inspiration">Inspiration</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
-                        </li> ' ;} ?>
+                        </li> ' 
+                            ;} ?>
                         
                         </ul> 
                         <?php if (!empty($_SESSION['username'])){

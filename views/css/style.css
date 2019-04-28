@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
 body {
    overflow-x: hidden;
    font-family: 'Lato', sans-serif;
@@ -54,7 +55,8 @@ body {
     top: 25%;
     z-index: 1;
     color: white;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
+
    }
 
    .caption h1 {       
@@ -244,6 +246,7 @@ hr.socket{
 
 
 
+
 /* ----------Log in/out and sign up??---------------*/
 .button {
   border-radius: 4px;
@@ -360,12 +363,12 @@ hr.socket{
     border: none;
 }
 .card-header {
-     border-bottom: none; 
-   color: #505962;
+     border-bottom: none;
 }
 
 .card-header h3 {
 margin-bottom: 0;
+ color: #505962 !important;
 }
 
 .card-body {
@@ -388,6 +391,7 @@ th, td {
   padding: 10px;
 }*/
 
+/*output boxes for articles*/
 #banner{
    
     background: rgb(0, 0, 0); /* Fallback color */
@@ -399,9 +403,37 @@ th, td {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  overflow: scroll;
+
 /*  width: 50%;*/
     
 }
+
+
+/*div#carouselExampleIndicators{
+    
+}
+#pics{
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}*/
+
+/*logo*/
+
+div#logo-strap {
+    font-family: 'Oleo Script', cursive;
+    color: #1ebba3;
+    font-size: .85rem;
+    text-transform: none;
+}
+
 
 
 /*============ BOOTSTRAP BREAK POINTS:

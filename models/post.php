@@ -6,18 +6,23 @@ class Post {
     public $published;
     public $created_at;
     public $updated_at;
-    public $category_id;
+    public $categoryID ;
     public $first_name;
     public $image;
     public $title;
    public $post_id;
    public $like_count;
+   public $categories ;
+  
         
-    public function __construct($title, $id, $body, $image) {
+    public function __construct($title, $id, $body, $image, $categoryID, $categories ) {
         $this->title=$title;
         $this->id=$id;
         $this->body=$body;
         $this->image=$image;
+        $this->categoryID =$categoryID ;
+        $this->categories =$categories ;
+         
 //        $this->post_id=$post_id;
 //        $this->user_id=$user_id;
 //         $this->like_count=$like_count;
@@ -48,13 +53,32 @@ class Post {
       // we create a list of Product objects from the database results
 
        foreach($req->fetchAll() as $post) {
-          $list[] = new Post($post['title'], $post['id'],$post['body'], $post['image']); 
+          $list[] = new Post($post['title'], $post['id'],$post['body'], $post['image'],"",""); 
 
          
        }
       return $list;
    
     }
+    
+       public static function findByCat($categoryID ) {
+      $list = [];
+      $db = Db::getInstance();
+      $categoryID  = intval($categoryID );
+      $req = $db->query("select post.title, post.id, post.body, post.categoryID, category.categories  from post 
+            INNER JOIN category
+ON post.categoryID = category.id where categoryID = $categoryID ;  ");
+      // we create a list of Product objects from the database results
+ $req->execute(array('categoryID ' => $categoryID ));
+       foreach($req->fetchAll() as $post) {
+          $list[] = new Post($post['title'], $post['id'],$post['body'], "","",$post['categories']); 
+
+         
+       }
+      return $list;
+   
+    }
+    
       public static function search($searchTerm) { // find by user lne 137
       $list = [];
         $search = $_POST['search'];
@@ -68,19 +92,13 @@ class Post {
         if ($rows > 0) {
             $results = $req->fetchAll();
             foreach ($results as $result) {
-                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image']);
+                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"","");
             }
             return $list;
         } else {
-            echo "  <div class='container'> <div id='logo' class='text-cente'> 
-                        <h2>0 results found!</h2><p></p>
-                    </div></div>'" . " <div class='container'> <h4> Continue searching</h4>
-
-        <form class='searchbar'method='POST'>
-            <input type='text' placeholder='Search..'required name='search'>
-            <button type='submit'> <i class='fa fa-search'></i></button>
-        </form> </div>";
-            exit();
+          
+            require_once('views/pages/noResult.php');
+         exit();
         }
     }
    
@@ -106,6 +124,10 @@ class Post {
     $db = Db::getInstance();
     $req = $db->prepare("insert into post( title, body, image, user_id ) values ( :title, :body, :image, :user_id);"
             . "insert into liketotal(post_id, totalcount) 
+values ((select id from post where title=:title),
+('0'));
+
+insert into totalcomments(post_id, totalCount) 
 values ((select id from post where title=:title),
 ('0'));");
 
@@ -155,9 +177,9 @@ public static function uploadFile(string $title) {
                 trigger_error("File Missing!");
 	}
 
-	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
-		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
-	}
+//	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
+//		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
+//	}
 
 	$tempFile = $_FILES[self::InputKey]['tmp_name'];
         $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
@@ -183,7 +205,7 @@ public static function uploadFile(string $title) {
       $req->execute(array('id' => $id));
       $post = $req->fetch();
 if($post){
-      return new Post ($post['title'], $post['id'],$post['body'],$post['image']);
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
     }
     else
     {
@@ -216,19 +238,199 @@ Post::uploadFile($title);
 	}
 
     }
-
-    public static function searchBar($searchTerm) {
-      $db = Db::getInstance();
-      
-      $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$searchTerm%'");
-      //extend this with other search terms if working  for title
-      $req->execute(array('searchTerm' => $searchTerm));
-      foreach ($req->fetchAll() as $post) {
-
-      $list[]= new Post ($post['title'], $post['id'],$post['body'],$post['image']);
-    }
-    return $list;
     
+    public static function RecentPost(){
+      $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at) FROM post);');
+        // we create a list of Post objects from the database results
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+    public static function RecentPostDes(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=1
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+  public static function RecentPostEco(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=2
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
     }
 
+      public static function RecentPostFam(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=3
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+       public static function RecentPostIns(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=4
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+     public static function RecentPostTip(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT *
+FROM post
+WHERE created_at=(
+SELECT MAX(created_at)
+    FROM post
+    where categoryID=5
+);');
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else "error";
+    }
+    
+      public static function postLikeDes(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=1;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+    
+    public static function postLikeEco(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=2;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+    
+    public static function postLikeFam(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=3;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+        public static function postLikeIns(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=4;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+    
+        public static function postLikeTip(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=5;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
 }
+
+

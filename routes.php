@@ -27,9 +27,11 @@
 $controllers = array('pages' => ['home', 'error', 'contactUs', 'aboutUs'],
                     'product' => ['readAll','read','create','update','delete'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
-                     'post' => ['readAll','delete','create','read','update', 'search','addComment','addLike'],
 
-                   'user' => ['readAll', 'read','login','logout','delete','register','update','registerAdmin','readAccount']
+                     'post' => ['readAll','delete','create','read','update', 'search','addComment','addLike','readByCat','RecentPost','RecentPostDes','RecentPostEco','RecentPostFam','RecentPostIns','RecentPostTip','postLikeDes','postLikeEco','postLikeFam','postLikeTip','postLikeIns'],
+
+
+                   'user' => ['readAll', 'read','login','logout','delete','register','update','registerAdmin','readAccount', 'loginPopUp']
 
                     );
 
