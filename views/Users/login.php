@@ -25,6 +25,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: white;
+                color: black;
+                
             }
         </style>
 

@@ -49,6 +49,9 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "'>$img </a>";
                             document.getElementById("demo").innerHTML = txt;
                         }
                     </script>  
-                    </div>
+                    
+        </div>
+            
+<?php require_once 'views/pages/divs.php'; ?>      
     </body>
 </html>

@@ -15,9 +15,15 @@
     <label>username</label>
         <input class="w3-input" type="text" name="username" value="<?= $user->username; ?>" >
       
+        </p>
+     
     </p>
      <label>password</label>
-        <input class="w3-input" type="text" name="password" value="<?= $user->password; ?>" >
+<!--        <input class="w3-input" type="text" name="password"  >-->
+
+     
+        
+    <a href='?controller=user&action=updatePassword&id=<?php echo $_SESSION["id"]; ?>'class='btn btn-primary'>Reset Password</a>
       
     </p>
     <label>email</label>
