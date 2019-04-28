@@ -212,9 +212,8 @@
    
   </div>  
             
-        <?php
-        // put your code here
-        ?>
+        
     </body>
 </html>
 
+<?php require_once 'views/pages/divs.php'; ?>

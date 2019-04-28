@@ -108,3 +108,4 @@ echo $img;
 
    
 </html>
+<?php require_once 'views/pages/divs.php'; ?>

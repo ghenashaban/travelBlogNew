@@ -78,3 +78,4 @@
     </div>
 
 </html>  
+<?php require_once 'views/pages/divs.php'; ?>

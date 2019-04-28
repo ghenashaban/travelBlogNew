@@ -51,3 +51,5 @@
         <script src="views/js/plugin/tinymce/init-tinymce.js" type="text/javascript"></script>
 </html>
 </div>
+    
+    <?php require_once 'views/pages/divs.php'; ?>

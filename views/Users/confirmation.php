@@ -13,3 +13,4 @@
                      </i> <br>log in </button> </a>' ?> 
     </body>
 </html>
+<?php require_once 'views/pages/divs.php'; ?>

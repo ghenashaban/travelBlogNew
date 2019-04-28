@@ -108,13 +108,16 @@
             padding: 10px 24px;
         }
 
-        .box {border-style: solid;
+        .box {
        width: 400px;
         }
         #myBtn{
           border-radius: 12px;  
         }
 
+        #left{
+            text-align: left;
+        }
     </style>
    
 <style>
@@ -124,6 +127,8 @@
   height: 50px;
   border-radius: 50%;
 }
+
+
 </style>
 
 
@@ -138,23 +143,23 @@
  
     <div id="banner">
 
-        <h3><?php echo $posts->title; ?> </h3>
-        <h5> <?php echo $posts->body; ?></h5>
+        <h3><?php echo $posts->title; ?> </h3> 
+        
 
         <?php
         $file1 = 'views/images/' . $posts->title . ".jpg";
         $file2 = 'views/images/' . $posts->title . ".jpeg";
 
         if (file_exists($file1)) {
-            $img = "<img src='$file1' width='150' />";
+            $img = "<img src='$file1' width='900' />";
             echo $img;
         } else if (file_exists($file2)) {
-            $img = "<img src='$file2' width='150' />";
+            $img = "<img src='$file2' width='900' />";
             echo $img;
         }
         ?>
         
-
+<h5> <?php echo $posts->body; ?></h5>
         
 
 
@@ -206,7 +211,7 @@
                         ?>
                   
                   
-<div class='box'>
+<div class='box' id="left">
     
                      <?php
     $file1 = 'views/images/' .$comment->username .".jpg";
@@ -245,11 +250,6 @@ echo $img;
             <div id="flip">Comments</div>
            
 
-       
-
-
- 
-
     </div>
 
     
@@ -280,6 +280,7 @@ echo $img;
                     }
                 }
             </script>
+       
 
  <div>
 <!--    <div class="caption text-center">
