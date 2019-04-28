@@ -10,15 +10,15 @@ if($link === false){
  
 if(isset($_REQUEST["term"])){
     // Prepare a select statement
-    $sql = "SELECT title FROM post ";
-    
+    $sql = "SELECT * FROM post WHERE title LIKE ? ";
+   
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
         
         
         // Set parameters
         $param_term = $_REQUEST["term"] . '%';
-        
+         mysqli_stmt_bind_param($stmt, "s", $param_term);
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
             $result = mysqli_stmt_get_result($stmt);
