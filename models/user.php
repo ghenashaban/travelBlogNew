@@ -245,15 +245,16 @@ if(isset($_POST['password'])&& $_POST['password']!=""){
 }
    $oldPassword=$_POST["oldPassword"];
     $hashedOld=User::internal_hash($oldPassword);
+    $sessionID= $_SESSION['id'];
     
 if (password_verify($_POST["oldPassword"], $_SESSION['password'])){
-
+echo "Password Reset";
 $req->execute();   
     } else {
-        echo "wrong password";
-       $session=$_SESSION['password'];
-       echo $session;
-       echo $hashedOld;
+        echo "Sorry, you have entered a wrong password";
+        echo "Please try again";
+        echo '<a href="?controller=user&action=updatePassword&id= '.$sessionID.'" class="btn btn-primary"> Reset Password</a>';
+       exit();
             
     }
     }

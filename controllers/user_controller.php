@@ -111,8 +111,23 @@ public function login() {
         return call('pages', 'error');
 
         $user = User::find($_GET['id']);
-      
+      require_once 'models/post.php';
+//            $PopularPostCOM = Post::PopularPostCOM();
+//            $PopularPostLIKE = Post::PopularPostLIKE();
+//            $RecentPosts = Post::RecentPost();
+            $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
         require_once('views/users/resetPassword.php');
+         
+           
         }
       else
           { 
@@ -120,7 +135,8 @@ public function login() {
             User::updatePassword($id);
                         
             $users = User::all();
-//            require_once('views/users/readAll.php');
+            
+//            require_once('views/pages/home1.php');
 //            header('location:index.php');
       }
       

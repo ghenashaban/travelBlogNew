@@ -13,3 +13,5 @@
     <input class="w3-btn w3-gray" type="submit" value="reset">
     </p>
     </form>
+
+<?php require_once 'views/pages/divs.php'; ?>
