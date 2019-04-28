@@ -1,14 +1,16 @@
 <!--<link href="../css/scroll.css" rel="stylesheet" type="text/css"/>-->
 <head>
     <!--Ghena script tag for comments ajax-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 </head>
 
 <body>
-    
-    <!--Ghena css for comments ajax-->
+<!--FB Sharing-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>   
+<!--FB Sharing-->
+
+<!--Ghena css for comments modal/ajax-->
     <style> 
         
         #panel, #flip {
@@ -16,7 +18,7 @@
             text-align: center;
             background-color: #e5eecc;
             border: solid 1px #c3c3c3;
-            background-color: rgb(0,0,0); /* Fallback color for comments box */
+            background-color: rgb(0,0,0);  /*Fallback color for comments box */
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
             border: 2px solid #55d6be;
             border-radius: 12px;
@@ -31,29 +33,30 @@
         .myModal{
             border: 2px solid #55d6be;
             border-radius: 12px;
+            
                 
             }
         }
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            padding-top: 100px; /* Location of the box */
+            display: none;  /*Hidden by default*/
+            position: fixed; /* Stay in place*/ 
+            z-index: 1;  /*Sit on top */
+            padding-top: 50px;  /*Location of the box */
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
+            width: 40%; /* Full width */
+            height: 20%;  /*Full height */
             overflow: auto; /* Enable scroll if needed */
             background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity*/ 
             border: 5px solid #55d6be;
             border-radius: 12px;
         }
 
-        /* Modal Content */
+         Modal Content 
         .modal-content {
-            background-color: rgb(0,0,0); /* Fallback color for comments box */
-/*          background-color: rgba(0,0,0,0.4);  Black w/ opacity */
+            background-color: rgb(0,0,0);  /*Fallback color for comments box*/
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity*/ 
             margin: auto;
             padding: 20px;
             border: 5px solid #55d6be;
@@ -63,7 +66,7 @@
             top: 35%;
         }
 
-        /* The Close Button */
+         The Close Button 
         .close {
             color: #aaaaaa;
             float: right;
@@ -80,7 +83,7 @@
 
         button{
             color: white;
-            border: 2px solid #55d6be; /* turquoise */
+            border: 2px solid #55d6be;  /*turquoise */
             background-color: rgb(0,0,0);
             background-color: rgba(0,0,0,0.4);  
             border-radius: 12px;
@@ -90,10 +93,13 @@
         .box {border-style: solid;
        width: 400px;
         }
+        #myBtn{
+          border-radius: 12px;  
+        }
 
     </style>
    
-           <style>
+<style>
 .avatar {
   vertical-align: middle;
   width: 50px;
@@ -111,7 +117,7 @@
             });
         });
     </script>
-   
+ 
     <div id="banner">
 
         <h3><?php echo $posts->title; ?> </h3>
@@ -137,7 +143,7 @@
         <div id="myModal" class="modal">
 
 
-            <div class="modal-content">
+            <div class="modal-content" >
                 <span class="close">&times;</span>
                 
                 <h3> To comment please login or register... </h3>
@@ -154,9 +160,17 @@
             
             ?>
         <br>
-        <div class="fb-like" data-href="https://www.lonelyplanet.com/croatia" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+ <!-- FB share -->
+ <div class="fb-share-button" data-href="https://www.timeout.com/croatia/travel/top-10-croatian-islands" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+ <!-- FB share -->         
+        <br>
+        <br>
+<!-- Twitter share -->
+<a href="https://twitter.com/intent/tweet?button_hashtag=joinedatthetrip&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #joinedatthetrip #croatia</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ <!-- Twitter share -->
+ 
+<!--        <div class="fb-like" data-href="https://www.lonelyplanet.com/croatia" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>-->
           <div id="panel"><p>
-
                     <?php
                     echo "Blah blah blahh:";
 
@@ -253,7 +267,6 @@ echo $img;
 
 
         </div>
-</div>
 <br>
 <br>
 <?php require_once 'views/pages/divs.php'; ?>
