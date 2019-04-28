@@ -76,25 +76,7 @@ require_once 'views/pages/homepage-sections.php';
 
        
         
-        <div class="col-12">
-                        <h3 class="heading text-center">Gallery</h3>
-                        <div class="heading-underline"></div>
-                    </div> 
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-50" src="views/images/badBear.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-50" src="views/images/bear.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-50" src="views/images/route66.jpg" alt="Third slide">
-    </div>
-  </div>
-</div>
-        
+      
 
         
         
