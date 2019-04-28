@@ -352,6 +352,13 @@
             <footer>
                 <div class="row justify-content-center">
                     <div class="col-md-5 text-center">
+
+                      <!--image to be added <img src="">-->
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p> 
+                        <strong><a href="?controller=pages&action=contactUs">Contact Us….</a></strong><br>
+                        <strong>Contact info  </strong>
+                        <p>99999<br>email address</p>
+
                       <div><a class="navbar-brand" href="index.php"><svg xmlns="http://www.w3.org/2000/svg" height="65pt" version="1.1" viewBox="0 -1 612.092 612" width="65pt">
 <g id="surface1">
 <path d="M 0 0.046875 L 610.726562 0.046875 L 610.726562 610.773438 L 0 610.773438 Z M 0 0.046875 " style=" stroke:none;fill-rule:nonzero;fill:#1ebba3;fill-opacity:1;" />
@@ -377,7 +384,7 @@
                         
                         <strong>Contact info:  </strong>
                         <p>020 777 4567<br>joined-at-the-trip@gmail.com</p>
-                        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>

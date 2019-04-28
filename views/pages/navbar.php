@@ -38,6 +38,10 @@ $userID=$_SESSION['id'];
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?controller=pages&action=aboutUs">About Us</a>
+                        </li>
+                       
                         <?php 
                         if (!empty($_SESSION) ){
                         if ( $_SESSION["role"]=="Admin"){
@@ -75,8 +79,11 @@ $userID=$_SESSION['id'];
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
-                        </li> ' 
-                            ;} ?>
+                        </li> 
+                          '
+                            ;}
+                            ?>
+                      
                         
                         </ul> 
                         <?php if (!empty($_SESSION['username'])){
@@ -114,6 +121,11 @@ $userID=$_SESSION['id'];
                             <button class="button"><i class="material-icons">
                                     person_add
                                 </i> <br>sign up </button> </a>';
+                        
+                          echo'<a href="?controller=post&action=searchBar"><button class="button"><i class="material-icons">
+                        search
+                         </i> <br>search </button> </a>';
+ 
                         }?>
 
                
