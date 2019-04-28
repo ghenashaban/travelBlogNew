@@ -1,7 +1,6 @@
 
 <link href="views/css/search.css" rel="stylesheet" type="text/css"/>
-<div>
-    <div class="caption text-center">
+   <div class="caption text-center">
         <h3> Welcome! أهلا بك! Bem Vinda! Failte! Bienvenido! </h3>
         <h1> Joined at the trip!</h1>
       
@@ -13,23 +12,6 @@
         </div>
         </form>       
 
-
-
     </div>
-<div>
-    <div class="caption text-center">
-
-
-               
-
-
-
-            </div>
-
-            <!-- end landing page -->
-
-
         </div>
             <?php require_once 'views/pages/divs.php'; ?>
-</div>
-
