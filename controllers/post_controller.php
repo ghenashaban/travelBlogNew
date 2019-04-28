@@ -114,10 +114,10 @@ if (!isset($_GET['id'])) {
   }
   
     
-    
 
-     
-
+  
+  
+  
 public function update() {
         
       if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -138,8 +138,8 @@ public function update() {
       }
       
     }
+}
 
-  }
 
 // function addComment() {
 //if (isset($_POST['submit'])) {
@@ -170,6 +170,3 @@ public function update() {
 //      
 //    }
 //
-
-      
-

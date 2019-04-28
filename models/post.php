@@ -264,7 +264,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=1
+    where category_ID=1
 );');
         
             $post = $req->fetch();
@@ -281,7 +281,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=2
+    where category_ID=2
 );');
         
             $post = $req->fetch();
@@ -299,7 +299,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=3
+    where category_ID=3
 );');
         
             $post = $req->fetch();
@@ -317,7 +317,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=4
+    where category_ID=4
 );');
         
             $post = $req->fetch();
@@ -335,7 +335,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=5
+    where category_ID=5
 );');
         
             $post = $req->fetch();
@@ -353,7 +353,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=1;');
+where category_ID=1;');
 
         
             $post = $req->fetch();
@@ -371,7 +371,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=2;');
+where category_ID=2;');
 
         
             $post = $req->fetch();
@@ -389,7 +389,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=3;');
+where category_ID=3;');
 
         
             $post = $req->fetch();
@@ -406,7 +406,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=4;');
+where category_ID=4;');
 
         
             $post = $req->fetch();
@@ -424,7 +424,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=5;');
+where category_ID=5;');
 
         
             $post = $req->fetch();
@@ -436,4 +436,3 @@ if($post){
 }
 
 
-    
