@@ -55,7 +55,8 @@ body {
     top: 25%;
     z-index: 1;
     color: white;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
+
    }
 
    .caption h1 {       
@@ -245,6 +246,7 @@ hr.socket{
 
 
 
+
 /* ----------Log in/out and sign up??---------------*/
 .button {
   border-radius: 4px;
@@ -407,6 +409,22 @@ th, td {
     
 }
 
+
+/*div#carouselExampleIndicators{
+    
+}
+#pics{
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}*/
+
 /*logo*/
 
 span#logo-strap {
@@ -418,6 +436,7 @@ span#logo-strap {
    line-height: .95em;
     padding-left: 0;
 }
+
 
 
 /*============ BOOTSTRAP BREAK POINTS:
