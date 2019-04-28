@@ -101,7 +101,19 @@ ON post.categoryID = category.id where categoryID = $categoryID ;  ");
          exit();
         }
     }
-   
+
+      public static function searchAhead($search) { //search all content for something relevant
+        $list = [];
+        $db = Db::getInstance();
+        $req = $db->prepare("SELECT distinct title FROM post WHERE title LIKE '%$search%';");
+        $req->execute();
+        $results = $req->fetchAll();
+        foreach ($results as $result) {
+            $list [] = $result['title'];
+        }
+        echo json_encode($list);
+    }
+    
     
     
     
