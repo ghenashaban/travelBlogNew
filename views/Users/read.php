@@ -65,10 +65,11 @@ echo $img;
   </tr>
   <tr><td>Surname</td> 
    <td><?php echo "$users->surname" ?> </td></tr>
+  <tr><td>Username</td>
+    <td><?php echo $users->username ?> <br></td></tr>
     <tr><td>User ID</td>
     <td><?php echo $users->id ?> <br></td></tr>
-    <tr><td>Username</td>
-    <td><?php echo $users->username ?> <br></td></tr>
+    
     <tr><td>password</td>
     <td><?php echo $users->password ?> <br></td></tr>
     <tr><td>Email</td>
