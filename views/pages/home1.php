@@ -13,23 +13,9 @@
         </div>
         </form>       
 
-
-
     </div>
-<div>
-    <div class="caption text-center">
 
 
-               
-
-
-
-            </div>
-
-            <!-- end landing page -->
-
-
-        </div>
 </div>
 
             <?php require_once 'views/pages/divs.php'; ?>
