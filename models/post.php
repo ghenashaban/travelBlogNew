@@ -122,15 +122,13 @@ ON post.categoryID = category.id where categoryID = $categoryID ;  ");
   
   public static function add() {
     $db = Db::getInstance();
-    $req = $db->prepare("insert into post( title, body, image, user_id ) values ( :title, :body, :image, :user_id);"
+    $req = $db->prepare("insert into post( title, body, user_id, categoryID  ) values (( :title), (:body), (:user_id), (select id from category where categories=:categories) );"
             . "insert into liketotal(post_id, totalcount) 
 values ((select id from post where title=:title),
 ('0'));
+");
 
-insert into totalcomments(post_id, totalCount) 
-values ((select id from post where title=:title),
-('0'));");
-
+            
 
 
 
@@ -139,6 +137,7 @@ $req->bindParam(':body', $body);
 $req->bindParam(':image', $image);
 
 $req->bindParam(':user_id', $user_id);
+$req->bindParam(':categories', $categories);
 
 
     if(isset($_POST['title'])&& $_POST['title']!=""){
@@ -146,6 +145,9 @@ $req->bindParam(':user_id', $user_id);
     }
      if(isset($_POST['user_id'])&& $_POST['user_id']!=""){
         $filteredUserId = filter_input(INPUT_POST,'user_id', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+     if(isset($_POST['categories'])&& $_POST['categories']!=""){
+        $filteredCategory = filter_input(INPUT_POST,'categories', FILTER_SANITIZE_SPECIAL_CHARS);
     }
 //     if(isset($_POST['post_id'])&& $_POST['post_id']!=""){
 //        $filteredPostId = filter_input(INPUT_POST,'post_id', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -156,7 +158,7 @@ $req->bindParam(':user_id', $user_id);
 //    if(isset($_POST['image'])&& $_POST['image']!=""){
 //        $filteredimage = filter_input(INPUT_POST,'image', FILTER_SANITIZE_SPECIAL_CHARS);
 //    }
-
+$categories=$filteredCategory;
 $user_id=$filteredUserId;
 
 $title = $filteredTitle;
@@ -262,7 +264,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=1
+    where category_ID=1
 );');
         
             $post = $req->fetch();
@@ -279,7 +281,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=2
+    where category_ID=2
 );');
         
             $post = $req->fetch();
@@ -297,7 +299,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=3
+    where category_ID=3
 );');
         
             $post = $req->fetch();
@@ -315,7 +317,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=4
+    where category_ID=4
 );');
         
             $post = $req->fetch();
@@ -333,7 +335,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where categoryID=5
+    where category_ID=5
 );');
         
             $post = $req->fetch();
@@ -351,7 +353,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=1;');
+where category_ID=1;');
 
         
             $post = $req->fetch();
@@ -369,7 +371,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=2;');
+where category_ID=2;');
 
         
             $post = $req->fetch();
@@ -387,7 +389,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=3;');
+where category_ID=3;');
 
         
             $post = $req->fetch();
@@ -404,7 +406,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=4;');
+where category_ID=4;');
 
         
             $post = $req->fetch();
@@ -422,7 +424,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where categoryID=5;');
+where category_ID=5;');
 
         
             $post = $req->fetch();
@@ -434,4 +436,3 @@ if($post){
 }
 
 
-    

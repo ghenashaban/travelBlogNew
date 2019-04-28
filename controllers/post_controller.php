@@ -92,7 +92,20 @@ if (!isset($_GET['id'])) {
 
 
       $posts = Post::findByCat($_GET['categoryID']);
-    
+    require_once 'models/post.php';
+//            $PopularPostCOM = Post::PopularPostCOM();
+//            $PopularPostLIKE = Post::PopularPostLIKE();
+//            $RecentPosts = Post::RecentPost();
+            $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
        
     require_once 'views/posts/readByCat.php';
    
@@ -101,10 +114,10 @@ if (!isset($_GET['id'])) {
   }
   
     
-    
 
-     
-
+  
+  
+  
 public function update() {
         
       if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -125,8 +138,8 @@ public function update() {
       }
       
     }
+}
 
-  }
 
 // function addComment() {
 //if (isset($_POST['submit'])) {
@@ -157,6 +170,3 @@ public function update() {
 //      
 //    }
 //
-
-      
-

@@ -24,14 +24,14 @@
 
 // for validation we list the allowed controllers and their actions
 // Add an entry for each new controller and its actions
-$controllers = array('pages' => ['home', 'error'],
+$controllers = array('pages' => ['home', 'error', 'contactUs', 'aboutUs'],
                     'product' => ['readAll','read','create','update','delete'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
 
                      'post' => ['readAll','delete','create','read','update', 'search','addComment','addLike','readByCat','RecentPost','RecentPostDes','RecentPostEco','RecentPostFam','RecentPostIns','RecentPostTip','postLikeDes','postLikeEco','postLikeFam','postLikeTip','postLikeIns'],
 
 
-                   'user' => ['readAll', 'read','login','logout','delete','register','update','registerAdmin','readAccount', 'loginPopUp']
+                   'user' => ['readAll','updatePassword', 'read','login','logout','delete','register','update','registerAdmin','readAccount', 'loginPopUp']
 
                     );
 
