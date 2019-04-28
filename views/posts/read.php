@@ -2,23 +2,37 @@
 <head>
     <!--Ghena script tag for comments ajax-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--Issi tags for social media sharing-->
+   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
     
 </head>
 
 <body>
+    
     <!--Ghena css for comments ajax-->
     <style> 
+        
         #panel, #flip {
             padding: 5px;
             text-align: center;
             background-color: #e5eecc;
             border: solid 1px #c3c3c3;
+            background-color: rgb(0,0,0); /* Fallback color for comments box */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            border: 2px solid #55d6be;
+            border-radius: 12px;
         }
 
         #panel {
-            padding: 50px;
+            padding: 10px;
             display: none;
+            border: 2px solid #55d6be;
+            border-radius: 12px;
+            
+        .myModal{
+            border: 2px solid #55d6be;
+            border-radius: 12px;
+                
+            }
         }
         .modal {
             display: none; /* Hidden by default */
@@ -32,15 +46,21 @@
             overflow: auto; /* Enable scroll if needed */
             background-color: rgb(0,0,0); /* Fallback color */
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            border: 5px solid #55d6be;
+            border-radius: 12px;
         }
 
         /* Modal Content */
         .modal-content {
-            background-color: #fefefe;
+            background-color: rgb(0,0,0); /* Fallback color for comments box */
+/*          background-color: rgba(0,0,0,0.4);  Black w/ opacity */
             margin: auto;
             padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
+            border: 5px solid #55d6be;
+            width: 40%;
+            border-radius: 20px;
+            display: block;
+            top: 35%;
         }
 
         /* The Close Button */
@@ -57,10 +77,20 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        button{
+            color: white;
+            border: 2px solid #55d6be; /* turquoise */
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);  
+            border-radius: 12px;
+            padding: 10px 24px;
+        }
+
         .box {border-style: solid;
        width: 400px;
         }
-        
+
     </style>
    
            <style>
@@ -99,32 +129,36 @@
             echo $img;
         }
         ?>
+        <p></p>
+        <div id="myBtn">
          <button id="myBtn">Comment/like ?</button>
-
+        </div>
 
         <div id="myModal" class="modal">
 
 
             <div class="modal-content">
                 <span class="close">&times;</span>
-
-                <h3> it looks like your not logged in </h3>
-                "<a href="?controller=user&action=login"><button>Log in here</button> </a>";
+                
+                <h3> To comment please login or register... </h3>
+                <a href="?controller=user&action=login"><button>Login/Register</button> </a>
             </div>
         </div>
                 <?php
         echo "<br>";
-        echo "likes:";
+        echo "Likes: ";
         echo $likes->totalcount;
         
             require_once 'views/posts/addLike.php';
             require_once 'views/posts/addComment.php';
             
             ?>
+        <br>
+        <div class="fb-like" data-href="https://www.lonelyplanet.com/croatia" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
           <div id="panel"><p>
 
                     <?php
-                    echo "these are the comments:";
+                    echo "Blah blah blahh:";
 
                     foreach ($comments as $comment) {
                         ?>
@@ -172,7 +206,7 @@ echo $img;
        
 
 
-       <?php  require_once 'views/posts/twitter.php'; ?>
+ 
 
     </div>
 

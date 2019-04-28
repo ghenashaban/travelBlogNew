@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
-        <meta property="og:url"           content="http://localhost:8080/travelBlogNew/index.php?controller=post&amp;action=read&amp;id=103" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Your Website Title" />
-    <meta property="og:description"   content="Your description" />
+    <meta property="og:url"          content="http://localhost:8080/travelBlogNew/index.php?controller=post&amp;action=read&amp;id=103" />
+    <meta property="og:type"          content="Website" />
+    <meta property="og:title"         content="Joined at the trip!" />
+    <meta property="og:description"   content="Travel blog by 5 female friends" />
     <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
     </head>
     <body>
+        <!--FB-->
+        <div id="fb-root"></div>
+<!--<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>-->
+<!--v1-->
         <div id="fb-root"></div>
     <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
