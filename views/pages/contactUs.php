@@ -202,8 +202,8 @@
         <img src="views/images/victoria1.jpg" alt="Victoria" style="width:300px; height:215px">
             </div>
        <div class="flip-card-back">
-       <h3></h3><br>
-           <h3 class="title">FOR EVERYTHING ELSE..</h3>
+       <h3></h3>
+           <h3 class="title">FOR EVERYTHING ELSE... before she get mauled by a polar bear </h3>
        </div> 
             </div>
         </div>
