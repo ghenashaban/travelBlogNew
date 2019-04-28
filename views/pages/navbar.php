@@ -17,6 +17,10 @@ $userID=$_SESSION['id'];
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?controller=pages&action=aboutUs">About Us</a>
+                        </li>
+                       
                         <?php 
                         if (!empty($_SESSION) ){
                         if ( $_SESSION["role"]=="Admin"){
@@ -54,8 +58,11 @@ $userID=$_SESSION['id'];
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
-                        </li> ' 
-                            ;} ?>
+                        </li> 
+                          '
+                            ;}
+                            ?>
+                      
                         
                         </ul> 
                         <?php if (!empty($_SESSION['username'])){

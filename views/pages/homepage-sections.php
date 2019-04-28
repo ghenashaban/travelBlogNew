@@ -334,6 +334,7 @@
                     <div class="col-md-5 text-center">
                       <!--image to be added <img src="">-->
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p> 
+                        <strong><a href="?controller=pages&action=contactUs">Contact Us….</a></strong><br>
                         <strong>Contact info  </strong>
                         <p>99999<br>email address</p>
                         <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
