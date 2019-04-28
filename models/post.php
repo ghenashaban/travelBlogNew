@@ -67,9 +67,9 @@ class Post {
       $categoryID  = intval($categoryID );
       $req = $db->query("select post.title, post.id, post.body, post.categoryID, category.categories  from post 
             INNER JOIN category
-ON post.category_ID = category.id where category_ID = $categoryID ;  ");
+ON post.categoryID = category.id where categoryID = $categoryID ;  ");
       // we create a list of Product objects from the database results
- $req->execute(array('category_ID ' => $categoryID ));
+ $req->execute(array('categoryID ' => $categoryID ));
        foreach($req->fetchAll() as $post) {
           $list[] = new Post($post['title'], $post['id'],$post['body'], "","",$post['categories']); 
 
@@ -262,7 +262,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=1
+    where categoryID=1
 );');
         
             $post = $req->fetch();
@@ -279,7 +279,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=2
+    where categoryID=2
 );');
         
             $post = $req->fetch();
@@ -297,7 +297,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=3
+    where categoryID=3
 );');
         
             $post = $req->fetch();
@@ -315,7 +315,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=4
+    where categoryID=4
 );');
         
             $post = $req->fetch();
@@ -333,7 +333,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=5
+    where categoryID=5
 );');
         
             $post = $req->fetch();
@@ -343,7 +343,94 @@ if($post){
     else "error";
     }
     
+      public static function postLikeDes(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=1;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
     
+    public static function postLikeEco(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=2;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+    
+    public static function postLikeFam(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=3;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+        public static function postLikeIns(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=4;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
+    
+        public static function postLikeTip(){
+   $list = [];
+        $db = Db::getInstance();
+        $req = $db->query('SELECT
+title, post_id, post.id,
+MAX(totalCount) 
+FROM liketotal
+inner JOIN post ON liketotal.post_id=post.id
+where categoryID=5;');
+
+        
+            $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],"","","","");
+    }
+    else "error";
+    }
 }
 
 

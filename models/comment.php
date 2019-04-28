@@ -6,13 +6,15 @@ class Comment {
     public $post_id;
     public $content;
      public $date;
+     public $username;
     
-      public function __construct($user_id, $id, $post_id, $content, $date) {
+      public function __construct($user_id, $id, $post_id, $content, $date, $username) {
         $this->user_id=$user_id;
         $this->id=$id;
         $this->post_id=$post_id;
         $this->date=$date;
         $this->content=$content;
+        $this->username=$username;
        
        
     }
@@ -54,12 +56,15 @@ public static function findByPostId($post_id) {
         $db = Db::getInstance();
         //use intval to make sure $id is an integer
         $post_id = intval($post_id);
-        $req = $db->prepare('select * from comment where post_id = :post_id; ');
+        $req = $db->prepare('SELECT *
+FROM comment
+INNER JOIN user
+ON comment.user_id = user.id where post_id =:post_id; ');
         //the query was prepared, now replace :id with the actual $id value
         $req->execute(array('post_id' => $post_id));
       foreach ($req->fetchAll() as $comment) {
           
-             $list[]= new  Comment($comment['user_id'], $comment['id'], $comment['post_id'], $comment['content'], $comment['date']);
+             $list[]= new  Comment($comment['user_id'], $comment['id'], $comment['post_id'], $comment['content'], $comment['date'],$comment['username']);
       } return $list ;  
     }
    

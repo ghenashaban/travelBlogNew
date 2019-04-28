@@ -28,13 +28,13 @@
 $file2 = 'views/images/' .$users->username .".jpeg";
 
 if(file_exists($file1) ){
-//   $img= '<img src="$file1"  class="avatar">';
+//   $img= "<img src='$file1'  class='avatar'>";
     $img = "<img src='$file1' class='sticky' />";
     echo $img;
     
 }
 else if (file_exists($file2)) {
-//    $img= '<img src="$file2"  class="avatar">';
+//    $img= "<img src='$file2'  class='avatar'>";
   $img = "<img src='$file2' class='sticky' />";
 echo $img;  
 
@@ -64,8 +64,8 @@ echo $img;
   </tr>
   <tr><td>Surname</td> 
    <td><?php echo "$users->surname" ?> </td></tr>
-    <tr><td>User ID</td>
-    <td><?php echo $users->id ?> <br></td></tr>
+    <tr><td>User Name</td>
+    <td><?php echo $users->username ?> <br></td></tr>
     <tr><td>Email</td>
     <td><?php echo $users->email ?> <br></td></tr>
     <tr><td>Password</td>
