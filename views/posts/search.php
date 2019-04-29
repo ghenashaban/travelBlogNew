@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<
         <h1>list of  matching posts</h1>
   
 
@@ -18,6 +13,5 @@
                             </div></a>";
                             
                              } ?>
-
-    </body>
-    </html>
+        
+<?php require_once 'views/pages/divs.php'; ?>

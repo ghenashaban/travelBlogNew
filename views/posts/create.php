@@ -1,5 +1,5 @@
 <html>
-    <div id="banner">
+    <div id="bannerA">
 <p>Fill in the following form to create a new article:</p>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
    
@@ -51,3 +51,5 @@
         <script src="views/js/plugin/tinymce/init-tinymce.js" type="text/javascript"></script>
 </html>
 </div>
+    
+    <?php require_once 'views/pages/divs.php'; ?>

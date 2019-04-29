@@ -5,3 +5,5 @@
 <p>It looks like something went wrong :(</p>
 </div>
 </div>
+
+<?php require_once 'views/pages/divs.php'; ?>

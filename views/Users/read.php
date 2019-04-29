@@ -25,7 +25,7 @@
 <div class="col-sm-3">
     <?php
     $file1 = 'views/images/' .$users->username .".jpg";
-$file2 = 'views/images/' .$users->username .".jpeg";
+$file2 = 'views/images/' .$users->username .'.jpeg';
 
 if(file_exists($file1) ){
 //   $img= '<img src="$file1"  class="avatar">';
@@ -108,3 +108,4 @@ echo $img;
 
    
 </html>
+<?php require_once 'views/pages/divs.php'; ?>

@@ -65,3 +65,4 @@ echo $img;
 </div>
 
 
+<?php require_once 'views/pages/divs.php'; ?>

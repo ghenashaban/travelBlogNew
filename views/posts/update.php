@@ -1,5 +1,5 @@
 <html>
-    <div id="banner">
+    <div id="bannerA">
 <!-- <div class="caption text-center">-->
      
            
@@ -53,3 +53,5 @@ echo $img;   }
         <script src="views/js/plugin/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/init-tinymce.js" type="text/javascript"></script>
 </html>
+
+<?php require_once 'views/pages/divs.php'; ?>

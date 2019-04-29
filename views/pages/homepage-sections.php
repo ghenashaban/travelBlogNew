@@ -7,9 +7,10 @@
                </h1>
 <div class="container-fluid">
 <div class="row">
+    
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/croatia.jpg" alt="Lake in Croatia">
+    <img class="card-img-top" src="views/images/<?php echo $RecentPostDes->title.".jpg"; ?>" alt='Lake in Croatia'>
     <div class="card-header"><h3><?php echo $RecentPostDes->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $RecentPostDes->id; ?>" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
@@ -19,7 +20,7 @@
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/miami-post.jpg" alt="Miami skyline">
+    <img class="card-img-top" src="views/images/<?php echo $postLikeDes->title.".jpg"; ?>" alt="Miami skyline">
     <div class="card-header"><h3><?php echo $postLikeDes->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $postLikeDes->id; ?>" class="stretched-link card-title">South Beach is usually the first thing people think of when it comes to Miami - but there's a lot more to the city than that</a>
@@ -57,7 +58,7 @@
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/holiday destinations that are saving the planet.jpeg" alt="Lake and flowers in Switzerland">
+    <img class="card-img-top" src="views/images/<?php echo $RecentPostEco->title.".jpg"; ?>" alt="Lake and flowers in Switzerland">
     <div class="card-header"><h3><?php echo $RecentPostEco->title?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $RecentPostEco->id?>" class="stretched-link card-title">We take a tour of the world’s most eco-friendly destinations</a>
@@ -67,7 +68,7 @@
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/HOW TO TRAVEL PLASTIC-FREE.jpg" alt="Plastic bottles">
+    <img class="card-img-top" src="views/images/<?php echo $postLikeEco->title.".jpg"; ?>" alt="Plastic bottles">
     <div class="card-header"><h3><?php echo $postLikeEco->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $postLikeEco->id; ?>" class="stretched-link card-title">You can reduce how much single use plastic you consume while travelling through a bit of preparation</a>
@@ -108,7 +109,7 @@
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/FAMILY HOLIDAY HEAVEN.jpg" alt="Welsh shipping container">
+    <img class="card-img-top" src="views/images/<?php echo $RecentPostFam->title.".jpg"; ?>" alt="Welsh shipping container">
     <div class="card-header"><h3><?php echo $RecentPostFam->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $RecentPostFam->id; ?>" class="stretched-link card-title">How we found holiday bliss in a Welsh shipping container</a>
@@ -118,7 +119,7 @@
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/SUN, SEA AND LEGOLAND.jpeg" alt="Dubai skyline">
+    <img class="card-img-top" src="views/images/<?php echo $postLikeFam->title.".jpeg"; ?>" alt="Dubai skyline">
     <div class="card-header"><h3><?php echo $postLikeFam->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $postLikeFam->id; ?>" class="stretched-link card-title">Why Dubai is the perfect family holiday destination</a>
@@ -143,38 +144,7 @@
 
  </div>         
    </div>                    
-    <!--   CONTENT FROM VIDEO TUTORIAL - NOW USING CARDS ABOVE            
-   <div class="col-md-4">
-                        <h3>More on family travel</h3>
-                        <div class="feature">
-                            <i class="fas fa-code fa-3x"></i>
-                        </div>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                    </div>
-
-                    <div class="col-md-4">
-                        <h3>More on family travel</h3>
-                        <div class="feature">
-                            <i class="fas fa-bold fa-3x"></i>
-                        </div>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                    </div>  
-
-                    <div class="col-md-4">
-                        <h3>More on family travel</h3>
-                        <div class="feature">
-                            <i class="fab fa-css3 fa-3x"></i>
-                        </div>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                    </div>  
-                </div>
-
-                <div class="fixed-wrap">
-                    <div class="fixed">
-
-                    </div>
-                </div>  
-            </div>  -->        
+     
 
         <!--- End family travel section --->
 
@@ -193,7 +163,7 @@
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/SARDINIA'S GRAND CANYON.jpeg" alt="Sardinia canyon">
+    <img class="card-img-top" src="views/images/<?php echo $postLikeIns->title.".jpg"; ?>" alt="Sardinia canyon">
     <div class="card-header"><h3><?php echo $postLikeIns->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $postLikeIns->id; ?>" class="stretched-link card-title">Up for a challenge? Try hiking this rocky ravine</a>
@@ -213,7 +183,7 @@
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/WHERE TO GO ON YOUR HONEYMOON.jpg" alt="Hammock on beach">
+    <img class="card-img-top" src="views/images/<?php echo $RecentPostIns->title.".jpg"; ?>" alt="Hammock on beach">
     <div class="card-header"><h3><?php echo $RecentPostIns->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $RecentPostIns->id; ?>" class="stretched-link card-title">We check out the best destinations for romance</a>
@@ -240,7 +210,7 @@
 <div class="row">
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/FAMILY HOLIDAY PACKING LIST.jpg" alt="Family at airport">
+    <img class="card-img-top" src="views/images/<?php echo $postLikeTip->title.".jpg"; ?>" alt="Family at airport">
     <div class="card-header"><h3><?php echo $postLikeTip->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $postLikeTip->id; ?>" class="stretched-link card-title">Don't leave home without these essential items</a>
@@ -260,7 +230,7 @@
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/HOW TO CHOOSE THE PERFECT TRAVEL COMPANIO.jpg" alt="Two women taking selfie">
+    <img class="card-img-top" src="views/images/<?php echo $RecentPostTip->title.".jpeg"; ?>" alt="Two women taking selfie">
     <div class="card-header"><h3><?php echo $RecentPostTip->title?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $RecentPostTip->id?>" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
@@ -270,34 +240,7 @@
  </div> 
                       <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=5 ">Read more articles</a></div> 
  </div>                    
-
-           <!--old layout         <div class="row">
-
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fas fa-play-circle fa-4x" data-fa-transform="shrink-3 up-5"></i>
-                                <h3>Custom Animation</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fas fa-sliders-h fa-4x" data-fa-transform="shrink-4.5 up-4.5"></i>
-                                <h3>Content slider</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="feature">
-                                <i class="fab fa-wpforms fa-4x" data-fa-transform="shrink-4 up-5"></i>
-                                <h3>Contact form</h3>
-                                p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>                       
-                            </div>                      
-                        </div>
-
-                    </div>      -->       
+       
                  
             </div>
         

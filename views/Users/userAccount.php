@@ -98,3 +98,4 @@ echo $img;
        
     </body>
 </html>
+<?php require_once 'views/pages/divs.php'; ?>

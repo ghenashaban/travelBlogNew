@@ -1,0 +1,32 @@
+EXCEPTIONS:EXCEPTION CAUGHT: 2019-04-29 14:23:23 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xxxx' in 'field list'
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(44): Post::add()
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->create()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'create')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-04-29 14:23:40 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xxxx' in 'field list'
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(44): Post::add()
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->create()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'create')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-04-29 16:59:15 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'blah' in 'field list'
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(56): PDO->query('select blah fro...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(5): Post::all()
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readAll()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readAll')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-04-29 16:59:18 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'blah' in 'field list'
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(56): PDO->query('select blah fro...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(5): Post::all()
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readAll()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readAll')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}

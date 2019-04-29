@@ -36,12 +36,31 @@ class PostController {
       
       public function create() {
    
-      if($_SERVER['REQUEST_METHOD'] == 'GET'){
+      if($_SERVER['REQUEST_METHOD'] == 'GET'){$posts = Post::all();
+            $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
           require_once('views/posts/create.php');
       }
       else { 
             Post::add();
-             
+                  $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             $posts = Post::all(); 
             require_once('views/posts/readAll.php');
       }
@@ -50,6 +69,16 @@ class PostController {
     
     public function search() {
   if($_SERVER['REQUEST_METHOD'] == 'GET'){
+      $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
           require_once('views/posts/search.php');
       }
       else { 
@@ -64,6 +93,7 @@ class PostController {
 if (!isset($_GET['id'])) {
         return call('pages', 'error');
 } try {
+    
       $posts = Post::find($_GET['id']);
       require_once 'models/comment.php';
       $comments=Comment::findByPostId($_GET['id']);
@@ -143,7 +173,16 @@ public function update() {
         return call('pages', 'error');
 
         $post = Post::find($_GET['id']);
-      
+      $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
         require_once('views/posts/update.php');
         }
       else
@@ -159,32 +198,4 @@ public function update() {
 }
 
 
-// function addComment() {
-//if (isset($_POST['submit'])) {
-//
-//                Comment::addComment();
-//               
-//                
-//            } else {
-//                $new= new PostController;
-//                $new->read();
-//                Post::find($_GET['id']);
-//                require_once('views/posts/read.php');
-//            }
-//
-//}
-//function addComment(){
-//    if($_SERVER['REQUEST_METHOD'] == 'GET'){
-//          require_once('views/posts/.php');
-//      }
-//      else { 
-//          require_once('views/posts/read.php');
-//          require_once('models/comment.php');
-//            Comment::addComment();
-//             
-//          
-//      require_once('views/posts/read.php');
-//      }
-//      
-//    }
-//
+

@@ -30,9 +30,10 @@
                 
             }
         </style>
+    </head>
 
     <div id="bannerLog">
-        <div class="container">
+       
             <div class="form-container">
                 <form method="post" class="w3-container">
                     <h2>Log in</h2>
@@ -70,11 +71,15 @@
 
                 </form>
             </div>
-        </div>
+       
         <h6>Not registered? Please sign up here! <a href="?controller=user&action=register">
                 <button class="button"><i class="material-icons">
                         person_add
                     </i> <br>sign up </button> </a></h6> 
-    </div>
+   </div>
+
+
 
 </html>  
+
+<?php require_once 'views/pages/divs.php'; ?>
