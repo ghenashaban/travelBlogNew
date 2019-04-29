@@ -1,5 +1,10 @@
 <div id="banner">
-<p>Fill in the following form to update the user:</p>
+    <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-10"><h4>Fill in the following form to update the user:</h4>   
+                </div> </div>
+
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     <h2>Update User</h2>
     <p>
@@ -63,6 +68,11 @@ echo $img;
 
 
 </div>
+ <script>
+function goBack() {
+  window.history.back();
+}
 
+                    </script> 
 
 <?php require_once 'views/pages/divs.php'; ?>

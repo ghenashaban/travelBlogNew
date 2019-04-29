@@ -20,6 +20,7 @@
 </style>
     </head>
     <div id="banner">
+       
     <body>
          <div class="row">
 <div class="col-sm-3">
@@ -77,25 +78,20 @@ echo $img;
       </div>
  </div>
 
-        
-<!--// FOR USE IF USERS HAVE AVATARS
-//$file1 = 'views/images/' .$posts->title .".jpg";
-//$file2 = 'views/images/' .$posts->title .".jpeg";
-//if(file_exists($file1) ){
-//    $img = "<img src='$file1' width='150' />";
-//    echo $img;    
-//}
-//else if (file_exists($file2)) {
-//  $img = "<img src='$file2' width='150' />";
-//    echo $img; 
-//} else {
-//    // we can put a default image
-//    echo "No picture found";
-//}
-//?>-->
+ <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8">  
+                </div> </div>
 
     </div>
        
     </body>
+    <script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
 </html>
 <?php require_once 'views/pages/divs.php'; ?>

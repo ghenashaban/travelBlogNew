@@ -164,7 +164,7 @@ $body = $filteredBody;
 $req->execute();
 Post::uploadFile($title);
     }
-const AllowedTypes = ['image/jpeg', 'image/jpg'];
+const AllowedTypes = ['name/jpeg', 'name/jpg'];
 const InputKey = 'myUploader';
 public static function uploadFile(string $title) {
 	if (empty($_FILES[self::InputKey])) {
@@ -176,8 +176,8 @@ public static function uploadFile(string $title) {
 //	}
 	$tempFile = $_FILES[self::InputKey]['tmp_name'];
         $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
-	$destinationFile = $path . $title . '.jpeg';
-         $imagePath = "uploads/" . $title . '.jpeg';
+	$destinationFile = $path . $title . '.jpg';
+         $imagePath = "uploads/" . $title . '.jpg';
 	if (!move_uploaded_file($tempFile, $destinationFile) ) {
 		return $imagePath;
 	}

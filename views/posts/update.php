@@ -2,8 +2,12 @@
     <div id="bannerA">
 <!-- <div class="caption text-center">-->
      
-           
-<p>Fill in the following form to update an existing post:</p>
+           <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8"><h2>Fill in the following form to update an existing post:</h2>   
+                </div> </div>
+
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data"> 
     <h2>Update article</h2>
     <p>
@@ -51,7 +55,13 @@ echo $img;   }
 
 <script src="views/js/js/jquery.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/tinymce.min.js" type="text/javascript"></script>
-        <script src="views/js/plugin/tinymce/init-tinymce.js" type="text/javascript"></script>
+     <script src="views/js/plugin/tinymce/init-tinymce.js" type="text/javascript"></script>
+<script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
 </html>
 
 <?php require_once 'views/pages/divs.php'; ?>

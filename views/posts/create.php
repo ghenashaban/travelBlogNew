@@ -1,6 +1,11 @@
 <html>
     <div id="bannerA">
-<p>Fill in the following form to create a new article:</p>
+        <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8"><h2>Fill in the following form to create a new article:</h2>   
+                </div> </div>
+
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
    
     <p>
@@ -49,7 +54,13 @@
 <script src="views/js/js/jquery.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/init-tinymce.js" type="text/javascript"></script>
-</html>
+<script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
+    </html>
 </div>
     
     <?php require_once 'views/pages/divs.php'; ?>
