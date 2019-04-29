@@ -21,19 +21,17 @@ require_once 'models/post.php';
            
             require_once 'views/pages/home1.php';
             
-             
-            
-//           
-              
-            
-        } else {
-            require_once 'models/post.php';
-            $search = $_POST['search'];
-           $posts = Post::search($search);
-
-            require_once('views/pages/searchResult.php');
-        }
+      
+//        } else {
+//            require_once 'models/post.php';
+//            $search = $_POST['search'];
+//           $posts = Post::search($search);
+//
+//            require_once('views/pages/searchResult.php');
+//        }
     }
+    }
+    
 
     public function error() {
         require_once 'models/post.php';

@@ -79,29 +79,29 @@ ON post.categoryID = category.id where categoryID = $categoryID ;  ");
    
     }
     
-      public static function search($searchTerm) { // find by user lne 137
-      $list = [];
-        $search = $_POST['search'];
-        $db = Db::getInstance();
-
-        $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$search%';");
-        $req->execute();
-
-        $rows = $req->rowCount();
-
-        if ($rows > 0) {
-            $results = $req->fetchAll();
-            foreach ($results as $result) {
-                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"","");
-            }
-            return $list;
-        } else {
-          
-            require_once('views/pages/noResult.php');
-         exit();
-        }
-    }
-
+//      public static function search($searchTerm) { // find by user lne 137
+//      $list = [];
+//        $search = $_POST['search'];
+//        $db = Db::getInstance();
+//
+//        $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$search%';");
+//        $req->execute();
+//
+//        $rows = $req->rowCount();
+//
+//        if ($rows > 0) {
+//            $results = $req->fetchAll();
+//            foreach ($results as $result) {
+//                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"","");
+//            }
+//            return $list;
+//        } else {
+//          
+//            require_once('views/pages/noResult.php');
+//         exit();
+//        }
+//    }
+//
       public static function searchAhead($search) { //search all content for something relevant
         $list = [];
         $db = Db::getInstance();
@@ -114,7 +114,7 @@ ON post.categoryID = category.id where categoryID = $categoryID ;  ");
         echo json_encode($list);
     }
     
-    
+//    
     
     
     

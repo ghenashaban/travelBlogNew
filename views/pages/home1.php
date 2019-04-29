@@ -21,7 +21,7 @@ ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
 
         <form method="POST">
         <div class="container">
-            <input type="text" placeholder="Search.."  name="txtCountry" id="txtCountry" class="typeahead">
+            <input type="text" placeholder="Search.."  name="search" id="txtCountry" class="typeahead">
             <div class="search"></div>
 
         </div>
