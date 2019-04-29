@@ -46,6 +46,17 @@ class User {
         }
         return $list;
     }
+    
+    
+     public static function allBloggers() {
+        $list = [];
+        $db = Db::getInstance();
+        $req = $db->query("select * from user where role='Admin'  ");
+        foreach ($req->fetchAll() as $user) {
+            $list[] = new User($user['id'], $user['first_name'], $user['surname'], $user['username'], $user['email'], $user['role'], $user['password'], $user['created_at'], $user['updated_at'], $user['country_id'],"");
+        }
+        return $list;
+    }
     //function checks if there are existing
     //records in user table for a given username
     public static function userNameExists($userName)

@@ -44,7 +44,24 @@ $userID=$_SESSION['id'];
                        
                         <?php 
                         if (!empty($_SESSION) ){
-                        if ( $_SESSION["role"]=="Admin"){
+                        if ( $_SESSION["role"]=="Admin" ){
+                         echo' <li class="nav-item">
+                            <a class="nav-link"  href="?controller=user&action=readAll" >View all Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="?controller=post&action=readAll" >View all articles</a>
+                        </li>;
+                          <li class="nav-item">
+                            <a class="nav-link"  href="?controller=post&action=create" >Create new article</a>
+                        </li>';
+                         
+                        
+                            
+                        } }?>
+                        
+                         <?php 
+                        if (!empty($_SESSION) ){
+                        if ( $_SESSION["role"]=="master"  ){
                          echo' <li class="nav-item">
                             <a class="nav-link"  href="?controller=user&action=readAll" >View all Users</a>
                         </li>
@@ -54,6 +71,9 @@ $userID=$_SESSION['id'];
                           <li class="nav-item">
                             <a class="nav-link"  href="?controller=post&action=create" >Create new article</a>
                         </li>;
+                        <li class="nav-item">
+                            <a class="nav-link"  href="?controller=user&action=allBloggers" >View all blogger</a>
+                        </li>
                          <li class="nav-item">
                             <a class="nav-link"  href="?controller=user&action=registerAdmin" >Add new blogger</a>
                         </li>';

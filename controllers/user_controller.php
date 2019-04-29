@@ -19,6 +19,23 @@ class UserController {
             $postLikeTip=Post::postLikeTip();
         require_once('views/users/readAll.php');
     }
+    
+    public function allBloggers() {
+       
+        $users = User::allBloggers();
+     
+            $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
+        require_once('views/users/readBloggers.php');
+    }
 
     Public function read() {
         if (!isset($_GET['id']))
