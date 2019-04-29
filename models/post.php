@@ -101,7 +101,19 @@ ON post.categoryID = category.id where categoryID = $categoryID ;  ");
          exit();
         }
     }
-   
+
+      public static function searchAhead($search) { //search all content for something relevant
+        $list = [];
+        $db = Db::getInstance();
+        $req = $db->prepare("SELECT distinct title FROM post WHERE title LIKE '%$search%';");
+        $req->execute();
+        $results = $req->fetchAll();
+        foreach ($results as $result) {
+            $list [] = $result['title'];
+        }
+        echo json_encode($list);
+    }
+    
     
     
     
@@ -264,7 +276,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=1
+    where categoryID=1
 );');
         
             $post = $req->fetch();
@@ -281,7 +293,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=2
+    where categoryID=2
 );');
         
             $post = $req->fetch();
@@ -299,7 +311,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=3
+    where categoryID=3
 );');
         
             $post = $req->fetch();
@@ -317,7 +329,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=4
+    where categoryID=4
 );');
         
             $post = $req->fetch();
@@ -335,7 +347,7 @@ FROM post
 WHERE created_at=(
 SELECT MAX(created_at)
     FROM post
-    where category_ID=5
+    where categoryID=5
 );');
         
             $post = $req->fetch();
@@ -353,7 +365,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where category_ID=1;');
+where categoryID=1;');
 
         
             $post = $req->fetch();
@@ -371,7 +383,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where category_ID=2;');
+where categoryID=2;');
 
         
             $post = $req->fetch();
@@ -389,7 +401,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where category_ID=3;');
+where categoryID=3;');
 
         
             $post = $req->fetch();
@@ -406,7 +418,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where category_ID=4;');
+where categoryID=4;');
 
         
             $post = $req->fetch();
@@ -424,7 +436,7 @@ title, post_id, post.id,
 MAX(totalCount) 
 FROM liketotal
 inner JOIN post ON liketotal.post_id=post.id
-where category_ID=5;');
+where categoryID=5;');
 
         
             $post = $req->fetch();

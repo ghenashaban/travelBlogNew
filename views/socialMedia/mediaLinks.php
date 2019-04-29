@@ -9,7 +9,6 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/js/all.js">
-        <link href="css/socialMedia.css" rel="stylesheet" type="text/css"/> 
         <link href="views/css/socialMedia.css" rel="stylesheet" type="text/css"/>
         <!--Social Media-->
         <title></title>
