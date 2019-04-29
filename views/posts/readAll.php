@@ -6,20 +6,28 @@
     </head>
     <body>
         <div id="banner">
-        <h3>list of all posts</h3>
-  
+        <h1>Joined at the trip Blogs</h1>
+  <button onclick="goBack()">Go Back</button>
 
+
+
+ <div class="row">
    <?php foreach ($posts as $post) { ?>
-     <p>  <td>   <?php echo $post->title; ?> </td>
-    
-   <a href='?controller=post&action=read&id=<?php echo $post->id; ?>' class='btn btn-primary'>Read More</a>
-    <a href='?controller=post&action=update&id=<?php echo $post->id; ?>'class='btn btn-primary'>Update</a>
+     <div class="col-5"> <p>  <td>   <?php echo $post->title; ?> </td> </div> 
+    <div class="col-2">
    
+   <a href='?controller=post&action=read&id=<?php echo $post->id; ?>' class='btn btn-primary'>Read More</a>
+ </div>
+     <div class="col-2">    
+    <a href='?controller=post&action=update&id=<?php echo $post->id; ?>'class='btn btn-primary'>Update</a>
+     </div>
+     <div class="col-2">
     <a href='?controller=post&action=delete&id=<?php echo $post->id; ?>' class='btn btn-primary' onclick="ConfirmDelete()">Delete</a>
-</p>
+    </p> </div>
                         <?php } ?>
                             
-    
+ </div>
+        </div>
   
      <script>
                         function ConfirmDelete() {
@@ -33,6 +41,12 @@
                             }
                             document.getElementById("demo").innerHTML = txt;
                         }
+                        </script>
+                        <script>
+function goBack() {
+  window.history.back();
+}
+
                     </script>  
                     </div>
     </body>
