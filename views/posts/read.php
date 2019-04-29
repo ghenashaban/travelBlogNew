@@ -141,7 +141,7 @@
         });
     </script>
  
-    <div id="banner">
+    <div id="bannerA">
 
         <h3><?php echo $posts->title; ?> </h3> 
         

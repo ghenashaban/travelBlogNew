@@ -385,12 +385,30 @@ th, td {
 }*/
 
 /*output boxes for articles*/
-#banner{
+#bannerA{
    
     background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0,0,0,0.6); /* Black background with 0.5 opacity */
   width: 1300px;
     height: 700px;
+    border-radius: 20px;
+    padding: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  top: 0;
+
+/*  width: 50%;*/
+    
+}
+
+#banner{
+   
+    background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0,0,0,0.6); /* Black background with 0.5 opacity */
+  width: 1000px;
+    height: 600px;
     border-radius: 20px;
     padding: 25px;
   display: block;

@@ -1,5 +1,5 @@
 <html>
-    <div id="banner">
+    <div id="bannerA">
 <p>Fill in the following form to create a new article:</p>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
    

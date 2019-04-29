@@ -51,7 +51,16 @@ class PostController {
       }
       else { 
             Post::add();
-             
+                  $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             $posts = Post::all(); 
             require_once('views/posts/readAll.php');
       }

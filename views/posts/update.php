@@ -1,5 +1,5 @@
 <html>
-    <div id="banner">
+    <div id="bannerA">
 <!-- <div class="caption text-center">-->
      
            
