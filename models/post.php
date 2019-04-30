@@ -86,7 +86,7 @@ class Post {
     }
 
     public static function search($searchTerm) { // find by user lne 137
-        try {
+      
             $list = [];
             $search = $_POST['search'];
             $db = Db::getInstance();
@@ -104,14 +104,12 @@ class Post {
                 require_once('views/pages/noResult.php');
                 exit();
             }
-        } catch (Exception $e) {
-            call('pages', 'error');
-            logException($e);
+      
         }
-    }
+    
 
     public static function searchAhead($search) { //search all content for something relevant
-        try {
+        
             $list = [];
             $db = Db::getInstance();
             $req = $db->prepare("SELECT distinct title FROM post WHERE title LIKE '%$search%';");
@@ -121,10 +119,7 @@ class Post {
                 $list [] = $result['title'];
             }
             echo json_encode($list);
-        } catch (Exception $e) {
-            call('pages', 'error');
-            logException($e);
-        }
+      
     }
 
     public static function remove($id) {
@@ -188,7 +183,10 @@ class Post {
 
 const AllowedTypes = ['name/jpeg', 'name/jpg'];
 const InputKey = 'myUploader';
+
 public static function uploadFile(string $title) {
+    
+try {
 	if (empty($_FILES[self::InputKey])) {
 		//die("File Missing!");
 
@@ -212,7 +210,8 @@ public static function uploadFile(string $title) {
         } catch (Exception $e) {
             call('pages', 'error');
             logException($e);
-
+        }
+}
   public static function find($id) {
       $db = Db::getInstance();
        $id = intval($id);

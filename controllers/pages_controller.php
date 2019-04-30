@@ -7,7 +7,7 @@ use function models\Exception\logException;
 class PagesController {
 
     public function home() {
-        try {
+        
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 require_once 'models/post.php';
 //            $PopularPostCOM = Post::PopularPostCOM();
@@ -25,7 +25,7 @@ class PagesController {
                 $postLikeTip = Post::postLikeTip();
 
                 require_once 'views/pages/home1.php';
-            } else {
+            } else if (!empty($_POST['search'])) {
                 require_once 'models/post.php';
                 $search = $_POST['search'];
                 $RecentPostDes = Post::RecentPostDes();
@@ -41,15 +41,15 @@ class PagesController {
                 $posts = Post::search($search);
 
                 require_once('views/pages/searchResult.php');
+            } else {
+                echo "hello";
+                
             }
-        } catch (Exception $e) {
-            call('pages', 'error');
-            logException($e);
-        }
+
     }
 
     public function error() {
-        try {
+      
             require_once 'models/post.php';
             $RecentPostDes = Post::RecentPostDes();
             $RecentPostEco = Post::RecentPostEco();
@@ -62,10 +62,8 @@ class PagesController {
             $postLikeIns = Post::postLikeIns();
             $postLikeTip = Post::postLikeTip();
             require_once('views/pages/error.php');
-        } catch (Exception $e) {
-            call('pages', 'error');
-            logException($e);
-        }
+            
+     
     }
 
     public function contactUS() {

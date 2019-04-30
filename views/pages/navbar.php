@@ -88,7 +88,7 @@ $userID=$_SESSION['id'];
                         <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
 
-                        </li>'
+                        </li>
 
                          
                          <li class="nav-item">
@@ -96,8 +96,8 @@ $userID=$_SESSION['id'];
                         </li>
                          <li class="nav-item">
                             <a class="nav-link" href="#map">Map</a>
-                        </li>
-                          '
+                        </li>'
+                          
 
                             ;}
                             ?>
@@ -144,9 +144,9 @@ $userID=$_SESSION['id'];
                         search
                          </i> <br>search </button> </a>';
  
-                        }?>
+                       
 
-               
+                        } ?>
  
                     
 
