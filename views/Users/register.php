@@ -20,6 +20,9 @@ border-color:black;
   margin-left: auto;
   margin-right: auto;
 }
+.button {
+    background-color: green;
+}
 
          </style> 
     </head>
@@ -99,7 +102,7 @@ border-color:black;
      </div>
   </div>
     <span id='message'></span> <br>
-                        <button  type="submit" value="Submit" id="submit" disabled class="btn btn-default" >-->
+                        <button  type="submit" value="Submit" id="submit" disabled class="button" >-->
                             <i class="glyphicon glyphicon-open-file"></i>&nbsp;SIGN UP
                         </button>
     

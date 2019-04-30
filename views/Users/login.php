@@ -29,6 +29,12 @@
                 color: black;
                 
             }
+             .signIN{
+               background: rgb(0, 0, 0); /* Fallback color */
+                background: rgba(0,0,0,0.6);
+                color: white;
+                
+            }
         </style>
     </head>
 
@@ -63,7 +69,7 @@
 
 
                     <div class="w3-container">
-                        <center>  <button type="submit" name="submit" class="btn btn-default">
+                        <center>  <button type="submit" name="submit" class="signIN">
                                 <i class="glyphicon glyphicon-log-in"></i>&nbsp;SIGN IN
                             </button>
                         </center>
