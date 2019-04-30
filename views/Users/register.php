@@ -215,5 +215,5 @@ border-color:black;
 
 
 
-
+<?php require_once 'views/pages/divs.php'; ?>
            

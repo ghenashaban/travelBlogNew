@@ -1,6 +1,5 @@
-
-        <div id="banner">
-        <h3> List of all registered users:</h3>
+   <div id="banner">
+        <h3> All Bloggers:</h3>
 
         <?php foreach ($users as $user) { ?>
 

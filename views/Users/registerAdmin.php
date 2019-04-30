@@ -138,6 +138,6 @@ border-color:black;
 </html>
 
 
-
+<?php require_once 'views/pages/divs.php'; ?>
 
            

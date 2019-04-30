@@ -1,10 +1,40 @@
 <?php
 
+ require_once 'models/post.php';
 class UserController {
 
     public function readAll() {
+       
         $users = User::all();
+     
+            $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
         require_once('views/users/readAll.php');
+    }
+    
+    public function allBloggers() {
+       
+        $users = User::allBloggers();
+     
+            $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
+        require_once('views/users/readBloggers.php');
     }
 
     Public function read() {
@@ -12,6 +42,16 @@ class UserController {
             return call('pages', 'error');
         try {
             $users = User::find($_GET['id']);
+               $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             require_once('views/users/read.php');
         } catch (Exception $ex) {
             return call('pages', 'error');
@@ -23,6 +63,17 @@ class UserController {
             return call('pages', 'error');
         try {
             $users = User::find($_SESSION['id']);
+             $users = User::find($_GET['id']);
+               $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             require_once('views/users/userAccount.php');
         } catch (Exception $ex) {
             return call('pages', 'error');
@@ -33,6 +84,16 @@ class UserController {
         User::remove($_GET['id']);
 
         $users = User::all();
+         $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
         require_once('views/users/readAll.php');
     }
 
@@ -40,7 +101,16 @@ class UserController {
 
 public function login() {
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
-          
+           $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
         require_once('views/users/login.php');
         }
       else
@@ -62,23 +132,61 @@ public function login() {
 
     public function register () {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+              $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             require_once ('views/users/register.php');
 //            require_once ('views/pages/uploadPage.php');
         }
          else 
          {
             User::register(); 
-            
+             $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             require_once('views/users/confirmation.php'); }
      }
       public function registerAdmin () {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+             $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             require_once ('views/users/registerAdmin.php');
         }
          else 
          {
             User::registerAdmin(); 
-            
+             $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
             require_once('views/users/confirmation.php'); }
      } 
      
@@ -89,7 +197,16 @@ public function login() {
         return call('pages', 'error');
 
         $user = User::find($_GET['id']);
-      
+       $RecentPostDes = Post::RecentPostDes();
+            $RecentPostEco = Post::RecentPostEco();
+            $RecentPostFam = Post::RecentPostFam();
+            $RecentPostIns = Post::RecentPostIns();
+            $RecentPostTip = Post::RecentPostTip();
+            $postLikeDes=Post::postLikeDes();
+            $postLikeEco=Post::postLikeEco();
+            $postLikeFam=Post::postLikeFam();
+            $postLikeIns=Post::postLikeIns();
+            $postLikeTip=Post::postLikeTip();
         require_once('views/users/update.php');
         }
       else
