@@ -1,0 +1,183 @@
+You have seen how arrays in PHP can be used to represent collections of data. And you have seen how databases and SQL can be used to store and manage data. The task of a PHP database library is to connect the two:  bringing together PHP's representation of data collections with SQL's. The standard contemporary library for managing databases in PHP is known as PDO or PHP Data Objects. PDO is an object oriented library which abstracts over the particulars of managing a database. It allows you to use the same classes and methods each time you interact with it, regardless of which database you are connecting to: whether that's MySQL or MSSQL. Using PDO is very routine, you only have to learn a few methods of a couple of classes and you can reapply this knowledge to each new querying problem. 
+
+API: The things the outside door can interact with.
+//Get app to log in as a user we created in mysql. 
+//dsn goes in string "mysql:host=name;dbname;dbname" (password null)
+
+PDO connect: 
+Create a new instance of the PDO class. 
+The constructor creates the connection.
+$dsn references a data string: mysql:host=name;dbname=dbname
+
+try {
+	$pdo= new PDO ($dsn, $user, $password, $options);
+} catch (PDOException $e) {
+	die($e->getMessage());
+
+
+PDO Iterators:
+Create a new instance of the PDO Class.
+Issue query querry() data returned is iterable therefor can be used in foreach as though it were an associative array.
+PDO::Fetch Column will only return a signle db field or column, in the example below that is column 0.
+
+
+
+$pdo = new PDO ($dsn);
+$stmt = $pdo->query(
+	"SELECT * FROM table",
+	PDO ::FETCH_COLUMN,
+	0);
+
+foreach ($stmt as $row) { //each row of the selected column is echo'd
+	echo $row;
+}
+
+unset ($stmt); //Clears results memory - not nec but effocient to do so
+
+
+PDO Prepare:
+This method takes a SQL statement and "prepares" it for later execution. This could theoretically mean sending it to the database so it can make it more efficient. In practice PDO does not yet take this step. The PDOStatement object may then be executed at whatever time is appropriate. Note however that the return value of execute() is a Boolean indicating success. You still need to loop over the statement object to retrieve the data.
+
+
+$pdo = new PDO($dsn);
+$stmt = $pdo->prepare("SELECT * FROM table");
+$stmt->execute();
+
+//moving cursor forward, getting a row at a time
+while ($row = $stmt->fetch()){
+print_r($row); //array of columns
+}
+
+
+PDO Cursors:
+
+PDO::CURSOR_SCROLL . The forward only cursor, as discussed, allows you to iterate, in sequence, once over a query result. 
+
+PDO::CURSOR_SCROLL allows you to iterate in sequence in reverse or forward directions and revisit previous records
+
+
+PDStatement::fetchALL:
+Use when you need to iterate/loop over a small amount of data multiple times.
+Loads the enitre result set into memory as an array.
+fetchAll can then be used as many times as you like in whatever kind of loop suits you.
+Care: iterbales that work in foreach loops only work in foreach loops.
+
+$pdo = new PDO($dsn);
+$stmt = $pdo->prepare("SELECT * FROM table");
+$rows=$stmt->fetchALL();
+$numRows = count($rows);
+foreach($rows as $row) {
+	print_r($row);
+}
+
+
+PDO Fetching modes:
+
+stmt->fetch(PDO::FETCH_BOTH)
+	Array with numebr and string keys (default)
+PDO::Fetch_NUM
+	Numebric keys only i.e. sequiential array
+PDO::FETCH_ASSOC
+	String keys only i.e. assosctive array. instructs PDO not to insert the 	integer sequential indexes since most people know the names of the fields 	they're using and find it clear to write them out. 
+PDO::FETCH_OBJ
+	$obj->name =='name' column
+PDO::FETCH_CLASS
+	useful with MVC Models (see later)
+PDO::FETCH_INTO
+	Provide object
+
+
+Modifying Data:
+exec() method runs a query which has no result set and so requires no PDOStatement object. 
+INSERT statements for example,  do not return results. 
+exec() itself returns the number of rows in the database which have been modified. If you wish to get the last inserted id, the lastInsertid() method on the PDO object will tell you. 
+
+$pdo->exec("INSERT INTO table VALUES(1)");
+
+$deleted = $pdo->exce("DELETE FROM table WHERE 1");
+
+$changes = $pdo->exec("UPDATE table SET field=0 WHERE NAME LIKE '%lock%'");
+
+Prepared Statements:
+Preparing statements before you execute them allows you to separate out data from SQL. You supply prepare() with a SQL string which contains placeholders for data. 
+
+$stmt = $pdo->prepare("INSERT INTO user (unsername, email)
+			VALUES (:username, :email)");
+
+$stmt->execute([
+	'username' => $_GET['username'], 
+	'email' => 'sh@example.com',
+		]);
+
+
+Use : for a named variable
+Use ? as a parameter placeholder and provide a sequential array.
+
+$stmt = $pdo->prepare("
+	INSERT INTO user(username, email)
+	VALUES (?, ?)");
+$stmt->execute(['shomes','sh@example.com']);
+
+ERROR HANDLING:
+Under the default regime you have to test whether or not query() actually returns a PDOStatement – it will be Boolean false if the query has failed. You should then call errorInfo() on the PDO object to find out what went wrong.
+
+1. Silent
+2. Warning
+3. Exception
+
+if (!$pdo->quert($sql)){
+	$error = $pdo->errorInfo();
+}
+
+
+EXCEPTION ERROR MODE:
+The exception error mode is a little more user friendly. All query functions throw an exception if they fail, so you do not have to check if the query() returns a PDOStatement or false. Instead  supply a try/catch block in case it throws an exception
+
+$pdo->setAttribute(
+	PDO::ATTR_ERRMODE,
+	PDO::ERRMODE_EXCEPTION);
+try{
+	$pdo->exec($sql);
+}catch (PDOException $e) {
+	echo $e->getMessage();
+	$error = $e->errorInfo();
+}
+
+
+PDO CLasses & Methods:
+See page 560 for full list of PDO Class methods
+See page 561 for full list of PDOStatements
+
+throw - inside the class within a method
+
+
+
+
+
+
+
+
+bind queeries
+$stmt->excute(); 
+
+
+
+MVC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

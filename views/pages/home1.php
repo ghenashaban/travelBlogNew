@@ -16,6 +16,7 @@ ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
 </style>	
 
     <div class="caption text-center">
+
                   <h3> Welcome! أهلا بك! Bem Vinda! Failte! Bienvenido! </h3>
         <h1> Joined at the trip!</h1>          
 
@@ -31,7 +32,8 @@ ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
     </div>
 
 
-</div>
+    </div>   
+
 <script>
     $(document).ready(function () {
         $('#txtCountry').typeahead({
@@ -52,5 +54,5 @@ ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
     });
 </script>
 
+>>>>>>> 16b11d7eaa2c8cbbf162076dc3b8536bca2f3754
             <?php require_once 'views/pages/divs.php'; ?>
-
