@@ -186,18 +186,18 @@ class Post {
         }
     }
 
-    const AllowedTypes = ['image/jpeg', 'image/jpg'];
-    const InputKey = 'myUploader';
+const AllowedTypes = ['name/jpeg', 'name/jpg'];
+const InputKey = 'myUploader';
+public static function uploadFile(string $title) {
+	if (empty($_FILES[self::InputKey])) {
+		//die("File Missing!");
 
-    public static function uploadFile(string $title) {
-        try {
-            if (empty($_FILES[self::InputKey])) {
-                //die("File Missing!");
                 trigger_error("File Missing!");
             }
 //	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
 //		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
 //	}
+
             $tempFile = $_FILES[self::InputKey]['tmp_name'];
             $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
             $destinationFile = $path . $title . '.jpeg';
@@ -212,26 +212,24 @@ class Post {
         } catch (Exception $e) {
             call('pages', 'error');
             logException($e);
-        }
+
+  public static function find($id) {
+      $db = Db::getInstance();
+       $id = intval($id);
+      $req = $db->prepare('select * from post where id = :id ');
+      $req->execute(array('id' => $id));
+      $post = $req->fetch();
+if($post){
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+    }
+    else
+    {
+        throw new Exception('A real exception should go here');
+    }
     }
 
-    public static function find($id) {
-        try {
-            $db = Db::getInstance();
-            $id = intval($id);
-            $req = $db->prepare('select * from post where id = :id ');
-            $req->execute(array('id' => $id));
-            $post = $req->fetch();
-            if ($post) {
-                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "");
-            } else {
-                throw new Exception('A real exception should go here');
-            }
-        } catch (Exception $e) {
-            call('pages', 'error');
-            logException($e);
-        }
-    }
+
+  
 
     public static function update($id) {
         try {
