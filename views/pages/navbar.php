@@ -94,12 +94,16 @@ $userID=$_SESSION['id'];
                         <li class="nav-item">
                             <a class="nav-link" href="#inspiration">Inspiration</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#gallery">Gallery</a>
-                        </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
                         </li> 
+                         <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#map">Map</a>
+                        </li>
                           '
                             ;}
                             ?>

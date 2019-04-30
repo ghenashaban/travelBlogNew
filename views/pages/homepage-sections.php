@@ -243,6 +243,29 @@
        
                  
             </div>
+           <div id="map" class="offset">    
+
+          
+    <!--            <div class="narrow text-center">-->
+
+                    <div class="col-12">
+                        <h3 class="heading text-center">Map</h3>
+                        <div class="heading-underline"></div>
+                    </div>  
+                    
+        <div class="container-fluid">
+<div class="row">
+
+ 
+   <?php require_once 'views/pages/maps.php';?>
+                
+
+ </div> 
+                      
+ </div>                    
+       
+                 
+            </div>
         
 <div id="gallery">
       <div class="jumbotron">

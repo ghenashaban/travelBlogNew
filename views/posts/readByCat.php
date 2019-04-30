@@ -6,7 +6,13 @@
     </head>
     <body>
         <div id="banner">
-        <h3>Blogs</h3>
+            
+            <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8"><h2>Blogs:</h2>   
+                </div> </div>
+        
  
  
        
@@ -59,6 +65,12 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "'>$img </a>";
                             document.getElementById("demo").innerHTML = txt;
                         }
                     </script>  
+                     <script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
                     
         </div>
             
