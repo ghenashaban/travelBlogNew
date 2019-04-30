@@ -41,6 +41,7 @@ class PagesController {
                 $posts = Post::search($search);
 
                 require_once('views/pages/searchResult.php');
+             
             } else {
                 echo "hello";
                 

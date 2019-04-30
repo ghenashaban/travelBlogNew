@@ -6,8 +6,8 @@
     <body>
        
         <div class="row">
-        <div  class = "container" >                
-
+                   
+            
                     <h4> "<?php echo $_POST['search']; ?>"</h4>
 
                
@@ -38,9 +38,8 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "' >$img </a>";
                         <?php }?>
 
                     
-        </div> </div> 
+        </div> 
         <?php  require_once 'views/pages/divs.php'; ?>
     </body>
 </html>
 
-/
