@@ -193,8 +193,8 @@ try {
 
             $tempFile = $_FILES[self::InputKey]['tmp_name'];
             $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
-            $destinationFile = $path . $title . '.jpeg';
-            $imagePath = "uploads/" . $title . '.jpeg';
+            $destinationFile = $path . $title . '.jpg';
+            $imagePath = "uploads/" . $title . '.jpg';
             if (!move_uploaded_file($tempFile, $destinationFile)) {
                 return $imagePath;
             }

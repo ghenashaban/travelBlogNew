@@ -399,8 +399,8 @@ class User {
 
             $tempFile = $_FILES[self::InputKey]['tmp_name'];
             $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
-            $destinationFile = $path . $username . '.jpeg';
-            $imagePath = "uploads/" . $username . '.jpeg';
+            $destinationFile = $path . $username . '.jpg';
+            $imagePath = "uploads/" . $username . '.jpg';
 
             if (!move_uploaded_file($tempFile, $destinationFile)) {
                 return $imagePath;

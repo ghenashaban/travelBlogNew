@@ -147,7 +147,7 @@
         <div class="row">
                 <div class="col-2">
                     <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
-                <div class="col-10"><h3><?php echo $posts->title; ?> </h3>    
+                <div class="col-8"><h3><?php echo $posts->title; ?> </h3>    
                 </div> </div>
 
         <?php
