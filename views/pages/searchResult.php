@@ -6,9 +6,7 @@
     <body>
        
         <div class="row">
-                   
-            
-                    <h4> "<?php echo $_POST['search']; ?>"</h4>
+               <h4> "<?php echo $_POST['search']; ?>"</h4>
 
                
                    
