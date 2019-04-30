@@ -25,7 +25,7 @@ class PagesController {
                 $postLikeTip = Post::postLikeTip();
 
                 require_once 'views/pages/home1.php';
-            } else if (!empty($_POST['search'])) {
+            } else {
                 require_once 'models/post.php';
                 $search = $_POST['search'];
                 $RecentPostDes = Post::RecentPostDes();
@@ -42,12 +42,11 @@ class PagesController {
 
                 require_once('views/pages/searchResult.php');
              
-            } else {
-                echo "hello";
+            } 
                 
             }
 
-    }
+  
 
     public function error() {
       
