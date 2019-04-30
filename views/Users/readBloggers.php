@@ -1,13 +1,27 @@
    <div id="banner">
-        <h3> All Bloggers:</h3>
+         <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8"><h2>Bloggers:</h2>   
+                </div> </div>
 
-        <?php foreach ($users as $user) { ?>
-
+         <?php foreach ($users as $user) { ?>
+            <div class="row">
+<div class="col-8">
             <?php echo "$user->first_name" ?>  
             <?php echo "$user->surname" ?>  
+    </div>
+    <div class="col-2">
             <a href='?controller=user&action=read&id=<?php echo $user->id; ?>' class='btn btn-primary'>More info..</a>
-            <br> <br>
+        </div>  
+                 </div>
         <?php } ?> 
    
         </div>
+<script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
 <?php require_once 'views/pages/divs.php'; ?>

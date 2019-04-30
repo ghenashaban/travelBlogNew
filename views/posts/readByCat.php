@@ -6,14 +6,23 @@
     </head>
     <body>
         <div id="banner">
-        <h3>list of all posts</h3>
+            
+            <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8"><h2>Blogs:</h2>   
+                </div> </div>
+        
  
-
+ 
+       
    <?php foreach ($posts as $post) { ?>
    
       <p>   
    
     <?php // echo $post->categories; ?> 
+          <div class="row">
+              <div class="col-5">
   <?php $file1 = 'views/images/' .$post->title .".jpg";
 $file2 = 'views/images/' .$post->title.".jpeg";
 
@@ -28,10 +37,17 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "'>$img </a>";
   } 
                     
   ?>    
-      <?php echo $post->title; ?>    
+              </div>
+              <div class="col-3">
+      <?php echo $post->title; ?> 
+                  </div>
+              <div class="col-2">
+              
     <a href='?controller=post&action=read&id=<?php echo $post->id; ?>' class='btn btn-primary'>Read More..</a>                    
-                  
+          </div>        
 </p>
+          </div>
+
                         <?php } ?>
                             
     
@@ -49,6 +65,12 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "'>$img </a>";
                             document.getElementById("demo").innerHTML = txt;
                         }
                     </script>  
+                     <script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
                     
         </div>
             

@@ -120,7 +120,7 @@
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/<?php echo $postLikeFam->title.".jpeg"; ?>" alt="Dubai skyline">
+    <img class="card-img-top" src="views/images/<?php echo $postLikeFam->title.".jpg"; ?>" alt="Dubai skyline">
     <div class="card-header"><h3><?php echo $postLikeFam->title; ?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $postLikeFam->id; ?>" class="stretched-link card-title">Why Dubai is the perfect family holiday destination</a>
@@ -221,7 +221,7 @@
  
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/HOW TO SURVIVE A LONG CAR JOURNEY WITH CHILDREN.jpg" alt="Childen in car">
+    <img class="card-img-top" src="views/images/HOW TO SURVIVE A LONG CAR JOURNEY WITH Children.jpg" alt="Childen in car">
     <div class="card-header"><h3>How to survive a long car journey with kids</h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=106" class="stretched-link card-title">Don't miss these essential tips for those long car journeys this summer</a>
@@ -231,7 +231,7 @@
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/<?php echo $RecentPostTip->title.".jpeg"; ?>" alt="Two women taking selfie">
+    <img class="card-img-top" src="views/images/<?php echo $RecentPostTip->title.".jpg"; ?>" alt="Two women taking selfie">
     <div class="card-header"><h3><?php echo $RecentPostTip->title?></h3></div>
     <div class="card-body">
       <a href="?controller=post&action=read&id=<?php echo $RecentPostTip->id?>" class="stretched-link card-title">Avoid conflict by asking these five questions before you set off</a>
@@ -240,6 +240,29 @@
 </div>
  </div> 
                       <div class="text-center"><a class="btn btn-secondary btn-md" href="?controller=post&action=readByCat&categoryID=5 ">Read more articles</a></div> 
+ </div>                    
+       
+                 
+            </div>
+           <div id="map" class="offset">    
+
+          
+    <!--            <div class="narrow text-center">-->
+
+                    <div class="col-12">
+                        <h3 class="heading text-center">Map</h3>
+                        <div class="heading-underline"></div>
+                    </div>  
+                    
+        <div class="container-fluid">
+<div class="row">
+
+ 
+   <?php require_once 'views/pages/maps.php';?>
+                
+
+ </div> 
+                      
  </div>                    
        
                  

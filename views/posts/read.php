@@ -143,8 +143,12 @@
  
     <div id="bannerA">
 
-        <h3><?php echo $posts->title; ?> </h3> 
         
+        <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-10"><h3><?php echo $posts->title; ?> </h3>    
+                </div> </div>
 
         <?php
         $file1 = 'views/images/' . $posts->title . ".jpg";
@@ -280,7 +284,12 @@ echo $img;
                     }
                 }
             </script>
-       
+       <script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
 
  <div>
 <!--    <div class="caption text-center">

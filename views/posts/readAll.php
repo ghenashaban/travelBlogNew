@@ -3,17 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
+        
     </head>
     <body>
+       
         <div id="banner">
-        <h1>Joined at the trip Blogs</h1>
-  <button onclick="goBack()">Go Back</button>
+            <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-9"><h2>Joined at the trip Blogs</h2>   
+                </div> </div>
 
+        
 
 
  <div class="row">
    <?php foreach ($posts as $post) { ?>
-     <div class="col-5"> <p>  <td>   <?php echo $post->title; ?> </td> </div> 
+     <div class="col-6"> <p>  <td>   <?php echo $post->title; ?> </td> </div> 
     <div class="col-2">
    
    <a href='?controller=post&action=read&id=<?php echo $post->id; ?>' class='btn btn-primary'>Read More</a>

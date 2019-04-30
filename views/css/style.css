@@ -528,6 +528,12 @@ span#logo-strap {
 
 /*end of logo*/
 
+            .previous {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 8px 16px;
+}
+        
 
 /*============ BOOTSTRAP BREAK POINTS:
 

@@ -24,7 +24,11 @@ border-color:black;
          </style> 
     </head>
     <div id="bannerREG">
-<h3>Add a new blogger:</h3>
+<div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8"><h2>Add a new blogger:</h2>   
+                </div> </div>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     
  <div class="row">
@@ -135,6 +139,12 @@ border-color:black;
             }
 
         </script>
+        <script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
 </html>
 
 

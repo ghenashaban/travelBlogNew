@@ -84,12 +84,21 @@ $userID=$_SESSION['id'];
                         <li class="nav-item">
                             <a class="nav-link" href="#inspiration">Inspiration</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#gallery">Gallery</a>
-                        </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link" href="#practicalTips">Practical Tips</a>
+
                         </li>'
+
+                         
+                         <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#map">Map</a>
+                        </li>
+                          '
+
                             ;}
                             ?>
                       
@@ -131,7 +140,7 @@ $userID=$_SESSION['id'];
                                     person_add
                                 </i> <br>sign up </button> </a>';
                         
-                          echo'<a href="?controller=post&action=searchBar"><button class="button"><i class="material-icons">
+                          echo'<a href="index.php"><button class="button"><i class="material-icons">
                         search
                          </i> <br>search </button> </a>';
  
