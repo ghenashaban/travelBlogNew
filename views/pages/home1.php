@@ -16,25 +16,22 @@ ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
 </style>	
 
     <div class="caption text-center">
-
                   <h3> Welcome! أهلا بك! Bem Vinda! Failte! Bienvenido! </h3>
         <h1> Joined at the trip!</h1>          
 
-         <form method="POST">
+        <form method="POST">
         <div class="container">
             <input type="text" placeholder="Search.."  name="search" id="txtCountry" class="typeahead">
             <div class="search"></div>
 
         </div>
 
-        </form> 
-      
+        </form>       
 
     </div>
 
 
-    </div>   
-
+</div>
 <script>
     $(document).ready(function () {
         $('#txtCountry').typeahead({
@@ -55,5 +52,6 @@ ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
     });
 </script>
 
-
             <?php require_once 'views/pages/divs.php'; ?>
+
+
