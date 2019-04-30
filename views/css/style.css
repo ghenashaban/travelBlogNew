@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 body {
    overflow-x: hidden;
    font-family: 'Lato', sans-serif;
@@ -173,7 +173,63 @@ body {
 .clients-hr{
     border-top: .05rem solid #1ebba3;
 }
+
+/*About us homepage section*/
+div#about-us {
+    font-size: 1rem;
+    text-transform:none;
+    text-align: left !important;
+}
+/*end of about us section*/
+
 /* ----------Contact/Footer Section---------------*/
+
+/*Contact us*/
+
+.flip-card {
+  background-color: transparent;
+  width: 230px;
+  height: 230px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */ 
+}
+
+/* This container is needed to position the front and back side */ 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */ 
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */ 
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* front side (fallback if image is missing) */ 
+.flip-card-front {
+  background-color: #1ebba3;
+  color: black;
+}
+
+/* back side */ 
+.flip-card-back {
+  background-color: #1ebba3;
+  color: white;
+  transform: rotateY(180deg);
+}
+/*end of contact us*/
+
 
 footer{
     background-color: #40474e;
@@ -447,13 +503,17 @@ th, td {
 
 span#logo-strap {
     display: inline-block;
-    font-family: 'Julius Sans One', sans-serif;
-    color: #1ebba3;    
+    font-family: 'Pacifico', cursive;
+    color: #fff;    
     text-align: center;
    letter-spacing: 0;
-   line-height: .95rem;
-    font-size: 0.95rem;   
+   line-height: 1.7rem;
+    font-size: 1.2rem; 
+    text-transform: none;
+    
 }
+
+
 /*end of logo*/
 
 

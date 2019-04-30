@@ -5,6 +5,7 @@
              
                 <h1 class="text-center">Destinations
                </h1>
+               <div class="heading-underline"></div>
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-4 mt-4">
@@ -347,43 +348,165 @@
 </div>  
      </div> 
     </div> 
+        
+ <div id="aboutUs" class="offset">
+
+           <div class="col-12"> 
+             
+                <div class="col-12">
+                        <h3 class="heading text-center">About us</h3>
+                        <div class="heading-underline"></div>
+                    </div> 
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-6 mx-auto"> <img class="img-fluid d-block" src="views/images/beach1.jpg" alt="The Joined at the Trip team"></div></div>
+ <div class="row">
+     <div class="col-md-8 mx-auto">
+         <div id="about-us" class="text-center btn btn-secondary btn-md">We are a group of five women who love to travel. Our trips around the world, to far-flung destinations like Fiji, to closer-to-home destinations like Spain, inspired us to set up this website. Our aim is to provide unbiased, practical travel advice to help you plan the best holiday possible!</div>
+     </div></div>
+    </div> 
+     </div>
+     </div>
+        
+    <!--- start contact us section --->
+        <div id="contact-us" class="offset">
+
+            <div class="jumbotron">
+
+                <div class="col-12 text-center">
+                    <h3 class="heading">Contact us</h3>
+                    <div class="heading-underline"></div>
+                </div>  
+
+ <div class="container-fluid">
+<div class="row">
+<div class="col-md-4 mt-4">
+  <div class="flip-card mx-auto">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="views/images/ghena2.jpg" alt="Ghena Shaban" style="width:230px;height:230px;">
+    </div>
+    <div class="flip-card-back">
+      <h3>Ghena Shaban</h3> 
+      <p>Travel adviser</p> 
+      <p>Contact: <a href="mailto:g.shaban@jatr.com">g.shaban@jatr.com</a></p>
+    </div>
+  </div>
+</div>
+   </div>
+    
+     <div class="col-md-4 mt-4">
+    <div class="flip-card mx-auto">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="views/images/issi2.jpg" alt="Issi Draper-Edwards" style="width:230px;height:230px;">
+    </div>
+    <div class="flip-card-back">
+      <h3>Issi Draper-Edwards</h3> 
+      <p>Travel adviser</p> 
+      <p>Contact: <a href="mailto:i.draper-edwards@jatr.com">i.draper-edwards@jatr.com</a></p>
+    </div>
+  </div>
+</div>
+</div>
+    
+    <div class="col-md-4 mt-4">
+    <div class="flip-card mx-auto">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="views/images/mel2.jpg" alt="Melanie Leather" style="width:230px;height:230px;">
+    </div>
+    <div class="flip-card-back">
+      <h3>Melanie Leather</h3> 
+      <p>Travel adviser</p> 
+      <p>Contact: <a href="mailto:m.leather@jatr.com">m.leather@jatr.com</a></p>
+    </div>
+  </div>
+</div>
+     </div>
+         </div>
+     
+     <div class="row">
+<div class="col-md-4 mt-4">
+  <div class="flip-card mx-auto">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="views/images/kristina2.jpg" alt="Krisztina Kovacs" style="width:230px;height:230px;">
+    </div>
+    <div class="flip-card-back">
+      <h3>Krisztina Kovacs</h3> 
+      <p>Travel adviser</p> 
+      <p>Contact: <a href="mailto:k.kovacs@jatr.com">k.kovacs@jatr.com</a></p>
+    </div>
+  </div>
+</div>
+   </div>
+    
+     <div class="col-md-4 mt-4">
+    <div class="flip-card mx-auto">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="views/images/samira2.jpg" alt="Samira Ali" style="width:230px;height:230px;">
+    </div>
+    <div class="flip-card-back">
+      <h3>Samira Ali</h3> 
+      <p>Travel adviser</p> 
+      <p>Contact: <a href="mailto:s.ali@jatr.com">s.ali@jatr.com</a></p>
+    </div>
+  </div>
+</div>
+</div>
+    
+    <div class="col-md-4 mt-4">
+    <div class="flip-card mx-auto">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="views/images/victoriaLI.jpg" alt="Victoria Holmes" style="width:230px;height:230px;">
+    </div>
+    <div class="flip-card-back">
+      <h3>Victoria Holmes</h3> 
+      <p>Travel adviser</p> 
+      <p>Contact: <a href="mailto:v.holmes@jatr.com">v.holmes@jatr.com</a></p>
+    </div>
+  </div>
+</div>
+     </div>
+         </div>
+    </div>                   
+</div>             
+  </div> 
+                        
+  
+    
+
+    
+    
+    
+    
+    
+         
+     
+     
         <!--footer-->
              <div id="contact" class="offset">
             <footer>
                 <div class="row justify-content-center">
                     <div class="col-md-5 text-center">
 
-                      <!--image to be added <img src="">-->
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p> 
-                        <strong><a href="?controller=pages&action=contactUs">Contact Us….</a></strong><br>
-                        <strong>Contact info  </strong>
-                        <p>99999<br>email address</p>
 
-                      <div><a class="navbar-brand" href="index.php"><svg xmlns="http://www.w3.org/2000/svg" height="65pt" version="1.1" viewBox="0 -1 612.092 612" width="65pt">
+                      <div><a class="navbar-brand" href="index.php"><svg xmlns="http://www.w3.org/2000/svg" height="65pt" version="1.1" viewBox="0 0 1152.4998 1152" width="65pt">
 <g id="surface1">
-<path d="M 0 0.046875 L 610.726562 0.046875 L 610.726562 610.773438 L 0 610.773438 Z M 0 0.046875 " style=" stroke:none;fill-rule:nonzero;fill:#1ebba3;fill-opacity:1;" />
-<path d="M 610.382812 519.164062 L 0 519.164062 L 0 610.773438 L 612 610.773438 Z M 610.382812 519.164062 " style=" stroke:none;fill-rule:nonzero;fill:rgb(70.980392%,22.745098%,14.117647%);fill-opacity:1;" />
-<path d="M 539.476562 386.839844 C 539.476562 437.433594 498.460938 478.449219 447.867188 478.449219 C 397.273438 478.449219 356.257812 437.433594 356.257812 386.839844 C 356.257812 336.246094 397.273438 295.230469 447.867188 295.230469 C 498.460938 295.230469 539.476562 336.246094 539.476562 386.839844 Z M 539.476562 386.839844 " style=" stroke:none;fill-rule:nonzero;fill:rgb(98.039216%,70.196078%,28.627451%);fill-opacity:1;" />
-<path d="M 262.296875 610.773438 L 0 610.773438 L 0 458.09375 C 103.425781 473.625 197.042969 527.988281 261.789062 610.132812 Z M 262.296875 610.773438 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 122.144531 549.703125 L 142.503906 549.703125 L 142.503906 570.058594 L 122.144531 570.058594 Z M 122.144531 549.703125 " style=" stroke:none;fill-rule:nonzero;fill:rgb(45.882353%,20.784314%,20.784314%);fill-opacity:1;" />
-<path d="M 61.074219 570.058594 L 81.429688 570.058594 L 81.429688 590.417969 L 61.074219 590.417969 Z M 61.074219 570.058594 " style=" stroke:none;fill-rule:nonzero;fill:rgb(45.882353%,20.784314%,20.784314%);fill-opacity:1;" />
-<path d="M 173.039062 133.390625 C 173.394531 265.996094 127.113281 394.515625 42.285156 496.4375 C 56.828125 501.769531 71.253906 507.714844 95.550781 518.421875 C 160.5625 417.429688 213.757812 275.890625 213.757812 133.390625 Z M 173.039062 133.390625 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 389.707031 590.417969 L 506.039062 590.417969 L 506.039062 610.773438 L 389.707031 610.773438 Z M 389.707031 590.417969 " style=" stroke:none;fill-rule:nonzero;fill:rgb(89.019608%,40.784314%,9.019608%);fill-opacity:1;" />
-<path d="M 346.078125 549.703125 L 549.65625 549.703125 L 549.65625 570.058594 L 346.078125 570.058594 Z M 346.078125 549.703125 " style=" stroke:none;fill-rule:nonzero;fill:rgb(89.019608%,40.784314%,9.019608%);fill-opacity:1;" />
-<path d="M 211.453125 184.109375 C 212.890625 167.253906 213.753906 150.316406 213.753906 133.359375 L 173.039062 133.359375 C 173.039062 150.398438 172.296875 167.316406 170.8125 184.097656 L 211.457031 184.097656 L 211.457031 184.109375 Z M 211.453125 184.109375 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 193.398438 149.214844 L 322.210938 19.660156 C 287.824219 2.46875 246.296875 9.207031 219.109375 36.382812 L 209.378906 46.113281 C 182.394531 73.445312 175.960938 114.996094 193.398438 149.214844 Z M 193.398438 149.214844 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 193.398438 149.214844 L 64.585938 19.660156 C 98.96875 2.46875 140.496094 9.207031 167.6875 36.382812 L 177.417969 46.113281 C 204.398438 73.445312 210.832031 114.996094 193.398438 149.214844 Z M 193.398438 149.214844 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 193.398438 149.214844 L 10.179688 149.214844 C 22.332031 112.746094 56.472656 88.144531 94.917969 88.144531 L 108.65625 88.144531 C 147.105469 88.132812 181.242188 112.734375 193.398438 149.214844 Z M 193.398438 149.214844 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 376.617188 149.214844 L 193.398438 149.214844 C 205.550781 112.746094 239.691406 88.144531 278.136719 88.144531 L 291.875 88.144531 C 330.324219 88.132812 364.460938 112.734375 376.617188 149.214844 Z M 376.617188 149.214844 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 322.953125 278.019531 L 193.398438 149.214844 C 227.617188 131.769531 269.167969 138.203125 296.5 165.195312 L 306.21875 174.917969 C 333.40625 202.09375 340.144531 243.625 322.953125 278.019531 Z M 322.953125 278.019531 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
-<path d="M 63.839844 278.019531 L 193.398438 149.214844 C 159.175781 131.769531 117.625 138.203125 90.296875 165.195312 L 80.574219 174.917969 C 53.386719 202.09375 46.648438 243.625 63.839844 278.019531 Z M 63.839844 278.019531 " style=" stroke:none;fill-rule:nonzero;fill:rgb(37.254902%,14.509804%,13.72549%);fill-opacity:1;" />
+<path d="M 314.394531 957.035156 L 372.867188 996.015625 L 1152.5 996.015625 L 1152.5 957.035156 Z M 314.394531 957.035156 " style=" stroke:none;fill-rule:nonzero;fill:#fff;fill-opacity:1;" />
+<path d="M 723.710938 1112.96875 L 957.597656 1112.96875 L 957.597656 1151.953125 L 723.710938 1151.953125 Z M 723.710938 1112.96875 " style=" stroke:none;fill-rule:nonzero;fill:#fff;fill-opacity:1;" />
+<path d="M 645.738281 1035 L 1035.550781 1035 L 1035.550781 1073.988281 L 645.738281 1073.988281 Z M 645.738281 1035 " style=" stroke:none;fill-rule:nonzero;fill:#fff;fill-opacity:1;" />
+<path d="M 963.988281 600.28125 C 1032.492188 668.789062 1032.492188 779.859375 963.988281 848.367188 C 895.480469 916.859375 784.414062 916.859375 715.90625 848.367188 C 647.40625 779.859375 647.40625 668.789062 715.90625 600.28125 C 784.414062 531.78125 895.480469 531.78125 963.988281 600.28125 Z M 963.988281 600.28125 " style=" stroke:none;fill-rule:nonzero;fill:#fff;fill-opacity:1;" />
+<path d="M 189.921875 931.988281 C 304.882812 741.078125 373.835938 526.019531 391.320312 303.84375 L 601.683594 514.890625 C 634.886719 449.183594 622.332031 369.59375 570.5 317.304688 L 551.964844 298.617188 C 539.621094 286.207031 525.394531 275.808594 509.832031 267.828125 L 705.511719 268.703125 C 682.539062 198.746094 617.367188 151.339844 543.734375 151.035156 L 517.398438 150.917969 C 498.59375 150.867188 479.914062 153.933594 462.101562 160.007812 L 602.445312 20.15625 C 536.738281 -13.042969 457.167969 -0.488281 404.878906 51.328125 L 386.191406 69.875 C 373.777344 82.203125 363.382812 96.4375 355.40625 112.007812 C 347.539062 96.375 337.273438 82.050781 324.976562 69.597656 L 306.433594 50.90625 C 254.636719 -1.382812 175.183594 -14.65625 109.1875 17.949219 L 248.21875 159.03125 C 230.449219 152.8125 211.789062 149.578125 192.984375 149.453125 L 166.671875 149.34375 C 93.058594 149.007812 27.484375 195.808594 3.878906 265.539062 L 199.574219 266.417969 C 183.921875 274.269531 169.613281 284.539062 157.160156 296.839844 L 138.460938 315.386719 C 86.175781 367.191406 72.90625 446.648438 105.523438 512.648438 L 312.988281 308.242188 C 298.691406 521.808594 221.265625 726.308594 90.535156 895.777344 C 61.183594 887.429688 31.332031 880.988281 1.152344 876.492188 L 0 1129.867188 L 448.285156 1131.804688 L 447.429688 1130.738281 C 378.207031 1045.386719 290.027344 977.339844 189.921875 931.988281 Z M 136.542969 1111.019531 L 97.558594 1110.84375 L 97.730469 1071.859375 L 136.707031 1072.035156 Z M 253.632812 1072.558594 L 214.652344 1072.382812 L 214.84375 1033.402344 L 253.828125 1033.574219 Z M 253.632812 1072.558594 " style=" stroke:none;fill-rule:nonzero;fill:#fff;fill-opacity:1;" />
 </g>
 </svg>
-<span id="logo-strap">Joined at<br>the trip</span></a>
-</div>
+<span id="logo-strap">Joined at<br>the trip</span></a></div>
                         
-                        <strong>Contact info:  </strong>
-                        <p>020 777 4567<br>joined-at-the-trip@gmail.com</p>
+                        
+                        <p><strong>Tel: 020 777 4567<br>Email: <a href="mailto:v.holmes@jatr.com">joined-at-the-trip@gmail.com</a></strong></p>
         <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
