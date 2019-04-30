@@ -5,10 +5,10 @@
     </head>
     <body>
        
-        <div class="row">
-               <h4> "<?php echo $_POST['search']; ?>"</h4>
+        <div id="banner">
+               <h2> <?php echo "Search results for "?>"<?php echo $_POST['search']; ?>"</h2>
+               <br>
 
-               
                    
 
                         <?php foreach ($posts as $post) {
@@ -31,12 +31,12 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "' >$img </a>";
                         ?>
                      
                        
-                         <?php echo $post->title; ?> 
+                         <h5><?php echo $post->title; ?> 
                         <a class="btn btn-secondary active" href='?controller=post&action=read&id=<?php echo $post->id; ?>'>Read more</a> </td>  &nbsp; &nbsp;
-                        <?php }?>
-
+                       </h5>
+ <?php }?> 
                     
-        </div> 
+    </div>
         <?php  require_once 'views/pages/divs.php'; ?>
     </body>
 </html>

@@ -37,7 +37,7 @@ ul.typeahead.dropdown-menu li:last-child a { border-bottom:0px !important; }
         $('#txtCountry').typeahead({
             source: function (query, result) {
                 $.ajax({
-                    url: "views/posts/server.php",
+                    url: "models/server.php",
                     data: 'query=' + query,            
                     dataType: "json",
                     type: "POST",
