@@ -43,4 +43,3 @@ echo "<a href='?controller=post&action=read&id=" . $post->id . "' >$img </a>";
     </body>
 </html>
 
-/
