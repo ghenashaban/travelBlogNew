@@ -104,7 +104,7 @@ class Post {
          exit();
         }
     }
-      public static function searchAhead($search) { //search all content for something relevant
+     public static function searchAhead($search) { //search all content for something relevant
         $list = [];
         $db = Db::getInstance();
         $req = $db->prepare("SELECT distinct title FROM post WHERE title LIKE '%$search%';");
