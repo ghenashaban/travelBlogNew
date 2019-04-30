@@ -1,6 +1,12 @@
 <?php
+require_once 'models/Exception.php';
+
+use function models\Exception\logException;
+
 class PostController {
+        
     public function readAll() {
+            try{
        $posts = Post::all();
        $RecentPostDes = Post::RecentPostDes();
             $RecentPostEco = Post::RecentPostEco();
@@ -13,9 +19,15 @@ class PostController {
             $postLikeIns=Post::postLikeIns();
             $postLikeTip=Post::postLikeTip();
       require_once('views/posts/readAll.php'); 
-    }
     
+      } catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
+    }
+        }
+   
     public function delete() {
+        try{
         require_once 'models/comment.php';
         Comment::remove($_GET['id']);
             Post::remove($_GET['id']);
@@ -32,10 +44,13 @@ class PostController {
             $postLikeIns=Post::postLikeIns();
             $postLikeTip=Post::postLikeTip();
             require_once('views/posts/readAll.php');
-      }
-      
-      public function create() {
-   
+        } catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
+    }
+    }
+      public function create() {       
+   try{
       if($_SERVER['REQUEST_METHOD'] == 'GET'){$posts = Post::all();
             $RecentPostDes = Post::RecentPostDes();
             $RecentPostEco = Post::RecentPostEco();
@@ -64,10 +79,14 @@ class PostController {
             $posts = Post::all(); 
             require_once('views/posts/readAll.php');
       }
-      
+      } catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
     }
-    
+      }   
+   
     public function search() {
+        try{
   if($_SERVER['REQUEST_METHOD'] == 'GET'){
       $RecentPostDes = Post::RecentPostDes();
             $RecentPostEco = Post::RecentPostEco();
@@ -86,14 +105,19 @@ class PostController {
              
             $posts = Post::all(); 
             require_once('views/posts/readAll.php');
-            
-    }}
-
-   Public function read() {
+      }
+      } catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
+    }
+        }
+        
+    
+      Public function read() {
+try{
 if (!isset($_GET['id'])) {
         return call('pages', 'error');
-} try {
-    
+} try {   
       $posts = Post::find($_GET['id']);
       require_once 'models/comment.php';
       $comments=Comment::findByPostId($_GET['id']);
@@ -114,13 +138,13 @@ if (!isset($_GET['id'])) {
             $postLikeIns=Post::postLikeIns();
             $postLikeTip=Post::postLikeTip();
     require_once 'views/posts/read.php';
-   
-   
-    } catch (Exception $ex) {
-            return call('pages', 'error');
+    } catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
     }
+ 
      if (!empty($_REQUEST["content"])) {
-//        require_once 'models/comment.php';
+       require_once 'models/comment.php';
          Comment::addComment(); 
 //         require_once 'views/posts/read.php';
            $comments=Comment::findByPostId($_GET['id']);     
@@ -134,12 +158,14 @@ if (!isset($_GET['id'])) {
           header('location: http://localhost/travelBlogNew/index.php?controller=post&action=read&id='.$_GET["id"]);
        
       }
-  }
-
-  Public function readByCat() {
-
-
-      $posts = Post::findByCat($_GET['categoryID']);
+  }catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
+    }
+      }
+  Public function readByCat(){
+      try{
+     $posts = Post::findByCat($_GET['categoryID']);
     require_once 'models/post.php';
 //            $PopularPostCOM = Post::PopularPostCOM();
 //            $PopularPostLIKE = Post::PopularPostLIKE();
@@ -156,19 +182,16 @@ if (!isset($_GET['id'])) {
             $postLikeTip=Post::postLikeTip();
        
     require_once 'views/posts/readByCat.php';
-   
-  
-     
-  }
-  
-    
+    } catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
+    }
 
-  
-  
-  
+  }
+
 public function update() {
-        
-      if($_SERVER['REQUEST_METHOD'] == 'GET'){
+    try{
+       if($_SERVER['REQUEST_METHOD'] == 'GET'){
           if (!isset($_GET['id']))
         return call('pages', 'error');
 
@@ -193,9 +216,12 @@ public function update() {
             $posts = Post::all();
             require_once('views/posts/readAll.php');
       }
-      
+
+
+} catch (Exception $e) {
+        call ('pages','error');
+               logException($e);
     }
+
+      }
 }
-
-
-

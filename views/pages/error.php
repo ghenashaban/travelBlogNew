@@ -1,8 +1,8 @@
 <div id="banner">
 <div class="w3-container w3-red">
-<p>Oops, this is the error page.</p>
-<img src="views/images/standard/_errorimage.jpg" width="150" />
-<p>It looks like something went wrong :(</p>
+<h3>Looks like you made a wrong turn!<h3>
+<img src="views/images/way.jpg" width="450" />
+<p>Click back to have another try</p>
 </div>
 </div>
 
