@@ -17,6 +17,13 @@
   height: 175px;
   border-radius: 20px;
 }
+
+        #back{
+        color: black;
+        background-color: #55d6be;
+        border-radius:12px;
+    }
+
 </style>
     </head>
     <div id="banner">
@@ -80,7 +87,7 @@ echo $img;
 
  <div class="row">
                 <div class="col-2">
-                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                    <button onclick="goBack()" class="previous" id="back"> &laquo; Back</button> </div>    
                 <div class="col-8">  
                 </div> </div>
 

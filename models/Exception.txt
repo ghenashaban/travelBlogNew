@@ -694,11 +694,91 @@ EXCEPTION CAUGHT: 2019-04-30 14:46:52 SQLSTATE[42S22]: Column not found: 1054 Un
 #4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
 #5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+<<<<<<< HEAD
 EXCEPTION CAUGHT: 2019-05-01 01:51:23 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'blo * from post' at line 1
 #0 C:\xampp\htdocs\travelBlogNew\models\post.php(57): PDO->query('blo * from post...')
 #1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(10): Post::all()
 #2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readAll()
 #3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readAll')
+=======
+EXCEPTION CAUGHT: 2019-05-01 01:07:12 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:15:58 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:16:51 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:17:19 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:18:45 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:18:51 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:21:14 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:21:50 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:22:24 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:24:16 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FISH post.title, post.id, post.body, post.categoryID, category.categories  from ' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(76): PDO->query('FISH post.title...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(168): Post::findByCat(1)
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readByCat()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readByCat')
+>>>>>>> ed0605fd6f4b2776a7141b2758fc75f684940d54
 #4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
 #5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
 #6 {main}
