@@ -19,6 +19,13 @@ border-color:black;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  
+        #back{
+        color: black;
+        background-color: #55d6be;
+        border-radius:12px;
+    }
+
 }
 
          </style> 
@@ -26,7 +33,7 @@ border-color:black;
     <div id="bannerREG">
 <div class="row">
                 <div class="col-2">
-                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                    <button onclick="goBack()" class="previous" id="back"> &laquo; Back</button> </div>    
                 <div class="col-8"><h2>Add a new blogger:</h2>   
                 </div> </div>
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
