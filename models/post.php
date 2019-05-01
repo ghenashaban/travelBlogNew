@@ -3,7 +3,7 @@
 //require_once 'models/Exception.php';
 
 
-use function models\Exception\logException;
+//use function models\Exception\logException;
 
 class Post {
 

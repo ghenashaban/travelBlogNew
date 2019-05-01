@@ -37,6 +37,7 @@
                 
             }
         }
+        /*the actual modal box (not whats inside it)*/
         .modal {
 
 /*            display: none;  Hidden by default
@@ -47,18 +48,25 @@
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
             z-index: 1; /* Sit on top */
-            padding-top: 400px; /* Location of the box */
+
+            padding-top:200px; /* Location of the box */
+
+           
 
             left: 0;
             top: 0;
             width: 40%; /* Full width */
             height: 20%;  /*Full height */
             overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
+            
+            background-color: rgb(0,0,0);  /*Fallback color */
 
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity*/ 
 
-            background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+            background-color: rgba(0,0,0,0.7);/*  Black w/ opacity */
 
             border: 5px solid #55d6be;
             border-radius: 12px;
@@ -70,18 +78,23 @@
             background-color: rgb(0,0,0);  Fallback color for comments box
             background-color: rgba(0,0,0,0.4);  Black w/ opacity */
 
-        /* Modal Content */
+        /* Modal Content login/reg pop up box */
         #modal-content {
-            background-color: rgb(0,0,0); /* Fallback color for comments box */
-          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+/*            background-color: rgb(0,0,0);  Fallback color for comments box */
+/*          background-color: rgba(0,0,0,0.4);  Black w/ opacity */
+background-color: #55d6be;
 
             margin: auto;
             padding: 20px;
-            border: 5px solid #55d6be;
+            border: 5px solid grey;
             width: 40%;
             border-radius: 20px;
             display: block;
             top: 35%;
+            color: black;
+            font-weight: normal;
+            
         }
 
          The Close Button 
@@ -102,6 +115,14 @@
         button{
             color: white;
             border: 2px solid #55d6be;  /*turquoise */
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);  
+            border-radius: 12px;
+            padding: 10px 24px;
+        }
+         .button1{
+            color: white;
+            border: 2px solid grey;  /*turquoise */
             background-color: rgb(0,0,0);
             background-color: rgba(0,0,0,0.4);  
             border-radius: 12px;
@@ -136,7 +157,7 @@
     <script>
         $(document).ready(function () {
             $("#flip").click(function () {
-                $("#panel").slideToggle("slow");
+                $("#panel").slideToggle("fast");
             });
         });
     </script>
@@ -180,7 +201,7 @@
                 <span class="close">&times;</span>
                 
                 <h3> To comment please login or register... </h3>
-                <a href="?controller=user&action=login"><button>Login/Register</button> </a>
+                <a href="?controller=user&action=login"><button class="button1">Login/Register</button> </a>
             </div>
         </div>';
 }
@@ -292,16 +313,6 @@ function goBack() {
                     </script> 
 
  <div>
-<!--    <div class="caption text-center">
-
-
-               
-
-
-
-            </div>-->
-
-            <!-- end landing page -->
 
 
         </div>
