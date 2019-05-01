@@ -694,3 +694,11 @@ EXCEPTION CAUGHT: 2019-04-30 14:46:52 SQLSTATE[42S22]: Column not found: 1054 Un
 #4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
 #5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+EXCEPTION CAUGHT: 2019-05-01 01:51:23 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'blo * from post' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\post.php(57): PDO->query('blo * from post...')
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(10): Post::all()
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->readAll()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'readAll')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}
