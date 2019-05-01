@@ -18,11 +18,7 @@
   border-radius: 20px;
 }
 
-        #back{
-        color: black;
-        background-color: #55d6be;
-        border-radius:12px;
-    }
+       
 
 </style>
     </head>
@@ -78,7 +74,7 @@ echo $img;
     <td><?php echo $users->email ?> <br></td></tr>
     <tr><td>Password</td>
         <td>*********<br></td></tr>
-    <tr><td>Jointed Date</td>
+    <tr><td>Joined Date</td>
     <td><?php echo $users->created_at ?></td></tr>
   
 </table>
@@ -87,7 +83,7 @@ echo $img;
 
  <div class="row">
                 <div class="col-2">
-                    <button onclick="goBack()" class="previous" id="back"> &laquo; Back</button> </div>    
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
                 <div class="col-8">  
                 </div> </div>
 

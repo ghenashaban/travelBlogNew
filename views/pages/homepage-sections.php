@@ -14,7 +14,7 @@
     <img class="card-img-top" src="views/images/<?php echo $RecentPostDes->title.".jpg"; ?>" alt='Lake in Croatia'>
     <div class="card-header"><h3><?php echo $RecentPostDes->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=<?php echo $RecentPostDes->id; ?>" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
+      <a href="?controller=post&action=read&id=<?php echo $RecentPostDes->id; ?>" class="stretched-link card-title">MOST RECENT ARTICLE IN DESTINATION!</a>
      </div>
     </div>
 </div>

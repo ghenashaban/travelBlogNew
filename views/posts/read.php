@@ -148,7 +148,12 @@ background-color: #55d6be;
   height: 50px;
   border-radius: 50%;
 }
-
+.left{
+    text-align: left;
+    color: #55d6be;
+    font-size: 18px;
+    font-weight: bold;
+}
 
 </style>
 
@@ -183,7 +188,9 @@ background-color: #55d6be;
             echo $img;
         }
         ?>
-        
+        <br>
+        <br>
+       
 <h5> <?php echo $posts->body; ?></h5>
         
 
@@ -206,7 +213,7 @@ background-color: #55d6be;
         </div>';
 }
 ?>
-        
+       <div class="left"> <?php echo "Posted at: ".$posts->created_at . "  BY  ". $posts->username; ?>  </div>
         
                 <?php
         echo "<br>";
@@ -234,7 +241,7 @@ background-color: #55d6be;
 
                     foreach ($comments as $comment) {
                         ?>
-                  
+                  <br> <br>     
                   
 <div class='box' id="left">
     

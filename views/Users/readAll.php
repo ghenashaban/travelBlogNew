@@ -1,14 +1,8 @@
-<style>
-        #back{
-        color: black;
-        background-color: #55d6be;
-        border-radius:12px;
-    }
-</style>
+
         <div id="banner">
             <div class="row">
                 <div class="col-2">
-                    <button onclick="goBack()" class="previous" id="back"> &laquo; Back</button> </div>    
+                    <button onclick="goBack()" class="previous" > &laquo; Back</button> </div>    
                 <div class="col-8"><h2>List of all registered users:</h2>   
                 </div> </div>
       

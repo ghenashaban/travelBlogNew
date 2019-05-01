@@ -20,35 +20,24 @@ class Post {
     public $post_id;
     public $like_count;
     public $categories;
+    public $username;
 
-    public function __construct($title, $id, $body, $image, $categoryID, $categories) {
+    public function __construct($title, $id, $body, $image, $categoryID, $categories, $created_at, $username) {
         $this->title = $title;
         $this->id = $id;
         $this->body = $body;
         $this->image = $image;
         $this->categoryID = $categoryID;
         $this->categories = $categories;
+        $this->created_at=$created_at;
+        $this->username=$username;
 
 //        $this->post_id=$post_id;
 //        $this->user_id=$user_id;
 //         $this->like_count=$like_count;
     }
 
-//    ,$body,$id, $published, $image_name
-//             $this->body=$body;
-//        $this->id=$id;
-//        $this->title=$published;
-//        $this->image=$image;
-//    public function __construct($id, $user_id, $title, $body, $published, $created_at, $updated_at, $category_id){
-//        $this->id=$id;
-//        $this->user_id= $user_id;
-//        $this->title=$title;
-//        $this->body=$body;
-//        $this->published=$published;
-//        $this->created_at=$created_at;
-//        $this->updated_at=$updated_at;
-//        $this->category_id=$category_id;
-//    }
+// 
 
     public static function all() {
         try {
@@ -57,7 +46,7 @@ class Post {
             $req = $db->query("Select * from post ");
             // we create a list of Product objects from the database results
             foreach ($req->fetchAll() as $post) {
-                $list[] = new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "");
+                $list[] = new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
             }
             return $list;
         } catch (Exception $e) {
@@ -77,7 +66,7 @@ class Post {
             // we create a list of Product objects from the database results
             $req->execute(array('categoryID ' => $categoryID));
             foreach ($req->fetchAll() as $post) {
-                $list[] = new Post($post['title'], $post['id'], $post['body'], "", "", $post['categories']);
+                $list[] = new Post($post['title'], $post['id'], $post['body'], "", "", $post['categories'],"","");
             }
             return $list;
         } catch (Exception $e) {
@@ -96,7 +85,7 @@ class Post {
         if ($rows > 0) {
             $results = $req->fetchAll();
             foreach ($results as $result) {
-                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"","");
+                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"","","","");
             }
             return $list;
         } else {
@@ -211,11 +200,14 @@ try {
   public static function find($id) {
       $db = Db::getInstance();
        $id = intval($id);
-      $req = $db->prepare('select * from post where id = :id ');
+      $req = $db->prepare('select * from post
+inner join user on post.user_id=user.id
+
+where post.id=:id; ');
       $req->execute(array('id' => $id));
       $post = $req->fetch();
 if($post){
-      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","");
+      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","",$post['created_at'],$post['username']);
     }
     else
     {
@@ -265,7 +257,7 @@ if($post){
             // we create a list of Post objects from the database results
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "");
+                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -287,7 +279,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], "", "", "", "");
+                return new Post($post['title'], $post['id'], "", "", "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -309,7 +301,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "");
+                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -331,7 +323,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "");
+                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -353,7 +345,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "");
+                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -375,7 +367,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "");
+                return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -397,7 +389,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], "", "", "", "");
+                return new Post($post['title'], $post['id'], "", "", "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -419,7 +411,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], "", "", "", "");
+                return new Post($post['title'], $post['id'], "", "", "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -441,7 +433,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], "", "", "", "");
+                return new Post($post['title'], $post['id'], "", "", "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -463,7 +455,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], "", "", "", "");
+                return new Post($post['title'], $post['id'], "", "", "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
@@ -485,7 +477,7 @@ if($post){
 
             $post = $req->fetch();
             if ($post) {
-                return new Post($post['title'], $post['id'], "", "", "", "");
+                return new Post($post['title'], $post['id'], "", "", "", "","","");
             }
 //    else "error";
         } catch (Exception $e) {
