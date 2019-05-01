@@ -529,9 +529,13 @@ span#logo-strap {
 /*end of logo*/
 
             .previous {
-  background-color: #f1f1f1;
+/*  background-color: #f1f1f1;
   color: black;
-  padding: 8px 16px;
+*/  padding: 8px 16px;
+  
+   color: black;
+        background-color: #55d6be;
+        border-radius:12px;
 }
         
 
