@@ -14,7 +14,7 @@
     <img class="card-img-top" src="views/images/<?php echo $RecentPostDes->title.".jpg"; ?>" alt='Lake in Croatia'>
     <div class="card-header"><h3><?php echo $RecentPostDes->title; ?></h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=<?php echo $RecentPostDes->id; ?>" class="stretched-link card-title">Croatia provides the perfect opportunity for island-hopping. Find your ideal getaway here</a>
+      <a href="?controller=post&action=read&id=<?php echo $RecentPostDes->id; ?>" class="stretched-link card-title">Need inspiration for your next trip? Read our latest travel article for ideas</a>
      </div>
     </div>
 </div>
@@ -244,7 +244,73 @@
        
                  
             </div>
+        
+        
+        <div id="gallery">
+      <div class="jumbotron">
+          <div class="col-12">
+                        <h3 class="heading text-center">Gallery</h3>
+                        <div class="heading-underline"></div>
+                    </div> 
+<div class="row">
+    <div class="col-md-4 mx-auto">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
+    <li data-target="#demo" data-slide-to="6"></li>
+    <li data-target="#demo" data-slide-to="7"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner h-75">
+    <div class="carousel-item active">
+      <img src="views/images/badbearnew.jpg" alt="Ghena and Victoria with polar bear">
+    </div>
+    <div class="carousel-item">
+      <img src="views/images/bearnew.jpg" alt="Issi and Ghena with polar bear">
+    </div>
+    <div class="carousel-item">
+      <img src="views/images/issinew.jpg" alt="Issi with film star">
+    </div>
+       <div class="carousel-item">
+      <img src="views/images/route66new.jpg" alt="Team in front of Route 66 sign">
+    </div>
+        <div class="carousel-item">
+      <img src="views/images/beer.jpg" alt="Sarah having beer">
+    </div>
+        <div class="carousel-item">
+      <img src="views/images/boat.jpg" alt="Sarah on boat">
+    </div>
+        <div class="carousel-item">
+      <img src="views/images/sunset.jpg" alt="Sunset">
+    </div>
+          <div class="carousel-item">
+      <img src="views/images/beachscene.jpg" alt="Beach scene">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+  </div>  
+</div>  
+     </div> 
+    </div> 
+        
            <div id="map" class="offset">    
+   
 
           
     <!--            <div class="narrow text-center">-->
@@ -265,58 +331,14 @@
                       
  </div>                    
        
-                 
-            </div>
-        
-<div id="gallery">
-      <div class="jumbotron">
-          <div class="col-12">
-                        <h3 class="heading text-center">Gallery</h3>
-                        <div class="heading-underline"></div>
-                    </div> 
-<div class="row">
-    <div class="col-md-4 mx-auto">
-<div id="demo" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-    <li data-target="#demo" data-slide-to="3"></li>
-  </ul>
-  
-  <!-- The slideshow -->
-  <div class="carousel-inner h-75">
-    <div class="carousel-item active">
-      <img src="views/images/badbearnew.jpg" alt="Ghena and Victoria with polar bear">
-    </div>
-    <div class="carousel-item">
-      <img src="views/images/bearnew.jpg" alt="Issi and Ghena with polar bear">
-    </div>
-    <div class="carousel-item">
-      <img src="views/images/issinew.jpg" alt="Issi with film star">
-    </div>
-       <div class="carousel-item">
-      <img src="views/images/route66new.jpg" alt="Team in front of Route 66 sign">
-    </div>
-  </div>
-  
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
-  </div>  
-</div>  
-     </div> 
-    </div> 
+      </div>
+              
+        
+
         
  <div id="aboutUs" class="offset">
-
+<div class="jumbotron">
            <div class="col-12"> 
              
                 <div class="col-12">
@@ -332,12 +354,12 @@
      </div></div>
     </div> 
      </div>
-     </div>
-        
+ </div>
+ </div>   
     <!--- start contact us section --->
         <div id="contact-us" class="offset">
 
-            <div class="jumbotron">
+           
 
                 <div class="col-12 text-center">
                     <h3 class="heading">Contact us</h3>
@@ -440,7 +462,7 @@
          </div>
     </div>                   
 </div>             
-  </div> 
+   
                         
   
     

@@ -88,12 +88,12 @@ echo $img;
 
 
   <br/>
-   
+  <label class="upload"> 
   <input type="file" name="myUploader" class="w3-btn w3-pink" />
-            
-
+  <span>Choose file</span>          
+</label>
   <p>
-    <input class="w3-btn w3-gray" type="submit" value="Update user">
+    <input class="w3-btn w3-pink" type="submit" value="Update user">
     </p>
     </div>
 
