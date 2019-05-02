@@ -31,10 +31,16 @@
             }
              .signIN{
               
-                background-color: blue;
+                background-color: rgba(0,0,0,0.2);
                 color: white;
+                border: none;
+                
                 
             }
+            .signIN:hover {
+   color:#55d6be;
+   
+}
         </style>
     </head>
 
