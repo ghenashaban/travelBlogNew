@@ -7,6 +7,8 @@
                   <input class="w3-input" type="hidden" name="like_count" value="1">
         <input class="w3-btn w3-pink" type="submit" value="Like">
        </form>';
+       
+     
 
  }
  

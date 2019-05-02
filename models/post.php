@@ -1,5 +1,5 @@
 <?php
-require_once 'models/Exception.php';
+//require_once 'models/Exception.php';
 use function models\Exception\logException;
 class Post {
     public $id;
