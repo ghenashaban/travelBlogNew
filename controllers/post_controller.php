@@ -114,10 +114,10 @@ class PostController {
         
     
       Public function read() {
-try{
 if (!isset($_GET['id'])) {
         return call('pages', 'error');
-} try {   
+} try {
+    
       $posts = Post::find($_GET['id']);
       require_once 'models/comment.php';
       $comments=Comment::findByPostId($_GET['id']);
@@ -138,13 +138,13 @@ if (!isset($_GET['id'])) {
             $postLikeIns=Post::postLikeIns();
             $postLikeTip=Post::postLikeTip();
     require_once 'views/posts/read.php';
-    } catch (Exception $e) {
-        call ('pages','error');
-               logException($e);
+   
+   
+    } catch (Exception $ex) {
+            return call('pages', 'error');
     }
- 
      if (!empty($_REQUEST["content"])) {
-       require_once 'models/comment.php';
+//        require_once 'models/comment.php';
          Comment::addComment(); 
 //         require_once 'views/posts/read.php';
            $comments=Comment::findByPostId($_GET['id']);     
@@ -158,11 +158,7 @@ if (!isset($_GET['id'])) {
           header('location: http://localhost/travelBlogNew/index.php?controller=post&action=read&id='.$_GET["id"]);
        
       }
-  }catch (Exception $e) {
-        call ('pages','error');
-               logException($e);
-    }
-      }
+  }
   Public function readByCat(){
       try{
      $posts = Post::findByCat($_GET['categoryID']);
