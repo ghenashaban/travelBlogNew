@@ -1,12 +1,7 @@
 <?php
-
-//require_once 'models/Exception.php';
-
-
-//use function models\Exception\logException;
-
+require_once 'models/Exception.php';
+use function models\Exception\logException;
 class Post {
-
     public $id;
     public $user_id;
     public $body;
@@ -21,7 +16,6 @@ class Post {
     public $like_count;
     public $categories;
     public $username;
-
     public function __construct($title, $id, $body, $image, $categoryID, $categories, $created_at, $username) {
         $this->title = $title;
         $this->id = $id;
@@ -31,22 +25,34 @@ class Post {
         $this->categories = $categories;
         $this->created_at=$created_at;
         $this->username=$username;
-
-//        $this->post_id=$post_id;
+               
 //        $this->user_id=$user_id;
 //         $this->like_count=$like_count;
     }
-
-// 
-
+//    ,$body,$id, $published, $image_name
+//             $this->body=$body;
+//        $this->id=$id;
+//        $this->title=$published;
+//        $this->image=$image;
+//    public function __construct($id, $user_id, $title, $body, $published, $created_at, $updated_at, $category_id){
+//        $this->id=$id;
+//        $this->user_id= $user_id;
+//        $this->title=$title;
+//        $this->body=$body;
+//        $this->published=$published;
+//        $this->created_at=$created_at;
+//        $this->updated_at=$updated_at;
+//        $this->category_id=$category_id;
+//    }
     public static function all() {
         try {
             $list = [];
             $db = Db::getInstance();
-            $req = $db->query("Select * from post ");
+            $req = $db->query("select * from post ");
             // we create a list of Product objects from the database results
             foreach ($req->fetchAll() as $post) {
-                $list[] = new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
+                $list[] = new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "",$post['created_at'], "");
+ 
             }
             return $list;
         } catch (Exception $e) {
@@ -54,7 +60,6 @@ class Post {
             logException($e);
         }
     }
-
     public static function findByCat($categoryID) {
         try {
             $list = [];
@@ -74,39 +79,45 @@ class Post {
             logException($e);
         }
     }
-
     public static function search($searchTerm) { // find by user lne 137
-      $list = [];
-        $search = $_POST['search'];
-        $db = Db::getInstance();
-        $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$search%';");
-        $req->execute();
-        $rows = $req->rowCount();
-        if ($rows > 0) {
+        try {
+            $list = [];
+            $search = $_POST['search'];
+            $db = Db::getInstance();
+            $req = $db->prepare("SELECT * FROM post WHERE title LIKE '%$search%';");
+            $req->execute();
+            $rows = $req->rowCount();
+            if ($rows > 0) {
+                $results = $req->fetchAll();
+                foreach ($results as $result) {
+                    $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'], "", "","","");
+                }
+                return $list;
+            } else {
+                require_once('views/pages/noResult.php');
+                exit();
+            }
+        } catch (Exception $e) {
+            call('pages', 'error');
+            logException($e);
+        }
+    }
+    public static function searchAhead($search) { //search all content for something relevant
+        try {
+            $list = [];
+            $db = Db::getInstance();
+            $req = $db->prepare("SELECT distinct title FROM post WHERE title LIKE '%$search%';");
+            $req->execute();
             $results = $req->fetchAll();
             foreach ($results as $result) {
-                $list [] = new Post($result['title'], $result['id'], $result['body'], $result['image'],"","","","");
+                $list [] = $result['title'];
             }
-            return $list;
-        } else {
-          
-            require_once('views/pages/noResult.php');
-         exit();
+            echo json_encode($list);
+        } catch (Exception $e) {
+            call('pages', 'error');
+            logException($e);
         }
     }
-     public static function searchAhead($search) { //search all content for something relevant
-        $list = [];
-        $db = Db::getInstance();
-        $req = $db->prepare("SELECT distinct title FROM post WHERE title LIKE '%$search%';");
-        $req->execute();
-        $results = $req->fetchAll();
-        foreach ($results as $result) {
-            $list [] = $result['title'];
-        }
-        echo json_encode($list);
-    }
-
-
     public static function remove($id) {
         try {
             $db = Db::getInstance();
@@ -120,7 +131,6 @@ class Post {
             logException($e);
         }
     }
-
     public static function add() {
         try {
             $db = Db::getInstance();
@@ -129,7 +139,6 @@ class Post {
             values ((select id from post where title=:title),
             ('0'));
             ");
-
             $req->bindParam(':title', $title);
             $req->bindParam(':body', $body);
             $req->bindParam(':image', $image);
@@ -165,22 +174,17 @@ class Post {
             logException($e);
         }
     }
-
 const AllowedTypes = ['name/jpeg', 'name/jpg'];
 const InputKey = 'myUploader';
 
 public static function uploadFile(string $title) {
-    
-try {
 	if (empty($_FILES[self::InputKey])) {
 		//die("File Missing!");
-
                 trigger_error("File Missing!");
             }
 //	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
 //		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
 //	}
-
             $tempFile = $_FILES[self::InputKey]['tmp_name'];
             $path = "C:/xampp/htdocs/travelBlogNew/views/images/";
             $destinationFile = $path . $title . '.jpg';
@@ -192,32 +196,24 @@ try {
                 unlink($tempFile);
             }
             return $imagePath;
-        } catch (Exception $e) {
-            call('pages', 'error');
-            logException($e);
-        }
-}
+        } 
+        
   public static function find($id) {
       $db = Db::getInstance();
        $id = intval($id);
-      $req = $db->prepare('select * from post
-inner join user on post.user_id=user.id
-
-where post.id=:id; ');
+      $req = $db->prepare('select post.created_at, post.id, post.title, post.body, post.categoryID, post.user_id, post.created_at, user.username
+from post inner join user on post.user_id=user.id where post.id=:id; ');
       $req->execute(array('id' => $id));
       $post = $req->fetch();
 if($post){
-      return new Post ($post['title'], $post['id'],$post['body'],$post['image'],"","",$post['created_at'],$post['username']);
+      return new Post ($post['title'], $post['id'],$post['body'],"","","",$post["created_at"],$post["username"]);
     }
     else
     {
         throw new Exception('A real exception should go here');
     }
     }
-
-
   
-
     public static function update($id) {
         try {
             $db = Db::getInstance();
@@ -228,11 +224,9 @@ if($post){
             if (isset($_POST['title']) && $_POST['title'] != "") {
                 $filteredTitle = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
             }
-
             if (isset($_POST['body'])) {
                 $filteredBody = $_POST['body'];
             }
-
             $title = $filteredTitle;
             $body = $filteredBody;
             $req->execute();
@@ -245,7 +239,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function RecentPost() {
         try {
             $list = [];
@@ -265,7 +258,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function RecentPostDes() {
         try {
             $list = [];
@@ -276,7 +268,6 @@ if($post){
         SELECT MAX(created_at)
         FROM post
         where categoryID=1);');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], "", "", "", "","","");
@@ -287,7 +278,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function RecentPostEco() {
         try {
             $list = [];
@@ -298,7 +288,6 @@ if($post){
         SELECT MAX(created_at)
         FROM post
         where categoryID=2);');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
@@ -309,7 +298,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function RecentPostFam() {
         try {
             $list = [];
@@ -320,7 +308,6 @@ if($post){
         SELECT MAX(created_at)
         FROM post
         where categoryID=3);');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
@@ -331,7 +318,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function RecentPostIns() {
         try {
             $list = [];
@@ -342,7 +328,6 @@ if($post){
         SELECT MAX(created_at)
         FROM post
         where categoryID=4);');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
@@ -353,7 +338,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function RecentPostTip() {
         try {
             $list = [];
@@ -364,7 +348,6 @@ if($post){
         SELECT MAX(created_at)
         FROM post
         where categoryID=5);');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], $post['body'], $post['image'], "", "","","");
@@ -375,7 +358,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function postLikeDes() {
         try {
             $list = [];
@@ -386,7 +368,6 @@ if($post){
         inner JOIN post ON liketotal.post_id=post.id
         where totalCount=( SELECT max(totalCount) from liketotal where liketotal.categoryID=1);
         ');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], "", "", "", "","","");
@@ -397,7 +378,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function postLikeEco() {
         try {
             $list = [];
@@ -408,7 +388,6 @@ if($post){
         inner JOIN post ON liketotal.post_id=post.id
         where totalCount=( SELECT max(totalCount) from liketotal where liketotal.categoryID=2);
         ');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], "", "", "", "","","");
@@ -419,7 +398,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function postLikeFam() {
         try {
             $list = [];
@@ -430,7 +408,6 @@ if($post){
         inner JOIN post ON liketotal.post_id=post.id
         where totalCount=( SELECT max(totalCount) from liketotal where liketotal.categoryID=3);
         ');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], "", "", "", "","","");
@@ -441,7 +418,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function postLikeIns() {
         try {
             $list = [];
@@ -452,7 +428,6 @@ if($post){
         inner JOIN post ON liketotal.post_id=post.id
         where totalCount=( SELECT max(totalCount) from liketotal where liketotal.categoryID=4);
         ');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], "", "", "", "","","");
@@ -463,7 +438,6 @@ if($post){
             logException($e);
         }
     }
-
     public static function postLikeTip() {
         try {
             $list = [];
@@ -474,7 +448,6 @@ if($post){
         inner JOIN post ON liketotal.post_id=post.id
         where totalCount=( SELECT max(totalCount) from liketotal where liketotal.categoryID=5);
         ');
-
             $post = $req->fetch();
             if ($post) {
                 return new Post($post['title'], $post['id'], "", "", "", "","","");
@@ -485,5 +458,4 @@ if($post){
             logException($e);
         }
     }
-
 }

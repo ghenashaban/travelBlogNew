@@ -379,6 +379,11 @@ class User {
             $password = User::internal_hash($filteredPassword);
 
             $req->execute();
+
+            User::uploadFile($username);
+            if (!empty($_FILES[self::InputKey]['username'])) {
+                User::uploadFile($username);
+            }
         } catch (Exception $e) {
             call('pages', 'error');
             logException($e);
