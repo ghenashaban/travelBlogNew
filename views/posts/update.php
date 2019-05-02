@@ -44,14 +44,14 @@ else if (file_exists($file2)) {
 echo $img;   } 
 
 ?>
-  <br/>
-  <input type="file" name="myUploader" class="w3-btn w3-pink" />
+  <br/> 
+  <input type="file" name="myUploader"  /> 
   <p>
     <input class="w3-btn w3-gray" type="submit" value="Update Post">
     </p>
     </form>
 <!-- </div>-->
-    </div>
+    </div>   
 
 <script src="views/js/js/jquery.min.js" type="text/javascript"></script>
         <script src="views/js/plugin/tinymce/tinymce.min.js" type="text/javascript"></script>

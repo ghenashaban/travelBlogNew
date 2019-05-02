@@ -266,6 +266,7 @@
     <li data-target="#demo" data-slide-to="5"></li>
     <li data-target="#demo" data-slide-to="6"></li>
     <li data-target="#demo" data-slide-to="7"></li>
+    <li data-target="#demo" data-slide-to="8"></li>
   </ul>
   
   <!-- The slideshow -->
@@ -279,6 +280,9 @@
     <div class="carousel-item">
       <img src="views/images/issinew.jpg" alt="Issi with film star">
     </div>
+    <div class="carousel-item">
+      <img src="views/images/group.jpg" alt="Beach scene">
+    </div>
        <div class="carousel-item">
       <img src="views/images/route66new.jpg" alt="Team in front of Route 66 sign">
     </div>
@@ -290,10 +294,11 @@
     </div>
         <div class="carousel-item">
       <img src="views/images/sunset.jpg" alt="Sunset">
-    </div>
-          <div class="carousel-item">
+    </div>          
+      <div class="carousel-item">
       <img src="views/images/beachscene.jpg" alt="Beach scene">
     </div>
+    
   </div>
   
   <!-- Left and right controls -->
