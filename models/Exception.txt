@@ -782,3 +782,11 @@ EXCEPTION CAUGHT: 2019-05-01 01:24:16 SQLSTATE[42000]: Syntax error or access vi
 #4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
 #5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+EXCEPTION CAUGHT: 2019-05-02 13:50:09 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NO * from liketotal where post_id='108'' at line 1
+#0 C:\xampp\htdocs\travelBlogNew\models\like.php(67): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\travelBlogNew\controllers\post_controller.php(125): Like::findByPostId('108')
+#2 C:\xampp\htdocs\travelBlogNew\routes.php(22): PostController->read()
+#3 C:\xampp\htdocs\travelBlogNew\routes.php(43): call(Object(PostController), 'read')
+#4 C:\xampp\htdocs\travelBlogNew\views\layout1.php(44): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\travelBlogNew\index.php(33): require_once('C:\\xampp\\htdocs...')
+#6 {main}

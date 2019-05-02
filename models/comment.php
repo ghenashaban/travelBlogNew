@@ -20,7 +20,7 @@ class Comment {
     }
     
     public static function addComment() {
-    $db = Db::getInstance();
+   $db = Db::getInstance();
     $req = $db->prepare("insert into comment( post_id, content, user_id) values (:post_id, :content, :user_id);
              update totalcomments
 set totalCount = (SELECT count(*) from comment where post_id=:post_id)
@@ -49,6 +49,7 @@ if (isset($_POST['content'])) {
 
 //$image = $filteredimage;
 $req->execute();
+  
     
 }
 public static function findByPostId($post_id) {

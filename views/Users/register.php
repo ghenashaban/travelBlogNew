@@ -1,6 +1,6 @@
 <html>
     <head>
-<!--         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          <style>
    .border{
   border-radius: 8px;
@@ -68,7 +68,7 @@ border-color:black;
      
        <label>Country</label>
        <br>
-       <input class="w3-input border" type="text" name="country" placeholder="UK AND USA for now" required>
+       <input class="w3-input border" type="text" name="country"  required>
    
     </div>
      <div class="col-sm-6">

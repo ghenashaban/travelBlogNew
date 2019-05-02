@@ -76,7 +76,7 @@ border-color:black;
      
        <label>Country</label>
        <br>
-       <input class="w3-input border" type="text" name="country" placeholder="UK AND USA for now" required>
+       <input class="w3-input border" type="text" name="country"  required>
    
     </div>
      <div class="col-sm-6">
