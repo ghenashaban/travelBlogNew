@@ -81,7 +81,11 @@ echo $img;
       </div>
  </div>
 
-     
+  <div class="row">
+                <div class="col-2">
+                    <button onclick="goBack()" class="previous"> &laquo; Back</button> </div>    
+                <div class="col-8">    
+                </div> </div>   
 
       
  </div>
@@ -104,7 +108,12 @@ echo $img;
             
             </script>
           
-   
+      <script>
+function goBack() {
+  window.history.back();
+}
+
+                    </script> 
 
    
 </html>

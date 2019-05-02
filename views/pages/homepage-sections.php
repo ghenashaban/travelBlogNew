@@ -14,7 +14,10 @@
     <img class="card-img-top" src="views/images/<?php echo $RecentPostDes->title.".jpg"; ?>" alt='Lake in Croatia'>
     <div class="card-header"><h3><?php echo $RecentPostDes->title; ?></h3></div>
     <div class="card-body">
+
       <a href="?controller=post&action=read&id=<?php echo $RecentPostDes->id; ?>" class="stretched-link card-title">Need inspiration for your next trip? Read our latest travel article for ideas</a>
+
+
      </div>
     </div>
 </div>
@@ -31,10 +34,10 @@
                 
 <div class="col-md-4 mt-4">
   <div class="card">
-    <img class="card-img-top" src="views/images/amalfi-post.jpg" alt="Amalfi coastline">
-    <div class="card-header"><h3>Expert guide to the Amalfi Coast</h3></div>
+    <img class="card-img-top" src="views/images/48 hours in . . . Miami.jpg" alt="Amalfi coastline">
+    <div class="card-header"><h3>48 hours in . . . Miami</h3></div>
     <div class="card-body">
-      <a href="?controller=post&action=read&id=96" class="stretched-link card-title">The legendary Amalfi Coast is one of Europe's most desirable and romantic destinations. Don't miss our top tips</a>
+      <a href="?controller=post&action=read&id=94" class="stretched-link card-title">The legendary Amalfi Coast is one of Europe's most desirable and romantic destinations. Don't miss our top tips</a>
      </div>
     </div>
 </div>

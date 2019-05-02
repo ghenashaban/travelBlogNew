@@ -240,12 +240,12 @@ class User {
     public static function update($id) {
         try {
             $db = Db::getInstance();
-            $req = $db->prepare("Update user set first_name=:first_name ,  surname=:surname , username=:username , email=:email , password=:password where id=:id");
+            $req = $db->prepare("Update user set first_name=:first_name ,  surname=:surname , username=:username , email=:email  where id=:id");
             $req->bindParam(':first_name', $first_name);
             $req->bindParam(':surname', $surname);
             $req->bindParam(':username', $username);
             $req->bindParam(':email', $email);
-            $req->bindParam(':password', $password);
+         
             $req->bindParam(':id', $id);
 
 
@@ -265,10 +265,7 @@ class User {
                 $filteredEmail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
                 $email = $filteredEmail;
             }
-            if (isset($_POST['password']) && $_POST['password'] != "") {
-                $filteredPassword = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-                $password = User::internal_hash($filteredPassword);
-            }
+           
 
 
 
@@ -302,12 +299,18 @@ class User {
             $sessionID = $_SESSION['id'];
 
             if (password_verify($_POST["oldPassword"], $_SESSION['password'])) {
-                echo "Password Reset";
+                 echo '<div id="banner">';
+                echo "<h2>Password Reset Successfully</h2>";
+                echo "<img src=views/images/tick.png>";
+                echo '</div>';
                 $req->execute();
             } else {
-                echo "Sorry, you have entered a wrong password";
-                echo "Please try again";
+                echo '<div id="banner">';
+                echo "<h2>Sorry, you have entered a wrong password";
+                
+                echo "<br> Please try again! </h2>";
                 echo '<a href="?controller=user&action=updatePassword&id= ' . $sessionID . '" class="btn btn-primary"> Reset Password</a>';
+                 echo '</div>';
                 exit();
             }
         } catch (Exception $e) {
@@ -376,6 +379,11 @@ class User {
             $password = User::internal_hash($filteredPassword);
 
             $req->execute();
+
+            User::uploadFile($username);
+            if (!empty($_FILES[self::InputKey]['username'])) {
+                User::uploadFile($username);
+            }
         } catch (Exception $e) {
             call('pages', 'error');
             logException($e);
